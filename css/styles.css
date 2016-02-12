@@ -173,7 +173,7 @@ body .demo-blog {
 }
 
 .demo-blog .on-the-road-again .mdl-card__media {
-	background-image: url(../img/road.jpg);
+	background-image: url(../img/road.jpg);/*<?php showThumbnail($this); ?>*/
 }
 
 .demo-blog .shopping .mdl-card__media {
@@ -425,7 +425,10 @@ body .demo-blog {
 	align-items: center;
 }
 
-p img {
+.index-article-content img {
+	width: 98%;
+}
+.post-article-content img {
 	width: 100%;
 }
 
@@ -500,8 +503,18 @@ p img {
 .mdl-mini-footer--right-section{
     margin-right: 60px;
 }
+.demo-nav{
+	font-weight: 300 !important;
+}
 .demo-nav a{
     color: #fff;
     text-decoration: none;
     font-weight: 400;
+}
+.comment__text{
+	font-weight: 400 !important;
+	font-size: 13px !important;
+}
+.comments__closed{
+	color: #8A8A8A !important;
 }

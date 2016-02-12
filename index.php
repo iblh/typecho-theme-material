@@ -1,11 +1,11 @@
 <?php
 
 /**
- * 这是viosey 的 Material Design 模版
+ * 这是 Viosey 基于 Google Material Design 开发的Typecho模版
  *
  * @package Typecho Material Design Theme
  * @author viosey
- * @version 1.0.0
+ * @version 1.0
  * @link https://viosey.com
  */
 
@@ -70,7 +70,7 @@ $this->need('header.php');
                         </div>
 
                         <!-- 文章内容 -->
-                        <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+                        <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
                             <?php $this->content(' &nbsp;Continue &nbsp;Reading...'); ?>
                         </div>
 
@@ -93,8 +93,12 @@ $this->need('header.php');
                     <?php endwhile; ?>
 
                     <nav class="demo-nav mdl-cell mdl-cell--12-col">
+                        <?php $this->pageLink('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button>'); ?>
                         <div class="section-spacer"></div>
-                        <?php $this->pageNav('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button>', '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button>', '2' ,'...'); ?>
+                        page <?php if($this->_currentPage>1) echo $this->_currentPage;  else echo 1;?>
+                        of <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
+                        <div class="section-spacer"></div>
+                        <?php $this->pageLink('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button>','next'); ?>
                     </nav>
 
 
