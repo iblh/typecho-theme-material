@@ -36,6 +36,7 @@
 
     <script src="<?php $this->options->themeUrl('js/ripples.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
     <script>
         Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
           var link = el.querySelector('a');
@@ -51,5 +52,16 @@
           });
         });
 
+        $("#visitor-url").focus(function(){
+            this.value="http://";
+        });
+        $("#visitor-url").blur(function(){
+            this.value="";
+        });
+
     </script>
+
+
+
+
 </html>

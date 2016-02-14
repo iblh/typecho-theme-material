@@ -36,14 +36,22 @@ echo $commentClass;
 
         <!-- comment__actions 对该评论的行为-->
         <nav class="comment__actions">
+            <!-- like -->
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                 <i class="material-icons" role="presentation">thumb_up</i>
                 <span class="visuallyhidden">like comment</span>
             </button>
+            <!-- dislike -->
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                 <i class="material-icons" role="presentation">thumb_down</i>
                 <span class="visuallyhidden">dislike comment</span>
             </button>
+            <!-- reply -->
+            <?php $comments->reply('<button id="comment-reply-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">forum</i>
+            <span class="visuallyhidden">reply comment</span>
+            </button>'); ?>
+            <!-- share -->
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                 <i class="material-icons" role="presentation">share</i>
                 <span class="visuallyhidden">share comment</span>
@@ -100,7 +108,7 @@ echo $commentClass;
                     <!-- 用户网站 -->
     		    	<div class="login-form-group">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input type="url" name="url" class="mdl-textfield__input login-input-info"  />  <!--  placeholder="http://"-->
+                            <input type="url" name="url" id="visitor-url" class="mdl-textfield__input login-input-info" />  <!--  placeholder="http://"-->
                             <label for="url" class="mdl-textfield__label">Website</label>
                         </div>
     		    	</div>
@@ -108,7 +116,7 @@ echo $commentClass;
 
                 <!-- 评论输入框 -->
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="comment-input-div">
-                    <textarea name="text" rows="1" class="mdl-textfield__input" id="comment" ></textarea>
+                    <textarea name="text" rows="1" id="comment" class="mdl-textfield__input" ></textarea>
                     <label for="comment" class="mdl-textfield__label">Join the discussion</label>
                 </div>
 

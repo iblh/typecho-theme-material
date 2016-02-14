@@ -5,7 +5,7 @@
  *
  * @package Typecho Material Design Theme
  * @author viosey
- * @version Alpha 2.1
+ * @version Alpha 2.2
  * @link https://viosey.com
  */
 
