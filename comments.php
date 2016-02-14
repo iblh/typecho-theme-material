@@ -80,42 +80,39 @@ echo $commentClass;
 
 		        <!-- 若当前用户未登录 -->
 		        <?php else: ?>
-		    	<div class="form-group">
-		    		<label for="author" class="col-sm-2 control-label required">昵称</label>
-		    		<div class="col-sm-9">
-		    			<div class="form-control-wrapper">
-		    				<input type="text" name="author" class="form-control text empty" size="35" value="<?php $this->remember('author'); ?>" />
-		    				<span class="material-input"></span>
-		    			</div>
-		    		</div>
-		    	</div>
-				<div class="form-group">
-		    		<label for="mail" class="col-sm-2 control-label required">邮箱</label>
-		    		<div class="col-sm-9">
-		    			<div class="form-control-wrapper">
-		    				<input type="email" name="mail" class="form-control text empty" size="35" value="<?php $this->remember('mail'); ?>" />
-		    				<span class="material-input"></span>
-		    			</div>
-		    		</div>
-		    	</div>
-		    	<div class="form-group">
-		    		<label for="url" class="col-sm-2 control-label required">网站</label>
-		    		<div class="col-sm-9">
-		    			<div class="form-control-wrapper">
-		    				<input type="url" name="url" class="form-control text empty" size="35" value="<?php $this->remember('url'); ?>" placeholder="http://"/>
-		    				<span class="material-input"></span>
-		    			</div>
-		    		</div>
-		    	</div>
+
+                    <!-- 用户昵称 -->
+    		    	<div class="login-form-group">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input type="text" name="author" class="mdl-textfield__input login-input-info" />
+                            <label for="author" class="mdl-textfield__label">Name</label>
+                        </div>
+    		    	</div>
+
+                    <!-- 用户邮箱 -->
+                    <div class="login-form-group">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input type="email" name="mail" class="mdl-textfield__input login-input-info" />
+                            <label for="mail" class="mdl-textfield__label">Email</label>
+                        </div>
+    		    	</div>
+
+                    <!-- 用户网站 -->
+    		    	<div class="login-form-group">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input type="url" name="url" class="mdl-textfield__input login-input-info"  />  <!--  placeholder="http://"-->
+                            <label for="url" class="mdl-textfield__label">Website</label>
+                        </div>
+    		    	</div>
 		        <?php endif; ?>
 
-                <!-- 输入框 -->
+                <!-- 评论输入框 -->
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="comment-input-div">
                     <textarea name="text" rows="1" class="mdl-textfield__input" id="comment" ></textarea>
                     <label for="comment" class="mdl-textfield__label">Join the discussion</label>
                 </div>
 
-                <!-- 回复按钮 -->
+                <!-- 评论回复按钮 -->
                 <?php $comments->reply('
                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="comment-button">
                 <i class="material-icons" role="presentation">check</i><span class="visuallyhidden">add comment</span>

@@ -511,6 +511,14 @@ body .demo-blog {
     text-decoration: none;
     font-weight: 400;
 }
+.login-form-group{
+	width: 33%;
+	float: left;
+	color: #8A8A8A;
+}
+.login-input-info{
+	font-size: 14px !important;
+}
 .comment__text{
 	font-weight: 400 !important;
 	font-size: 13px !important;
