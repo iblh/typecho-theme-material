@@ -4,11 +4,12 @@
             <main class="mdl-layout__content">
 
                 <!-- 左上角返回按钮 -->
-                <div class="demo-back">
-                  <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" title="go back" role="button">
+                <div class="demo-back" id="backhome-div">
+                  <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" role="button">
                     <i class="material-icons" role="presentation">arrow_back</i>
                   </a>
                 </div>
+                <div class="mdl-tooltip" for="backhome-div">Home</div>
 
                 <!-- 文章模块 -->
                 <div class="demo-blog__posts mdl-grid">
@@ -21,28 +22,46 @@
 
                         <!-- 文章相关信息 -->
                         <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-                            <div class="minilogo"></div>
+                            <!-- 作者头像 -->
+                            <div id="author-avatar"><?php $this->author->gravatar(44); ?></div>
                             <div>
-                                <strong><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></strong>      <!-- 文章 作者 -->
-                                <span><?php $this->date('F j, Y'); ?></span>        <!-- 文章 日期 -->
+                                <!-- 作者名字 -->
+                                <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
+                                <!-- 文章日期 -->
+                                <span><?php $this->date('F j, Y'); ?></span>
                             </div>
                             <div class="section-spacer"></div>
-                            <div class="meta__favorites">
-                                425 <i class="material-icons" role="presentation">favorite</i>
+                            <!-- favorite -->
+                            <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <i class="material-icons" role="presentation">favorite</i>
                                 <span class="visuallyhidden">favorites</span>
-                            </div>
-                            <div>
-                                <i class="material-icons" role="presentation">bookmark</i>
-                                <span class="visuallyhidden">bookmark</span>
-                            </div>
-                            <div>
+                            </button>
+                            <div class="mdl-tooltip" for="article-functions-like-button">Like</div>
+                            <!-- view tags -->
+                            <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <i class="material-icons">view_carousel</i>
+                                <span class="visuallyhidden">tags</span>
+                            </button>
+                            <div class="mdl-tooltip" for="article-functions-viewtags-button">Tags</div>
+                            <ul id="article-functions-viewtags-ul" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+                              <li class="mdl-menu__item"><?php $this->tags('<li class="mdl-menu__item"> ', true, ''); ?></li>
+                            </ul>
+                            <!-- share -->
+                            <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <i class="material-icons" role="presentation">share</i>
                                 <span class="visuallyhidden">share</span>
-                            </div>
+                            </button>
+                            <div class="mdl-tooltip" for="article-fuctions-share-button">Share</div>
+                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                for="article-fuctions-share-button">
+                              <a class="comment-share-list-a" target="view_window" href="<?php $this->permalink(); ?>"><li class="mdl-menu__item">Open in New Tab</li></a>
+                              <a class="comment-share-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->content(); ?>+from&url=<?php $this->permalink(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
+                              <a class="comment-share-list-a" href="https://plus.google.com/share?url=<?php $this->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="mdl-menu__item">Share to Google+</li></a>
+                            </ul>
                         </div>
 
                         <!-- 文章内容 -->
-                        <div class="mdl-color-text--grey-700 mdl-card__supporting-text post-article-content">
+                        <div id="article-content-div" class="mdl-color-text--grey-700 mdl-card__supporting-text post-article-content">
                             <?php $this->content('Continue Reading...'); ?>
                         </div>
 

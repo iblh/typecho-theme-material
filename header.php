@@ -7,8 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#">
         <title>
+            <?php $this->archiveTitle('','',' - '); ?>
             <?php $this->options->title(); ?>
-            <?php $this->archiveTitle(); ?>
         </title>
 
         <!-- Add to homescreen for Chrome on Android -->
@@ -23,12 +23,18 @@
 
         <!-- Tile icon for Win8 (144x144 + tile color) -->
         <meta name="msapplication-TileImage" content="img/touch/ms-touch-icon-144x144-precomposed.png">
-        <meta name="msapplication-TileColor" content="#3372DF">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
 
         <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
         <!--
         <link rel="canonical" href="http://www.example.com/">
         -->
+
+        <meta property="og:url"           content="<?php $this->permalink(); ?>" />
+    	<meta property="og:type"          content="website" />
+    	<meta property="og:title"         content="<?php $this->archiveTitle(); ?>" />
+        <meta property="og:description"   content="Your description" />
+    	<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 
         <!-- Material icon -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">

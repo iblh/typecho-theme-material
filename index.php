@@ -5,7 +5,7 @@
  *
  * @package Typecho Material Design Theme
  * @author viosey
- * @version Alpha 2.2
+ * @version Alpha 2.3
  * @link https://viosey.com
  */
 
@@ -24,10 +24,11 @@ $this->need('header.php');
                             <h3><a href="entry.html">Daily Pic</a></h3>
                         </div>
                         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-                            <div class="minilogo"></div>
+                            <!-- 作者头像 -->
+                            <div id="author-avatar"><?php $this->author->gravatar(44); ?></div>
                             <div>
-                                <strong>The Newist</strong>
-                                <span>2 days ago</span>
+                                <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
+                                <span><?php $this->date('F j, Y'); ?></span>
                             </div>
                         </div>
                     </div>
@@ -77,14 +78,15 @@ $this->need('header.php');
                         <!-- 文章相关信息-->
                         <div>
                             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
-                                <div class="minilogo"></div>
+                                <!-- 作者头像 -->
+                                <div id="author-avatar"><?php $this->author->gravatar(44); ?></div>
                                 <div>
-                                    <strong><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></strong>
+                                    <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
                                     <span><?php $this->date('F j, Y'); ?></span>
                                 </div>
                             </div>
                             <div id="article-category-comment">
-                                <?php $this->category(','); ?> | <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>
+                                <?php $this->category(', '); ?> | <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>
                             </div>
                         </div>
 

@@ -3,11 +3,12 @@
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded demo-blog--blogpost">
 
         <!-- 左上角返回按钮 -->
-        <div class="demo-back">
+        <div class="demo-back" id="backhome-div">
             <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" title="go back" role="button">
                 <i class="material-icons" role="presentation">arrow_back</i>
             </a>
         </div>
+        <div class="mdl-tooltip" for="backhome-div">Home</div>
 
         <main class="mdl-layout__content">
 
@@ -58,4 +59,4 @@
 
             </div>
 
-            <?php $this->need('footer.php'); ?>
+            <?php include('footer.php'); ?>

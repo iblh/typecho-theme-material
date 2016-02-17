@@ -23,8 +23,9 @@
 
                     <!--mdl-mini-footer-right-section-->
                     <div class="mdl-mini-footer--right-section">
-                        <div>Powered by <a href="http://typecho.org" class="footer-develop-a">Typecho</a><br/>
-                            Theme by <a href="https://viosey.com" class="footer-develop-a">Viosey</a>
+                        <div>
+                            <div class="footer-develop-div">Powered by <a href="http://typecho.org" class="footer-develop-a">Typecho</a></div>
+                            <div class="footer-develop-div">Theme by <a href="https://viosey.com" class="footer-develop-a">Viosey</a></div>
                         </div>
                     </div>
                 </footer>
@@ -34,22 +35,22 @@
     </body>
 
 
+    <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/ripples.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
     <script>
         Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
-          var link = el.querySelector('a');
-          if(!link) {
+            var link = el.querySelector('a');
+            if(!link) {
             return;
-          }
-          var target = link.getAttribute('href');
-          if(!target) {
+            }
+            var target = link.getAttribute('href');
+            if(!target) {
             return;
-          }
-          el.addEventListener('click', function() {
+            }
+            el.addEventListener('click', function() {
             location.href = target;
-          });
+            });
         });
 
         $("#visitor-url").focus(function(){
