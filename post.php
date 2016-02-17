@@ -55,7 +55,7 @@
                             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="article-fuctions-share-button">
                               <a class="comment-share-list-a" target="view_window" href="<?php $this->permalink(); ?>"><li class="mdl-menu__item">Open in New Tab</li></a>
-                              <a class="comment-share-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->content(); ?>+from&url=<?php $this->permalink(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
+                              <a class="comment-share-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->title(); ?>+from&url=<?php $this->permalink(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
                               <a class="comment-share-list-a" href="https://plus.google.com/share?url=<?php $this->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="mdl-menu__item">Share to Google+</li></a>
                             </ul>
                         </div>

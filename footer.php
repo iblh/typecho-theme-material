@@ -1,5 +1,4 @@
                 <!--footer-->
-
                 <footer class="mdl-mini-footer">
                     <!--mdl-mini-footer-left-section-->
                     <div class="mdl-mini-footer--left-section">
@@ -61,8 +60,5 @@
         });
 
     </script>
-
-
-
-
+    <?php $this->footer(); ?>
 </html>

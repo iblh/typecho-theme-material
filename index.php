@@ -5,7 +5,7 @@
  *
  * @package Typecho Material Design Theme
  * @author viosey
- * @version Alpha 2.3
+ * @version Alpha 2.4
  * @link https://viosey.com
  */
 
@@ -106,4 +106,4 @@ $this->need('header.php');
 
                 </div>
 
-                <?php $this->need('footer.php'); ?>
+                <?php include('footer.php'); ?>
