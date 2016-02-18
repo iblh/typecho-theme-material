@@ -1,16 +1,14 @@
 <?php
-
 /**
  * 这是 Viosey 基于 Google Material Design 开发的Typecho模版
  *
  * @package Typecho Material Design Theme
  * @author viosey
- * @version Alpha 2.4
+ * @version Beta 2.0
  * @link https://viosey.com
  */
 
-$this->need('header.php');
-?>
+$this->need('header.php');?>
 
         <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
 
@@ -21,7 +19,7 @@ $this->need('header.php');
                     <!-- Daily Pic -->
                     <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col">
                         <div class="mdl-card__media mdl-color-text--grey-50">
-                            <h3><a href="entry.html">Daily Pic</a></h3>
+                            <p class="article-headline-p"><a href="#">Daily Pic</a></p>
                         </div>
                         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
                             <!-- 作者头像 -->
@@ -63,16 +61,16 @@ $this->need('header.php');
                     <?php while($this->next()): ?>
 
                     <!-- Article fragment -->
-                    <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
 
                         <!-- 文章链接和标题 -->
-                        <div class="mdl-card__media mdl-color-text--grey-50">
-                            <h3><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h3>
+                        <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
+                            <p class="article-headline-p"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></p>
                         </div>
 
                         <!-- 文章内容 -->
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
-                            <?php $this->content(' &nbsp;Continue &nbsp;Reading...'); ?>
+                            <?php $this->content('Continue Reading...'); ?>
                         </div>
 
                         <!-- 文章相关信息-->

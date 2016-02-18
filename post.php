@@ -16,8 +16,8 @@
                     <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
                         <!-- 文章标题 -->
-                        <div class="mdl-card__media mdl-color-text--grey-50">
-                            <h3><?php $this->title() ?></h3>
+                        <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(<?php showThumbnail($this); ?>);">
+                            <p class="article-headline-p"><?php $this->title() ?></p>
                         </div>
 
                         <!-- 文章相关信息 -->
@@ -55,14 +55,14 @@
                             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="article-fuctions-share-button">
                               <a class="comment-share-list-a" target="view_window" href="<?php $this->permalink(); ?>"><li class="mdl-menu__item">Open in New Tab</li></a>
-                              <a class="comment-share-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->title(); ?>+from&url=<?php $this->permalink(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
+                              <a class="comment-share-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->title(); ?>&url=<?php $this->permalink() ?>&via=viosey"><li class="mdl-menu__item" >Share to Twitter</li></a>
                               <a class="comment-share-list-a" href="https://plus.google.com/share?url=<?php $this->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="mdl-menu__item">Share to Google+</li></a>
                             </ul>
                         </div>
 
                         <!-- 文章内容 -->
                         <div id="article-content-div" class="mdl-color-text--grey-700 mdl-card__supporting-text post-article-content">
-                            <?php $this->content('Continue Reading...'); ?>
+                            <?php $this->content(); ?>
                         </div>
 
                         <!-- 文章评论 -->
