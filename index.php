@@ -4,7 +4,7 @@
  *
  * @package Typecho Material Design Theme
  * @author viosey
- * @version Beta 1.1
+ * @version Beta 1.2
  * @link https://viosey.com
  */
 
@@ -33,13 +33,14 @@ $this->need('header.php');?>
 
                     <!-- The Newist -->
                     <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-                        <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent">
-                            <i class="material-icons mdl-color-text--white" role="presentation">add</i>
+
+                        <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp">
+                            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
                             <span class="visuallyhidden">add</span>
                         </button>
+
                         <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
                             <img src="<?php $this->options->themeUrl('img/logo.png'); ?>">
-                            +1,337
                         </div>
                         <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
                             <div>
@@ -68,8 +69,14 @@ $this->need('header.php');?>
                                 <?php while($pages->next()): ?>
                                     <a href="<?php $pages->permalink(); ?>" class="md-menu-list-a" title="<?php $pages->title(); ?>"><li class="mdl-menu__item mdl-js-ripple-effect"><?php $pages->title(); ?></li></a>
                                 <?php endwhile; ?>
-                                <li class="mdl-menu__item mdl-js-ripple-effect">Message</li>
-                                <li class="mdl-menu__item mdl-js-ripple-effect">Search</li>
+                                <a href="<?php $this->options->feedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Article RSS</li></a> <!-- 文章的RSS地址连接 -->
+                                <a href="<?php $this->options->commentsFeedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Comment RSS</li></a> <!-- 评论的RSS地址连接 -->
+                                    <?php if($this->user->hasLogin()): ?>
+                                        <a href="<?php $this->options->adminUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect"><?php $this->user->screenName(); ?></li></a>
+                                        <a href="<?php $this->options->logoutUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Logout</li></a>
+                                    <?php else: ?>
+                                        <a href="<?php $this->options->adminUrl('login.php'); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Login</li></a>
+                                    <?php endif; ?>
                             </ul>
                         </div>
                     </div>

@@ -1,8 +1,9 @@
 <?php $this->need('header.php'); ?>
 
         <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
-            <main class="mdl-layout__content">
 
+            <main class="mdl-layout__content">
+                <div id="top"></div>
                 <!-- 左上角返回按钮 -->
                 <div class="demo-back" id="backhome-div">
                   <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" role="button">

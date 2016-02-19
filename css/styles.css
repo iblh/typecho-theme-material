@@ -571,6 +571,7 @@ body .demo-blog {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	text-decoration: none;
+	font-weight: 400;
 }
 @media screen and (max-width: 850px){
 	#comment-input-div{
@@ -626,6 +627,7 @@ blockquote {
 		h1, h2, h3, h4, h5, h6 {
 			font-weight: 400;
 			margin-left: 1pc;
+			margin: 24px 0 16px !important;
 		}
 		h1{
 			background-color: #F6F6F6;
@@ -669,7 +671,6 @@ blockquote {
 		}
 		h3{
 			background-color: #F6F6F6;
-			margin: 24px 0 16px !important;
 			font-size: 30px;
 			line-height: 39px;
 		}

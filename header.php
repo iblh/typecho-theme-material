@@ -36,11 +36,12 @@
         <meta property="og:description"   content="Your description" />
     	<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 
-        <!-- Material icon -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
         <?php $this->header(); ?>
+
+        <!-- Material icon -->
+        <link href="<?php $this->options->themeUrl('css/materialfontfamily.css'); ?>" rel="stylesheet">
+        <link href="<?php $this->options->themeUrl('css/materialicon.css'); ?>" rel="stylesheet">
+
 
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.min.css'); ?>" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/styles.css'); ?>" />
@@ -63,4 +64,3 @@
     </head>
 
     <body>
-        

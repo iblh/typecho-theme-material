@@ -1,6 +1,6 @@
 
                 <!-- Back to Top -->
-                <a href="#top"><button id="back_to_top" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <a href="#top"><button id="back_to_top" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--6dp">
                   <i class="material-icons">expand_less</i>
                 </button></a>
 

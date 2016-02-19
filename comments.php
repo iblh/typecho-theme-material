@@ -90,8 +90,10 @@
 		        <?php if($this->user->hasLogin()): ?>
 
 		            <!-- 显示当前登录用户的用户名以及登出连接 -->
-		            <p style="color:#8A8A8A">Logged in as <a href="<?php $this->options->adminUrl(); ?>" style="font-weight:400"><?php $this->user->screenName(); ?></a>.
-		            <a href="<?php $this->options->logoutUrl(); ?>" title="Logout" style="font-weight:400">Logout &raquo;</a></p>
+		            <p style="color:#8A8A8A;" class="visitor-name-span">Logged in as
+                        <a href="<?php $this->options->adminUrl(); ?>" style="font-weight:400"><?php $this->user->screenName(); ?></a>.
+		                <a href="<?php $this->options->logoutUrl(); ?>" title="Logout" style="font-weight:400">Logout &raquo;</a>
+                    </p>
 
 		        <!-- 若当前用户未登录 -->
 		        <?php else: ?>

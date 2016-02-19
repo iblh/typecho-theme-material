@@ -11,7 +11,7 @@
             <div class="mdl-tooltip" for="backhome-div">Home</div>
 
             <main class="mdl-layout__content">
-
+                <div id="top"></div>
                 <div class="demo-blog__posts mdl-grid">
 
                     <?php while($this->next()): ?>
