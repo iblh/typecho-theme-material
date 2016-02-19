@@ -497,6 +497,9 @@ body .demo-blog {
 .mdl-mini-footer--right-section{
     margin-right: 60px;
 }
+.mdl-mini-footer--social-btn{
+	outline-style: none;
+}
 .demo-nav{
 	font-weight: 300 !important;
 }
@@ -527,7 +530,7 @@ body .demo-blog {
 	font-size: 13px;
     font-weight: 400 !important;
 }
-.comment-share-list-a{
+.md-menu-list-a{
 	text-decoration: none;
 }
 #comment__avatar{
@@ -618,9 +621,11 @@ pre {
 blockquote {
 	word-break: break-all;
 	word-wrap: break-word;
+    font-size: 16px;
 }
 		h1, h2, h3, h4, h5, h6 {
 			font-weight: 400;
+			margin-left: 1pc;
 		}
 		h1{
 			background-color: #F6F6F6;
@@ -747,4 +752,14 @@ blockquote {
 }
 .more{
 	margin-left: 1pc;
+}
+#back_to_top{
+	float: right;
+	background: #00BCD4;
+	margin-right: 8pc;
+    top: 50px;
+}
+#top{
+	position: absolute;
+	top: 0px;
 }

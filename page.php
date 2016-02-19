@@ -37,15 +37,6 @@
                                 <span class="visuallyhidden">favorites</span>
                             </button>
                             <div class="mdl-tooltip" for="article-functions-like-button">Like</div>
-                            <!-- view tags -->
-                            <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                                <i class="material-icons">view_carousel</i>
-                                <span class="visuallyhidden">tags</span>
-                            </button>
-                            <div class="mdl-tooltip" for="article-functions-viewtags-button">Tags</div>
-                            <ul id="article-functions-viewtags-ul" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-                              <li class="mdl-menu__item"><?php $this->tags('<li class="mdl-menu__item"> ', true, ''); ?></li>
-                            </ul>
                             <!-- share -->
                             <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <i class="material-icons" role="presentation">share</i>

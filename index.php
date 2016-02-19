@@ -4,7 +4,7 @@
  *
  * @package Typecho Material Design Theme
  * @author viosey
- * @version Beta 1.0
+ * @version Beta 1.1
  * @link https://viosey.com
  */
 
@@ -13,7 +13,7 @@ $this->need('header.php');?>
         <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
 
             <main class="mdl-layout__content">
-
+                <div id="top"></div>
                 <div class="demo-blog__posts mdl-grid">
 
                     <!-- Daily Pic -->
@@ -43,18 +43,34 @@ $this->need('header.php');?>
                         </div>
                         <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
                             <div>
-                                <strong>The Newist</strong>
+                                <strong><?php $this->options->title();  ?></strong>
                             </div>
-                            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-                                <li class="mdl-menu__item mdl-js-ripple-effect">About</li>
-                                <li class="mdl-menu__item mdl-js-ripple-effect">Message</li>
-                                <li class="mdl-menu__item mdl-js-ripple-effect">Favorite</li>
-                                <li class="mdl-menu__item mdl-js-ripple-effect">Search</li>
+                            <div class="section-spacer"></div>
+                            <!-- Category Button -->
+                            <button id="show-category-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <i class="material-icons" role="presentation">apps</i>
+                                <span class="visuallyhidden">Show Category</span>
+                            </button>
+                            <div class="mdl-tooltip" for="show-category-button">Category</div>
+                            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-category-button">
+                                <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
+        				      	<?php while($category->next()): ?>
+        							<a href="<?php $category->permalink(); ?>" class="md-menu-list-a" title="<?php $category->name(); ?>"><li class="mdl-menu__item mdl-js-ripple-effect"><?php $category->name(); ?></li></a>
+        				      	<?php endwhile; ?>
                             </ul>
+                            <!--  Menu Button-->
                             <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <i class="material-icons" role="presentation">more_vert</i>
                                 <span class="visuallyhidden">show menu</span>
                             </button>
+                            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+                                <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+                                <?php while($pages->next()): ?>
+                                    <a href="<?php $pages->permalink(); ?>" class="md-menu-list-a" title="<?php $pages->title(); ?>"><li class="mdl-menu__item mdl-js-ripple-effect"><?php $pages->title(); ?></li></a>
+                                <?php endwhile; ?>
+                                <li class="mdl-menu__item mdl-js-ripple-effect">Message</li>
+                                <li class="mdl-menu__item mdl-js-ripple-effect">Search</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -100,7 +116,6 @@ $this->need('header.php');?>
                         <div class="section-spacer"></div>
                         <?php $this->pageLink('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button>','next'); ?>
                     </nav>
-
 
                 </div>
 

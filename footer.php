@@ -1,22 +1,28 @@
-                <!--footer-->
+
+                <!-- Back to Top -->
+                <a href="#top"><button id="back_to_top" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                  <i class="material-icons">expand_less</i>
+                </button></a>
+
+                <!--Footer-->
                 <footer class="mdl-mini-footer">
                     <!--mdl-mini-footer-left-section-->
                     <div class="mdl-mini-footer--left-section">
-                        <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+                        <a href="https://twitter.com/viosey" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
                             <span class="visuallyhidden">Twitter</span>
-                        </button>
-                        <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
+                        </button></a>
+                        <a href="https://www.facebook.com/viosey" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
                             <span class="visuallyhidden">Facebook</span>
-                        </button>
-                        <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+                        </button></a>
+                        <a href="https://plus.google.com/116465253856896614917" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
                             <span class="visuallyhidden">Google Plus</span>
-                        </button>
-                        <button class="mdl-mini-footer--social-btn social-btn__share">
+                        </button></a>
+
+                        <button id="mdl-mini-footer--share-btn" class="mdl-mini-footer--social-btn social-btn__share">
                             <i class="material-icons" role="presentation">share</i>
                             <span class="visuallyhidden">share</span>
                         </button>
                     </div>
-
                     <!--copyright-->
                     <div id="copyright">Copyright &copy; 2016&nbsp;<?php $this->options->title(); ?></div>
 
@@ -52,6 +58,7 @@
             });
         });
 
+        //Auto fill visitor-url "http://"
         $("#visitor-url").focus(function(){
             this.value="http://";
         });
