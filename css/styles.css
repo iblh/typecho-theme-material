@@ -159,8 +159,8 @@ body .demo-blog {
 
 .demo-blog .something-else .mdl-card__media img {
 	margin-bottom: 10px;
-	width: 4pc;
-	height: 4pc;
+	width: 10pc;
+	height: 10pc;
 }
 
 .demo-blog .something-else .mdl-card__supporting-text {
@@ -763,4 +763,11 @@ blockquote {
 #top{
 	position: absolute;
 	top: 0px;
+}
+#search-label{
+	right: 28px;
+	bottom: 39px;
+}
+#search-form{
+	bottom:47px;
 }

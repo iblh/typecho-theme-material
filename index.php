@@ -4,7 +4,7 @@
  *
  * @package Typecho Material Design Theme
  * @author viosey
- * @version Beta 1.2
+ * @version Beta 2.0
  * @link https://viosey.com
  */
 
@@ -33,11 +33,16 @@ $this->need('header.php');?>
 
                     <!-- The Newist -->
                     <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-
-                        <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp">
-                            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-                            <span class="visuallyhidden">add</span>
-                        </button>
+                        <!-- Search -->
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
+                            <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
+                                <i class="material-icons mdl-color-text--white" role="presentation">search</i>
+                            </label>
+                            <form id="search-form" method="post" action="" class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="text" name="s" id="search">
+                                <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                            </form>
+                        </div>
 
                         <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
                             <img src="<?php $this->options->themeUrl('img/logo.png'); ?>">
@@ -52,7 +57,6 @@ $this->need('header.php');?>
                                 <i class="material-icons" role="presentation">apps</i>
                                 <span class="visuallyhidden">Show Category</span>
                             </button>
-                            <div class="mdl-tooltip" for="show-category-button">Category</div>
                             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-category-button">
                                 <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
         				      	<?php while($category->next()): ?>
