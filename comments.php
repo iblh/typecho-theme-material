@@ -25,7 +25,7 @@
                 <!--评论者的名字-->
                 <span class="visitor-name-span"><?php $comments->author(); ?></span>
                 <!--评论日期-->
-                <span><?php $comments->dateWord(); ?></span>
+                <span><?php $comments->date('F j, Y'); ?></span>    <!-- CN: dateWord(); -->
             </div>
         </header>
 

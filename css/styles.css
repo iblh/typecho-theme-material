@@ -16,6 +16,7 @@ body {
 }
 a {
 	color: #0097a7;
+    font-weight: 400;
 }
 
 body .demo-blog {
@@ -73,7 +74,7 @@ body .demo-blog {
 }
 
 .demo-blog .mdl-card__supporting-text strong {
-	font-weight: 400;
+	font-weight: 500;
 }
 
 .demo-blog .mdl-card__media~.mdl-card__supporting-text {
@@ -622,12 +623,12 @@ pre {
 blockquote {
 	word-break: break-all;
 	word-wrap: break-word;
-    font-size: 16px;
+    font-size: 14px;
 }
 		h1, h2, h3, h4, h5, h6 {
 			font-weight: 400;
 			margin-left: 1pc;
-			margin: 24px 0 16px !important;
+			margin: 24px 10px 16px 10px !important;
 		}
 		h1{
 			background-color: #F6F6F6;

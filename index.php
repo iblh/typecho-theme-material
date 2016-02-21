@@ -2,9 +2,9 @@
 /**
  * 这是 Viosey 基于 Google Material Design 开发的Typecho模版
  *
- * @package Typecho Material Design Theme
+ * @package MaterialDesign-TypechoTheme
  * @author viosey
- * @version Beta 2.0
+ * @version Beta 2.1
  * @link https://viosey.com
  */
 
@@ -12,7 +12,7 @@ $this->need('header.php');?>
 
         <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
 
-            <main class="mdl-layout__content">
+            <main class="mdl-layout__content" id="main">
                 <div id="top"></div>
                 <div class="demo-blog__posts mdl-grid">
 
@@ -31,7 +31,7 @@ $this->need('header.php');?>
                         </div>
                     </div>
 
-                    <!-- The Newist -->
+                    <!-- Blog info -->
                     <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
                         <!-- Search -->
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
@@ -43,10 +43,11 @@ $this->need('header.php');?>
                                 <label class="mdl-textfield__label" for="search">Enter your query...</label>
                             </form>
                         </div>
-
+                        <!-- LOGO -->
                         <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
                             <img src="<?php $this->options->themeUrl('img/logo.png'); ?>">
                         </div>
+                        <!-- infomation -->
                         <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
                             <div>
                                 <strong><?php $this->options->title();  ?></strong>
@@ -75,12 +76,12 @@ $this->need('header.php');?>
                                 <?php endwhile; ?>
                                 <a href="<?php $this->options->feedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Article RSS</li></a> <!-- 文章的RSS地址连接 -->
                                 <a href="<?php $this->options->commentsFeedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Comment RSS</li></a> <!-- 评论的RSS地址连接 -->
-                                    <?php if($this->user->hasLogin()): ?>
-                                        <a href="<?php $this->options->adminUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect"><?php $this->user->screenName(); ?></li></a>
-                                        <a href="<?php $this->options->logoutUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Logout</li></a>
-                                    <?php else: ?>
-                                        <a href="<?php $this->options->adminUrl('login.php'); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Login</li></a>
-                                    <?php endif; ?>
+                                <?php if($this->user->hasLogin()): ?>
+                                    <a href="<?php $this->options->adminUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect"><?php $this->user->screenName(); ?></li></a>
+                                    <a href="<?php $this->options->logoutUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Logout</li></a>
+                                <?php else: ?>
+                                    <a href="<?php $this->options->adminUrl('login.php'); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Login</li></a>
+                                <?php endif; ?>
                             </ul>
                         </div>
                     </div>
