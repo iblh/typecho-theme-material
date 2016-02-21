@@ -4,7 +4,7 @@
  *
  * @package MaterialDesign-TypechoTheme
  * @author viosey
- * @version Beta 2.1
+ * @version Beta 3.0
  * @link https://viosey.com
  */
 
@@ -14,6 +14,11 @@ $this->need('header.php');?>
 
             <main class="mdl-layout__content" id="main">
                 <div id="top"></div>
+                <!-- Sidebar hamburger button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                  <span class="MD-burger-layer"></span>
+                </button>
+
                 <div class="demo-blog__posts mdl-grid">
 
                     <!-- Daily Pic -->
@@ -38,9 +43,7 @@ $this->need('header.php');?>
                             <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
                                 <i class="material-icons mdl-color-text--white" role="presentation">search</i>
                             </label>
-                            <form id="search-form" method="post" action="" class="mdl-textfield__expandable-holder">
-                                <input class="mdl-textfield__input" type="text" name="s" id="search">
-                                <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                            <form id="search-form" method="post" action="" class="mdl-textfield__expandable-holder"> <input class="mdl-textfield__input" type="text" name="s" id="search"> <label class="mdl-textfield__label" for="search">Enter your query...</label>
                             </form>
                         </div>
                         <!-- LOGO -->
@@ -131,4 +134,5 @@ $this->need('header.php');?>
 
                 </div>
 
+                <?php include('sidebar.php'); ?>
                 <?php include('footer.php'); ?>

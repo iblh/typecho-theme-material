@@ -34,17 +34,18 @@
     	<meta property="og:type"          content="website" />
     	<meta property="og:title"         content="<?php $this->archiveTitle(); ?>" />
         <meta property="og:description"   content="Your description" />
-    	<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 
         <?php $this->header(); ?>
 
-        <!-- Material icon -->
-        <link href="<?php $this->options->themeUrl('css/materialfontfamily.css'); ?>" rel="stylesheet">
-        <link href="<?php $this->options->themeUrl('css/materialicon.css'); ?>" rel="stylesheet">
+        <!-- Material style -->
+        <link rel="stylesheet" href="<?php $this->options->themeUrl('css/material.fontfamily.css'); ?>">
+        <link rel="stylesheet" href="<?php $this->options->themeUrl('css/material.icon.css'); ?>">
 
 
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.min.css'); ?>" />
-        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/styles.css'); ?>" />
+        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
+        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/burger.css'); ?>">
+        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/sidebar.css'); ?>">
 
         <style>
             body{

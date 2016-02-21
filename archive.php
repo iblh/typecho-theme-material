@@ -1,17 +1,21 @@
 <?php $this->need('header.php'); ?>
-
+        
         <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded demo-blog--blogpost">
-
-            <!-- 左上角返回按钮 -->
-            <div class="demo-back" id="backhome-div">
-                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" title="go back" role="button">
-                    <i class="material-icons" role="presentation">arrow_back</i>
-                </a>
-            </div>
-            <div class="mdl-tooltip" for="backhome-div">Home</div>
 
             <main class="mdl-layout__content">
                 <div id="top"></div>
+                <!-- Sidebar hamburger button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                  <span class="MD-burger-layer"></span>
+                </button>
+                <!-- 左上角返回按钮 -->
+                <div class="demo-back" id="backhome-div">
+                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" title="go back" role="button">
+                        <i class="material-icons" role="presentation">arrow_back</i>
+                    </a>
+                </div>
+                <div class="mdl-tooltip" for="backhome-div">Home</div>
+
                 <div class="demo-blog__posts mdl-grid">
 
                     <?php while($this->next()): ?>
@@ -57,7 +61,7 @@
                         <?php $this->pageLink('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button>','next'); ?>
                     </nav>
 
-
                 </div>
 
+                <?php include('sidebar.php'); ?>
                 <?php include('footer.php'); ?>

@@ -8,13 +8,13 @@
                 <footer class="mdl-mini-footer">
                     <!--mdl-mini-footer-left-section-->
                     <div class="mdl-mini-footer--left-section">
-                        <a href="https://twitter.com/viosey" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+                        <a href="https://twitter.com/viosey" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-twitter.png'); ?>);">
                             <span class="visuallyhidden">Twitter</span>
                         </button></a>
-                        <a href="https://www.facebook.com/viosey" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
+                        <a href="https://www.facebook.com/viosey" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-facebook.png'); ?>);">
                             <span class="visuallyhidden">Facebook</span>
                         </button></a>
-                        <a href="https://plus.google.com/116465253856896614917" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+                        <a href="https://plus.google.com/116465253856896614917" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-gplus.png'); ?>);">
                             <span class="visuallyhidden">Google Plus</span>
                         </button></a>
 
@@ -43,6 +43,9 @@
     <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/ripples.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('js/burger.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('js/sidebar.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
     <script>
         Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
             var link = el.querySelector('a');

@@ -342,10 +342,10 @@ body .demo-blog {
 }
 
 .demo-blog--blogpost .demo-back {
-	position: absolute;
-	top: 1pc;
+	position: fixed;;
+	top: 5pc;
 	left: 1pc;
-	z-index: 9999;
+	z-index: -1;
 	color: #fff;
 }
 
@@ -390,17 +390,6 @@ body .demo-blog {
 	cursor: pointer;
 }
 
-.social-btn__twitter {
-	background-image: url(https://gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png);
-}
-
-.social-btn__blogger {
-	background-image: url(https://gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png);
-}
-
-.social-btn__gplus {
-	background-image: url(https://gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png);
-}
 
 .social-btn__share {
 	background: 0 0;
@@ -770,5 +759,5 @@ blockquote {
 	bottom: 39px;
 }
 #search-form{
-	bottom:47px;
+	bottom:45px;
 }
