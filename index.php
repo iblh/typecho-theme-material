@@ -4,7 +4,7 @@
  *
  * @package MaterialDesign-TypechoTheme
  * @author viosey
- * @version Beta 3.0
+ * @version Beta 3.1
  * @link https://viosey.com
  */
 
@@ -45,23 +45,23 @@ $this->need('header.php');?>
                             </label>
                             <form id="search-form" method="post" action="" class="mdl-textfield__expandable-holder">
                                 <input class="mdl-textfield__input" type="text" name="s" id="search">
-                                <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                                <label id="search-form-label" class="mdl-textfield__label" for="search">Enter your query...</label>
                             </form>
                         </div>
                         <!-- LOGO -->
                         <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
                             <img src="<?php $this->options->themeUrl('img/logo.png'); ?>">
                         </div>
-                        <!-- infomation -->
+                        <!-- Infomation -->
                         <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
                             <div>
                                 <strong><?php $this->options->title();  ?></strong>
                             </div>
                             <div class="section-spacer"></div>
-                            <!-- Category Button -->
+                            <!-- Category button -->
                             <button id="show-category-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <i class="material-icons" role="presentation">apps</i>
-                                <span class="visuallyhidden">Show Category</span>
+                                <span class="visuallyhidden">Category</span>
                             </button>
                             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-category-button">
                                 <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
@@ -69,7 +69,7 @@ $this->need('header.php');?>
         							<a href="<?php $category->permalink(); ?>" class="md-menu-list-a" title="<?php $category->name(); ?>"><li class="mdl-menu__item mdl-js-ripple-effect"><?php $category->name(); ?></li></a>
         				      	<?php endwhile; ?>
                             </ul>
-                            <!--  Menu Button-->
+                            <!--  Menu button-->
                             <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <i class="material-icons" role="presentation">more_vert</i>
                                 <span class="visuallyhidden">show menu</span>
@@ -81,12 +81,7 @@ $this->need('header.php');?>
                                 <?php endwhile; ?>
                                 <a href="<?php $this->options->feedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Article RSS</li></a> <!-- 文章的RSS地址连接 -->
                                 <a href="<?php $this->options->commentsFeedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Comment RSS</li></a> <!-- 评论的RSS地址连接 -->
-                                <?php if($this->user->hasLogin()): ?>
-                                    <a href="<?php $this->options->adminUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect"><?php $this->user->screenName(); ?></li></a>
-                                    <a href="<?php $this->options->logoutUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Logout</li></a>
-                                <?php else: ?>
-                                    <a href="<?php $this->options->adminUrl('login.php'); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Login</li></a>
-                                <?php endif; ?>
+                                <a href="<?php $this->options->siteUrl(); ?>" target="window" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Open in New Tab</li></a>
                             </ul>
                         </div>
                     </div>

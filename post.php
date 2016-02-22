@@ -1,6 +1,6 @@
 <?php $this->need('header.php'); ?>
 
-        <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
+         <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
 
             <main class="mdl-layout__content">
                 <div id="top"></div>

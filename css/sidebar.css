@@ -11,6 +11,14 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.sidebar-material-icons{
+    margin-right: 2pc;
+    top: 15%;
+    position: relative;
+    /*vertical-align: middle;*/
+}
+
 .sidebar-overlay {
   visibility: hidden;
   position: fixed;
@@ -20,7 +28,7 @@
   bottom: 0;
   opacity: 0;
   background: #000;
-  z-index: 1034;
+  z-index: 998;
   -webkit-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   -moz-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -79,6 +87,9 @@
 }
 
 /* -- Sidebar style ------------------------------- */
+#sidebar{
+    z-index: 999;
+}
 .sidebar {
   position: relative;
   display: block;
@@ -90,6 +101,17 @@
   -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
+#sidebar-first-li a{
+    margin-top: 10px;
+}
+.sidebar-footer-text-a{
+    text-decoration: none;
+}
+.sidebar-footer-text-div{
+    text-align: left;
+    text-transform: none;
+}
+
 .sidebar:before,
 .sidebar:after {
   content: " ";
@@ -176,7 +198,6 @@
   padding-right: 56px;
   text-decoration: none;
   clear: both;
-  font-weight: 500;
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;

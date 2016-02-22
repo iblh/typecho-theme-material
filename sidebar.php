@@ -14,66 +14,116 @@
         </button>
         <!-- Sidebar brand image -->
         <div class="sidebar-image">
-            <img src="<?php $this->options->themeUrl('img/avatar.png'); ?>">
+            <?php $this->author->gravatar(); ?>
         </div>
         <!-- Sidebar brand name -->
         <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-            viosey@outlook.com
+            <?php $this->user->mail(); ?>
             <b class="caret"></b>
         </a>
     </div>
 
-    <!-- Sidebar navigation -->
+    <!-- Sidebar navigation / 侧边栏导航 -->
     <ul class="nav sidebar-nav">
-        <!-- User Dropdown -->
+        <!-- User dropdown / 用户下拉选项 -->
         <li class="dropdown">
             <ul id="settings-dropdown" class="dropdown-menu">
                 <li>
-                    <a href="#" tabindex="-1">
+                    <a href="<?php $this->options->adminUrl(); ?>" tabindex="-1">
+                        <i class="material-icons sidebar-material-icons" style="margin-left: 1pc;">account_circle</i>
                         Profile
                     </a>
                 </li>
                 <li>
-                    <a href="#" tabindex="-1">
+                    <a href="<?php $this->options->profileUrl(); ?>" tabindex="-1">
+                        <i class="material-icons sidebar-material-icons" style="margin-left: 1pc;">settings</i>
                         Settings
                     </a>
                 </li>
-                <li>
-                    <a href="#" tabindex="-1">
-                        Help
-                    </a>
-                </li>
-                <li>
-                    <a href="#" tabindex="-1">
-                        Exit
-                    </a>
-                </li>
+                <?php if($this->user->hasLogin()): ?>
+                    <li>
+                        <a href="<?php $this->options->logoutUrl(); ?>" class="md-menu-list-a" tabindex="-1">
+                            <i class="material-icons sidebar-material-icons" style="margin-left: 1pc;">exit_to_app</i>
+                            Exit
+                        </a>
+                    </li>
+                <?php else: ?>
+                    <li>
+                        <a href="<?php $this->options->loginUrl(); ?>" class="md-menu-list-a" tabindex="-1">
+                            <i class="material-icons sidebar-material-icons" style="margin-left: 1pc;">fingerprint</i>
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php $this->options->adminUrl('register.php'); ?>" class="md-menu-list-a" tabindex="-1">
+                            <i class="material-icons sidebar-material-icons" style="margin-left: 1pc;">person_add</i>
+                            Register
+                        </a>
+                    </li>
+                <?php endif; ?>
             </ul>
         </li>
-        <!-- Function -->
-        <li>
+
+        <!-- First -->
+        <li id="sidebar-first-li">
             <a href="#">
-                <i class="material-icons">move_to_inbox</i>
+                <i class="material-icons sidebar-material-icons">move_to_inbox</i>
                 Inbox
             </a>
         </li>
-        <li>
-            <a href="#">
-                <i class="material-icons">star</i>
-                Starred
+        <!-- Newest Article / 最新文章 -->
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                <i class="material-icons sidebar-material-icons">library_books</i>
+                Newest Article
+                <b class="caret"></b>
             </a>
+            <ul class="dropdown-menu">
+                <?php $this->widget('Widget_Contents_Post_Recent','pageSize=5')
+                ->parse('
+                <li>
+                    <a href="{permalink}" tabindex="-1">
+                        {title}
+                    </a>
+                </li>
+                '); ?>
+            </ul>
         </li>
-        <li>
-            <a href="#">
-                <i class="material-icons">send</i>
-                Sent Mail
+        <!-- Newest Comments / 最新评论 -->
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                <i class="material-icons sidebar-material-icons">forum</i>
+                Newest Comments
+                <b class="caret"></b>
             </a>
+            <ul class="dropdown-menu">
+                <?php $this->widget('Widget_Comments_Recent','pageSize=5')
+                ->parse('
+                <li>
+                    <a href="{permalink}" tabindex="-1">
+                        {text}
+                    </a>
+                </li>
+                '); ?>
+            </ul>
         </li>
-        <li>
-            <a href="#">
-                <i class="material-icons">drafts</i>
-                Drafts
+        <!-- Archives / 归档 -->
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                <i class="material-icons sidebar-material-icons">inbox</i>
+                Archives
+                <b class="caret"></b>
             </a>
+            <ul class="dropdown-menu">
+                <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')
+                ->parse('
+                <li>
+                    <a href="{permalink}" tabindex="-1">
+                        {date}
+                    </a>
+                </li>
+                '); ?>
+            </ul>
         </li>
 
         <li class="divider"></li>
@@ -83,6 +133,7 @@
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
+
                 <li>
                     <a href="#" tabindex="-1">
                         Social
@@ -118,8 +169,10 @@
         </li>
     </ul>
     <!-- Sidebar divider -->
-    <!-- <div class="sidebar-divider"></div> -->
+     <div class="sidebar-divider"></div>
 
-    <!-- Sidebar text -->
-    <!--  <div class="sidebar-text">Text</div> -->
+    <!-- Sidebar bottom text -->
+    <a href="#" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">Help & Support</div></a>
+    <a href="#" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">Feedback</div></a>
+    <a href="#" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">About Theme</div></a>
 </aside>

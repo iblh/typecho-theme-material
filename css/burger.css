@@ -8,6 +8,7 @@
   height: 15px;
   position: fixed;
   top: 2pc;
+  z-index: 997;
 }
 .MD-burger-layer {
   display: block;
