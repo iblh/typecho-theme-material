@@ -1,7 +1,10 @@
 
                 <!-- Back to Top -->
                 <a href="#top"><button id="back_to_top" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--6dp">
-                  <i class="material-icons">expand_less</i>
+                    <!-- For modern browsers. -->
+                    <i class="material-icons">expand_less</i>
+                    <!-- For IE9 or below. -->
+                    <i class="material-icons">&#xE5CE;</i>
                 </button></a>
 
                 <!--Footer-->
@@ -19,7 +22,10 @@
                         </button></a>
 
                         <button id="mdl-mini-footer--share-btn" class="mdl-mini-footer--social-btn social-btn__share">
+                            <!-- For modern browsers. -->
                             <i class="material-icons" role="presentation">share</i>
+                            <!-- For IE9 or below. -->
+                            <i class="material-icons">&#xE80D;</i>
                             <span class="visuallyhidden">share</span>
                         </button>
                     </div>

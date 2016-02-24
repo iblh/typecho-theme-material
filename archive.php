@@ -1,5 +1,5 @@
 <?php $this->need('header.php'); ?>
-        
+
         <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded demo-blog--blogpost">
 
             <main class="mdl-layout__content">
@@ -11,7 +11,10 @@
                 <!-- 左上角返回按钮 -->
                 <div class="demo-back" id="backhome-div">
                     <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" title="go back" role="button">
+                        <!-- For modern browsers. -->
                         <i class="material-icons" role="presentation">arrow_back</i>
+                        <!-- For IE9 or below. -->
+                        <i class="material-icons">&#xE5C4;</i>
                     </a>
                 </div>
                 <div class="mdl-tooltip" for="backhome-div">Home</div>
@@ -53,12 +56,26 @@
                     <?php endwhile; ?>
 
                     <nav class="demo-nav mdl-cell mdl-cell--12-col">
-                        <?php $this->pageLink('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button>'); ?>
+                        <?php $this->pageLink('
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <!-- For modern browsers. -->
+                            <i class="material-icons" role="presentation">arrow_back</i>
+                            <!-- For IE9 or below. -->
+                            <i class="material-icons">&#xE5C4;</i>
+                        </button>
+                        '); ?>
                         <div class="section-spacer"></div>
                         page <?php if($this->_currentPage>1) echo $this->_currentPage;  else echo 1;?>
                         of <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
                         <div class="section-spacer"></div>
-                        <?php $this->pageLink('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button>','next'); ?>
+                        <?php $this->pageLink('
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <!-- For modern browsers. -->
+                            <i class="material-icons" role="presentation">arrow_forward</i>
+                            <!-- For IE9 or below. -->
+                            <i class="material-icons">&#xE5C8;</i>
+                        </button>
+                        ','next'); ?>
                     </nav>
 
                 </div>

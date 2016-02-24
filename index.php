@@ -4,7 +4,7 @@
  *
  * @package MaterialDesign-TypechoTheme
  * @author viosey
- * @version Beta 3.1
+ * @version Beta 4.0
  * @link https://viosey.com
  */
 
@@ -41,7 +41,10 @@ $this->need('header.php');?>
                         <!-- Search -->
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
                             <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
+                                <!-- For modern browsers. -->
                                 <i class="material-icons mdl-color-text--white" role="presentation">search</i>
+                                <!-- For IE9 or below. -->
+                                <i class="material-icons mdl-color-text--white">&#xE8B6;</i>
                             </label>
                             <form id="search-form" method="post" action="" class="mdl-textfield__expandable-holder">
                                 <input class="mdl-textfield__input" type="text" name="s" id="search">
@@ -60,7 +63,10 @@ $this->need('header.php');?>
                             <div class="section-spacer"></div>
                             <!-- Category button -->
                             <button id="show-category-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">apps</i>
+                                <!-- For IE9 or below. -->
+                                <i class="material-icons">&#xE5C3;</i>
                                 <span class="visuallyhidden">Category</span>
                             </button>
                             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-category-button">
@@ -71,7 +77,10 @@ $this->need('header.php');?>
                             </ul>
                             <!--  Menu button-->
                             <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">more_vert</i>
+                                <!-- For IE9 or below. -->
+                                <i class="material-icons">&#xE5D4;</i>
                                 <span class="visuallyhidden">show menu</span>
                             </button>
                             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
@@ -121,12 +130,25 @@ $this->need('header.php');?>
                     <?php endwhile; ?>
 
                     <nav class="demo-nav mdl-cell mdl-cell--12-col">
-                        <?php $this->pageLink('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button>'); ?>
+                        <?php $this->pageLink('
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <!-- For modern browsers. -->
+                            <i class="material-icons" role="presentation">arrow_back</i>
+                            <!-- For IE9 or below. -->
+                            <i class="material-icons">&#xE5C4;</i>
+                        </button>
+                        '); ?>
                         <div class="section-spacer"></div>
                         page <?php if($this->_currentPage>1) echo $this->_currentPage;  else echo 1;?>
                         of <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
                         <div class="section-spacer"></div>
-                        <?php $this->pageLink('<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button>','next'); ?>
+                        <?php $this->pageLink('
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <!-- For modern browsers. -->
+                            <i class="material-icons" role="presentation">arrow_forward</i>
+                            <!-- For IE9 or below. -->
+                            <i class="material-icons">&#xE5C8;</i>
+                        </button>','next'); ?>
                     </nav>
 
                 </div>

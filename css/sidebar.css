@@ -18,7 +18,9 @@
     position: relative;
     /*vertical-align: middle;*/
 }
-
+.sidebar-indent-left1pc-element{
+    margin-left: 1pc;
+}
 .sidebar-overlay {
   visibility: hidden;
   position: fixed;

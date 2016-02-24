@@ -10,9 +10,12 @@
                 </button>
                 <!-- 左上角返回按钮 -->
                 <div class="demo-back" id="backhome-div">
-                  <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" role="button">
-                    <i class="material-icons" role="presentation">arrow_back</i>
-                  </a>
+                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" role="button">
+                        <!-- For modern browsers. -->
+                        <i class="material-icons" role="presentation">arrow_back</i>
+                        <!-- For IE9 or below. -->
+                        <i class="material-icons">&#xE5C4;</i>
+                    </a>
                 </div>
                 <div class="mdl-tooltip" for="backhome-div">Home</div>
 
@@ -38,13 +41,19 @@
                             <div class="section-spacer"></div>
                             <!-- favorite -->
                             <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">favorite</i>
+                                <!-- For IE9 or below. -->
+                                <i class="material-icons">&#xE87D;</i>
                                 <span class="visuallyhidden">favorites</span>
                             </button>
                             <div class="mdl-tooltip" for="article-functions-like-button">Like</div>
                             <!-- share -->
                             <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">share</i>
+                                <!-- For IE9 or below. -->
+                                <i class="material-icons">&#xE80D;</i>
                                 <span class="visuallyhidden">share</span>
                             </button>
                             <div class="mdl-tooltip" for="article-fuctions-share-button">Share</div>
@@ -68,11 +77,17 @@
                     <!-- theNext thePrev button -->
                     <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
                         <?php $this->theNext('%s', NULL, array('title' => '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                            <!-- For modern browsers. -->
                             <i class="material-icons">arrow_back</i>
+                            <!-- For IE9 or below. -->
+                            <i class="material-icons">&#xE5C4;</i>
                         </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Newer', 'tagClass' => 'prev-content')); ?>
                         <div class="section-spacer"></div>
                         <?php $this->thePrev('%s', NULL, array('title' => 'Older&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                            <!-- For modern browsers. -->
                             <i class="material-icons">arrow_forward</i>
+                            <!-- For IE9 or below. -->
+                            <i class="material-icons">&#xE5C8;</i>
                         </button>', 'tagClass' => 'prev-content')); ?>
                     </nav>
                 </div>

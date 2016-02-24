@@ -342,7 +342,7 @@ body .demo-blog {
 }
 
 .demo-blog--blogpost .demo-back {
-	position: fixed;;
+	position: fixed;
 	top: 5pc;
 	left: 1pc;
 	z-index: 997;

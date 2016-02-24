@@ -30,33 +30,33 @@
             <ul id="settings-dropdown" class="dropdown-menu">
                 <li>
                     <a href="<?php $this->options->adminUrl(); ?>" tabindex="-1">
-                        <i class="material-icons sidebar-material-icons" style="margin-left: 1pc;">account_circle</i>
+                        <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >account_circle</i>
                         Profile
                     </a>
                 </li>
                 <li>
                     <a href="<?php $this->options->profileUrl(); ?>" tabindex="-1">
-                        <i class="material-icons sidebar-material-icons" style="margin-left: 1pc;">settings</i>
+                        <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >settings</i>
                         Settings
                     </a>
                 </li>
                 <?php if($this->user->hasLogin()): ?>
                     <li>
                         <a href="<?php $this->options->logoutUrl(); ?>" class="md-menu-list-a" tabindex="-1">
-                            <i class="material-icons sidebar-material-icons" style="margin-left: 1pc;">exit_to_app</i>
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >exit_to_app</i>
                             Exit
                         </a>
                     </li>
                 <?php else: ?>
                     <li>
                         <a href="<?php $this->options->loginUrl(); ?>" class="md-menu-list-a" tabindex="-1">
-                            <i class="material-icons sidebar-material-icons" style="margin-left: 1pc;">fingerprint</i>
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >fingerprint</i>
                             Login
                         </a>
                     </li>
                     <li>
                         <a href="<?php $this->options->adminUrl('register.php'); ?>" class="md-menu-list-a" tabindex="-1">
-                            <i class="material-icons sidebar-material-icons" style="margin-left: 1pc;">person_add</i>
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >person_add</i>
                             Register
                         </a>
                     </li>
@@ -125,27 +125,45 @@
                 '); ?>
             </ul>
         </li>
-
+        <!-- divider -->
         <li class="divider"></li>
+        <!-- Hot tags / 标签 -->
+        <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=count&ignoreZeroCount=1&desc=0&limit=5')->to($tags); ?>
         <li class="dropdown">
             <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-                All Mail
+                Hot Tags
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-
-                <li>
-                    <a href="#" tabindex="-1">
-                        Social
-                        <span class="sidebar-badge">12</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" tabindex="-1">
-                        Promo
-                        <span class="sidebar-badge">0</span>
-                    </a>
-                </li>
+                <?php if($tags->have()): ?>
+                    <?php while ($tags->next()): ?>
+                        <li>
+                            <a href="<?php $tags->permalink(); ?>" tabindex="-1">
+                                <?php $tags->name(); ?>
+                                <span class="sidebar-badge"><?php $tags->count(); ?></span>
+                            </a>
+                        </li>
+                    <?php endwhile; ?>
+                    <?php else: ?>
+                        <li><?php _e('None Tag'); ?></li>
+                <?php endif; ?>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
+                Links
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <?php if (class_exists("Links_Plugin")): ?>
+                    <?php Links_Plugin::output('
+                    <li>
+                        <a href="{url}" title="{title}">
+                            {name}
+                        </a>
+                    </li>
+                    '); ?>
+                <?php endif; ?>
             </ul>
         </li>
 

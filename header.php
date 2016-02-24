@@ -2,7 +2,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" content="chrome=1">
+        <meta http-equiv="X-UA-Compatible">
         <meta name="description" content=" ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#">
@@ -38,8 +38,8 @@
         <?php $this->header(); ?>
 
         <!-- Material style -->
-        <link rel="stylesheet" href="<?php $this->options->themeUrl('css/material.fontfamily.css'); ?>">
-        <link rel="stylesheet" href="<?php $this->options->themeUrl('css/material.icon.css'); ?>">
+        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.fontfamily.css'); ?>">
+        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.icon.css'); ?>">
 
 
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.min.css'); ?>" />
@@ -48,9 +48,6 @@
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/sidebar.css'); ?>">
 
         <style>
-            body{
-
-            }
             #view-source {
                 position: fixed;
                 display: block;
