@@ -24,8 +24,6 @@
                         <button id="mdl-mini-footer--share-btn" class="mdl-mini-footer--social-btn social-btn__share">
                             <!-- For modern browsers. -->
                             <i class="material-icons" role="presentation">share</i>
-                            <!-- For IE9 or below. -->
-                            <i class="material-icons">&#xE80D;</i>
                             <span class="visuallyhidden">share</span>
                         </button>
                     </div>

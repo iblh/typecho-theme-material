@@ -4,7 +4,7 @@
  *
  * @package MaterialDesign-TypechoTheme
  * @author viosey
- * @version Beta 4.0
+ * @version Beta 4.1
  * @link https://viosey.com
  */
 
@@ -90,7 +90,7 @@ $this->need('header.php');?>
                                 <?php endwhile; ?>
                                 <a href="<?php $this->options->feedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Article RSS</li></a> <!-- 文章的RSS地址连接 -->
                                 <a href="<?php $this->options->commentsFeedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Comment RSS</li></a> <!-- 评论的RSS地址连接 -->
-                                <a href="<?php $this->options->siteUrl(); ?>" target="window" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Open in New Tab</li></a>
+                                <a href="<?php $this->options->siteUrl(); ?>" target="_blank" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Open in New Tab</li></a>
                             </ul>
                         </div>
                     </div>

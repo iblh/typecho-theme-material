@@ -71,6 +71,7 @@
                 Inbox
             </a>
         </li>
+
         <!-- Newest Article / 最新文章 -->
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
@@ -128,7 +129,7 @@
         <!-- divider -->
         <li class="divider"></li>
         <!-- Hot tags / 标签 -->
-        <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=count&ignoreZeroCount=1&desc=0&limit=5')->to($tags); ?>
+        <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=count&ignoreZeroCount=1&desc=1&limit=5')->to($tags); ?>
         <li class="dropdown">
             <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
                 Hot Tags
@@ -167,21 +168,19 @@
             </ul>
         </li>
 
+        <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+        Typecho_Widget::widget('Widget_Stat')->to($stat);
+        ?>
+        <!-- Article Numebr / 文章数 -->
         <li>
             <a href="#">
-                Trash
-                <span class="sidebar-badge">3</span>
+                Article Number
+                <span class="sidebar-badge"><?php echo $stat->publishedPostsNum;?></span>
             </a>
         </li>
         <li>
-            <a href="#">
-                Spam
-                <span class="sidebar-badge">456</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Follow Up
+            <a href="https://github.com/viosey/MaterialDesign-TypechoTheme" target="_blank">
+                Follow in Github
                 <span class="sidebar-badge badge-circle">i</span>
             </a>
         </li>

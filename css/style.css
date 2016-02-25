@@ -749,6 +749,7 @@ blockquote {
 #search-label{
 	right: 28px;
 	bottom: 39px;
+	z-index: 10;
 }
 #search-form{
 	bottom:45px;
@@ -758,4 +759,5 @@ blockquote {
 }
 #search-form-label:after{
     background-color: #ff4081;
+	width: 100%;
 }
