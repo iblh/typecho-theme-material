@@ -64,11 +64,11 @@
             </ul>
         </li>
 
-        <!-- First -->
+        <!-- Random / 随机文章 -->
         <li id="sidebar-first-li">
-            <a href="#">
-                <i class="material-icons sidebar-material-icons">move_to_inbox</i>
-                Inbox
+            <a href="<?php theme_random_posts();?>" target="_blank">
+                <i class="material-icons sidebar-material-icons">explore</i>
+                Random
             </a>
         </li>
 
@@ -150,6 +150,23 @@
                 <?php endif; ?>
             </ul>
         </li>
+        <!-- Pages / 页面 -->
+        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+        <li class="dropdown">
+            <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
+                Pages
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <?php while ($pages->next()): ?>
+                    <li>
+                        <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>" tabindex="-1">
+                            <?php $pages->title(); ?>
+                        </a>
+                    </li>
+                <?php endwhile; ?>
+            </ul>
+        </li>
         <li class="dropdown">
             <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
                 Links
@@ -159,7 +176,7 @@
                 <?php if (class_exists("Links_Plugin")): ?>
                     <?php Links_Plugin::output('
                     <li>
-                        <a href="{url}" title="{title}">
+                        <a href="{url}" target="_blank" itle="{title}">
                             {name}
                         </a>
                     </li>

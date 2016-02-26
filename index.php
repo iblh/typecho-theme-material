@@ -4,7 +4,7 @@
  *
  * @package MaterialDesign-TypechoTheme
  * @author viosey
- * @version Beta 4.1
+ * @version Beta 4.2
  * @link https://viosey.com
  */
 
@@ -84,12 +84,10 @@ $this->need('header.php');?>
                                 <span class="visuallyhidden">show menu</span>
                             </button>
                             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-                                <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-                                <?php while($pages->next()): ?>
-                                    <a href="<?php $pages->permalink(); ?>" class="md-menu-list-a" title="<?php $pages->title(); ?>"><li class="mdl-menu__item mdl-js-ripple-effect"><?php $pages->title(); ?></li></a>
-                                <?php endwhile; ?>
                                 <a href="<?php $this->options->feedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Article RSS</li></a> <!-- 文章的RSS地址连接 -->
                                 <a href="<?php $this->options->commentsFeedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Comment RSS</li></a> <!-- 评论的RSS地址连接 -->
+                                <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->options->title(); ?>&url=<?php $this->options->siteUrl(); ?>&via=<?php $this->author->screenName(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
+                                <a class="md-menu-list-a" href="https://plus.google.com/share?url=<?php $this->options->siteUrl(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="mdl-menu__item">Share to Google+</li></a>
                                 <a href="<?php $this->options->siteUrl(); ?>" target="_blank" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Open in New Tab</li></a>
                             </ul>
                         </div>

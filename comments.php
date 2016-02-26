@@ -58,9 +58,9 @@
             </button>
             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
                 for="comment-share-<?php $comments->theId(); ?>-button">
-              <a class="comment-share-list-a" target="view_window" href="<?php $comments->permalink(); ?>"><li class="mdl-menu__item">Open in New Tab</li></a>
-              <a class="comment-share-list-a" href="https://twitter.com/intent/tweet?text=<?php $comments->content(); ?>+from&url=<?php $comments->permalink(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
-              <a class="comment-share-list-a" href="https://plus.google.com/share?url=<?php $comments->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="mdl-menu__item">Share to Google+</li></a>
+              <a class="md-menu-list-a" target="view_window" href="<?php $comments->permalink(); ?>"><li class="mdl-menu__item">Open in New Tab</li></a>
+              <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $comments->content(); ?>+from&url=<?php $comments->permalink(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
+              <a class="md-menu-list-a" href="https://plus.google.com/share?url=<?php $comments->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="mdl-menu__item">Share to Google+</li></a>
             </ul>
         </nav>
 
