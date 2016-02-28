@@ -8,7 +8,7 @@
                 <button class="MD-burger-icon sidebar-toggle">
                   <span class="MD-burger-layer"></span>
                 </button>
-                <!-- 左上角返回按钮 -->
+                <!-- Top-left-corner home button -->
                 <div class="demo-back" id="backhome-div">
                     <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" title="go back" role="button">
                         <!-- For modern browsers. -->
@@ -26,20 +26,20 @@
                     <!-- Article fragment -->
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
 
-                        <!-- 文章链接和标题 -->
+                        <!-- Article link & title -->
                         <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
                             <p class="article-headline-p"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></p>
                         </div>
 
-                        <!-- 文章内容 -->
+                        <!-- Articel content -->
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
                             <?php $this->content('Continue Reading...'); ?>
                         </div>
 
-                        <!-- 文章相关信息-->
+                        <!-- Articli info-->
                         <div>
                             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
-                                <!-- 作者头像 -->
+                                <!-- Author avatar -->
                                 <div id="author-avatar"><?php $this->author->gravatar(44); ?></div>
                                 <div>
                                     <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>

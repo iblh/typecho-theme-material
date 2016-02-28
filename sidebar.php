@@ -23,9 +23,9 @@
         </a>
     </div>
 
-    <!-- Sidebar navigation / 侧边栏导航 -->
+    <!-- Sidebar navigation  -->
     <ul class="nav sidebar-nav">
-        <!-- User dropdown / 用户下拉选项 -->
+        <!-- User dropdown  -->
         <li class="dropdown">
             <ul id="settings-dropdown" class="dropdown-menu">
                 <li>
@@ -64,7 +64,7 @@
             </ul>
         </li>
 
-        <!-- Random / 随机文章 -->
+        <!-- Random article -->
         <li id="sidebar-first-li">
             <a href="<?php theme_random_posts();?>" target="_blank">
                 <i class="material-icons sidebar-material-icons">explore</i>
@@ -72,7 +72,7 @@
             </a>
         </li>
 
-        <!-- Newest Article / 最新文章 -->
+        <!-- Newest Article  -->
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <i class="material-icons sidebar-material-icons">library_books</i>
@@ -90,7 +90,7 @@
                 '); ?>
             </ul>
         </li>
-        <!-- Newest Comments / 最新评论 -->
+        <!-- Newest Comments  -->
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <i class="material-icons sidebar-material-icons">forum</i>
@@ -108,7 +108,7 @@
                 '); ?>
             </ul>
         </li>
-        <!-- Archives / 归档 -->
+        <!-- Archives  -->
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <i class="material-icons sidebar-material-icons">inbox</i>
@@ -128,7 +128,7 @@
         </li>
         <!-- divider -->
         <li class="divider"></li>
-        <!-- Hot tags / 标签 -->
+        <!-- Hot tags  -->
         <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=count&ignoreZeroCount=1&desc=1&limit=5')->to($tags); ?>
         <li class="dropdown">
             <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
@@ -150,7 +150,7 @@
                 <?php endif; ?>
             </ul>
         </li>
-        <!-- Pages / 页面 -->
+        <!-- Pages  -->
         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
         <li class="dropdown">
             <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
@@ -188,7 +188,7 @@
         <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         Typecho_Widget::widget('Widget_Stat')->to($stat);
         ?>
-        <!-- Article Numebr / 文章数 -->
+        <!-- Article Numebr  -->
         <li>
             <a href="#">
                 Article Number

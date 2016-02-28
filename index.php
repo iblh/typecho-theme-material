@@ -2,9 +2,9 @@
 /**
  * 这是 Viosey 基于 Google Material Design 开发的Typecho模版
  *
- * @package MaterialDesign-TypechoTheme
+ * @package MaterialDesignTypechoTheme
  * @author viosey
- * @version Beta 4.2
+ * @version Beta 4.3
  * @link https://viosey.com
  */
 
@@ -27,7 +27,7 @@ $this->need('header.php');?>
                             <p class="article-headline-p"><a href="#">Daily Pic</a></p>
                         </div>
                         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-                            <!-- 作者头像 -->
+                            <!-- Author avatar -->
                             <div id="author-avatar"><?php $this->author->gravatar(44); ?></div>
                             <div>
                                 <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
@@ -95,23 +95,23 @@ $this->need('header.php');?>
 
                     <?php while($this->next()): ?>
 
-                    <!-- Article fragment -->
+                    <!-- Article module -->
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
 
-                        <!-- 文章链接和标题 -->
+                        <!-- Article link & title -->
                         <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
                             <p class="article-headline-p"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></p>
                         </div>
 
-                        <!-- 文章内容 -->
+                        <!-- Articel content -->
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
                             <?php $this->content('Continue Reading...'); ?>
                         </div>
 
-                        <!-- 文章相关信息-->
+                        <!-- Articli info-->
                         <div>
                             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
-                                <!-- 作者头像 -->
+                                <!-- Author avatar -->
                                 <div id="author-avatar"><?php $this->author->gravatar(44); ?></div>
                                 <div>
                                     <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>

@@ -1,13 +1,13 @@
 <?php
 
-// 首页缩略图
+//Homepage thumbnail
 function showThumbnail($widget)
 {
-    // 当文章无图片时的默认缩略图
-    $rand = rand(1,5); // 随机 1-5 张缩略图
-    $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg'; // 随机缩略图路径
+    //If article no include picture, display random default picture
+    $rand = rand(1,5); //Random number
+    $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg'; //Random picture path
 
-    // 若只想要一张默认缩略图请删除下一行开头的"//"
+    // If only on random default picture, delete the following "//"
     //$random = $widget->widget('Widget_Options')->themeUrl . '/img/random.jpg';
 
     $attach = $widget->attachments(1)->attachment;
@@ -25,7 +25,7 @@ function showThumbnail($widget)
     }
 }
 
-//随机显示文章
+//Random article
 function theme_random_posts(){
     $defaults = array(
         'number' => 1,
@@ -35,7 +35,7 @@ function theme_random_posts(){
     $sql = $db->select()->from('table.contents')
         ->where('status = ?','publish')
         ->where('type = ?', 'post')
-        ->where('created <= unix_timestamp(now())', 'post') //添加这一句避免未达到时间的文章提前曝光
+        ->where('created <= unix_timestamp(now())', 'post') //avoid display the article which don't reach the publish time
         ->limit($defaults['number'])
         ->order('RAND()');
 
@@ -45,6 +45,10 @@ function theme_random_posts(){
         echo $val['permalink'];
     }
 }
+
+
+// if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+//
 // function themeConfig($form) {
 //     $Twitter_URL = new Typecho_Widget_Helper_Form_Element_Text('Twitter_URL', NULL, _t('https://twitter.com/viosey'), _t('Your Twitter URL'), NULL);
 //     $form->addInput($Twitter_URL);

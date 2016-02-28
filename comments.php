@@ -14,27 +14,27 @@
     echo $commentClass;
     ?>">
 
-        <!-- comment__text 该评论的相关信息-->
-        <header class="comment__header">
+        <!-- Comment info -->
+        <header class="comment header">
 
-            <!-- comment__avatar 该评论者的头像-->
+            <!-- Comment avatar -->
             <div id="comment__avatar"><?php $comments->gravatar(48); ?></div>
 
-            <!-- comment__author 该评论者的相关信息-->
+            <!-- Comment author -->
             <div class="comment__author">
-                <!--评论者的名字-->
+                <!--Commenter name -->
                 <span class="visitor-name-span"><?php $comments->author(); ?></span>
-                <!--评论日期-->
+                <!--Comment date -->
                 <span><?php $comments->date('F j, Y'); ?></span>    <!-- CN: dateWord(); -->
             </div>
         </header>
 
-        <!-- comment__text 评论内容-->
+        <!-- Comment content -->
         <div class="comment__text">
             <?php $comments->content(); ?>
         </div>
 
-        <!-- comment__actions 对该评论的行为-->
+        <!-- Comment actions -->
         <nav class="comment__actions">
             <!-- like -->
             <button id="comment-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
@@ -64,7 +64,7 @@
             </ul>
         </nav>
 
-        <!-- comment__answers 对该评论的回复-->
+        <!-- Comment answers -->
         <div class="comment__answers">
             <?php if ($comments->children) { ?> <!--是否嵌套评论判断开始-->
             <div class="comment-children">
@@ -83,22 +83,22 @@
 
         <div id="<?php $this->respondId(); ?>" class="respond">
 
-		    <!-- 输入表单开始 -->
+		    <!-- Input form start -->
 		    <form method="post" action="<?php $this->commentUrl() ?>">
 
-		        <!-- 如果当前用户已经登录 -->
+		        <!-- If user has login -->
 		        <?php if($this->user->hasLogin()): ?>
 
-		            <!-- 显示当前登录用户的用户名以及登出连接 -->
+		            <!-- Display user name & logout -->
 		            <p style="color:#8A8A8A;" class="visitor-name-span">Logged in as
                         <a href="<?php $this->options->adminUrl(); ?>" style="font-weight:400"><?php $this->user->screenName(); ?></a>.
 		                <a href="<?php $this->options->logoutUrl(); ?>" title="Logout" style="font-weight:400">Logout &raquo;</a>
                     </p>
 
-		        <!-- 若当前用户未登录 -->
+		        <!-- If user didn't login -->
 		        <?php else: ?>
 
-                    <!-- 访客昵称 -->
+                    <!-- Input name -->
     		    	<div class="login-form-group">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input type="text" name="author" class="mdl-textfield__input login-input-info" />
@@ -106,7 +106,7 @@
                         </div>
     		    	</div>
 
-                    <!-- 访客邮箱 -->
+                    <!-- Input email -->
                     <div class="login-form-group">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input type="email" name="mail" class="mdl-textfield__input login-input-info" />
@@ -114,7 +114,7 @@
                         </div>
     		    	</div>
 
-                    <!-- 访客网站 -->
+                    <!-- Input website -->
     		    	<div class="login-form-group">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input type="url" name="url" id="visitor-url" class="mdl-textfield__input login-input-info" />  <!--  placeholder="http://"-->
@@ -123,13 +123,13 @@
     		    	</div>
 		        <?php endif; ?>
 
-                <!-- 评论输入框 -->
+                <!-- Input comment content -->
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="comment-input-div">
                     <textarea name="text" rows="1" id="comment" class="mdl-textfield__input" ></textarea>
                     <label for="comment" class="mdl-textfield__label">Join the discussion</label>
                 </div>
 
-                <!-- 评论提交按钮 -->
+                <!-- Submit comment content button -->
                 <?php $comments->reply('
                 <button id="comment-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                     <i class="material-icons" role="presentation">check</i><span class="visuallyhidden">add comment</span>
