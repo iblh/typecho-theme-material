@@ -1,10 +1,10 @@
 <?php
 /**
- * 这是 Viosey 基于 Google Material Design 开发的Typecho模版
+ * 这是 Viosey 基于 Google Material Design 开发的 Typecho 主题
  *
- * @package MaterialDesignTypechoTheme
+ * @package Material Design Theme
  * @author viosey
- * @version Beta 4.4
+ * @version 1.0.0
  * @link https://viosey.com
  */
 
@@ -23,8 +23,8 @@ $this->need('header.php');?>
 
                     <!-- Daily Pic -->
                     <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col">
-                        <div class="mdl-card__media mdl-color-text--grey-50">
-                            <p class="article-headline-p"><a href="#">Daily Pic</a></p>
+                        <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->dailypic() ?>)">
+                            <p class="article-headline-p"><a href="#"><?php $this->options->slogan() ?></a></p>
                         </div>
                         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
                             <!-- Author avatar -->
@@ -53,7 +53,7 @@ $this->need('header.php');?>
                         </div>
                         <!-- LOGO -->
                         <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-                            <img src="<?php $this->options->themeUrl('img/logo.png'); ?>">
+                            <img src="<?php $this->options->logo() ?>">
                         </div>
                         <!-- Infomation -->
                         <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">

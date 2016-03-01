@@ -11,9 +11,6 @@ body {
 	content: '';
 	will-change: transform;
 }
-.demo-blog .daily-pic .mdl-card__media {
-	background-image: url(../img/daily-pic.jpg);
-}
 a {
 	color: #0097a7;
     font-weight: 400;
