@@ -39,14 +39,11 @@
         <?php $this->header(); ?>
 
         <!-- Material style -->
-        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.fontfamily.css'); ?>" />
-        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.icon.css'); ?>" />
+        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.font.css'); ?>" />
 
 
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.min.css'); ?>" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
-        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/burger.css'); ?>" />
-        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/sidebar.css'); ?>" />
 
         <style>
             #view-source {
