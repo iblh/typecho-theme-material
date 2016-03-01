@@ -10,6 +10,7 @@
             <?php $this->archiveTitle('','',' - '); ?>
             <?php $this->options->title(); ?>
         </title>
+        <link rel="icon" type="image/ico" href="favicon.ico">
 
         <!-- Add to homescreen for Chrome on Android -->
         <meta name="mobile-web-app-capable" content="yes" />

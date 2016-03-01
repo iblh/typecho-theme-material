@@ -59,9 +59,12 @@
                             <div class="mdl-tooltip" for="article-fuctions-share-button">Share</div>
                             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="article-fuctions-share-button">
-                              <a class="md-menu-list-a" target="_blank" href="<?php $this->permalink(); ?>"><li class="mdl-menu__item">Open in New Tab</li></a>
-                              <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->title(); ?>&url=<?php $this->permalink() ?>&via=<?php $this->user->screenName(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
-                              <a class="md-menu-list-a" href="https://plus.google.com/share?url=<?php $this->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="mdl-menu__item">Share to Google+</li></a>
+                                <?php if (class_exists("Stat_Plugin")): ?>
+                                    <a class="md-menu-list-a" href="#"><li class="mdl-menu__item"><?php $this->views(); ?> 浏览</li></a>
+                                <?php endif; ?>
+                                <a class="md-menu-list-a" target="_blank" href="<?php $this->permalink(); ?>"><li class="mdl-menu__item">Open in New Tab</li></a>
+                                <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->title(); ?>&url=<?php $this->permalink() ?>&via=<?php $this->user->screenName(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
+                                <a class="md-menu-list-a" href="https://plus.google.com/share?url=<?php $this->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="mdl-menu__item">Share to Google+</li></a>
                             </ul>
                         </div>
 

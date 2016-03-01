@@ -47,15 +47,13 @@ function theme_random_posts(){
 }
 
 
-// if (!defined('__TYPECHO_ROOT_DIR__')) exit;
-//
-// function themeConfig($form) {
-//     $Twitter_URL = new Typecho_Widget_Helper_Form_Element_Text('Twitter_URL', NULL, _t('https://twitter.com/viosey'), _t('Your Twitter URL'), NULL);
-//     $form->addInput($Twitter_URL);
-//
-//     $Facebook_URL = new Typecho_Widget_Helper_Form_Element_Text('Facebook_URL', NULL, _t('https://www.facebook.com/viosey'), _t('Your Facebook URL'), NULL);
-//     $form->addInput($Facebook_URL);
-//
-//     $GooglePlus_URL = new Typecho_Widget_Helper_Form_Element_Text('GooglePlus_URL', NULL, _t('https://plus.google.com/116465253856896614917'), _t('Your GooglePlus URL'), NULL);
-//     $form->addInput($GooglePlus_URL);
-// }
+function themeConfig($form) {
+    $TwitterURL = new Typecho_Widget_Helper_Form_Element_Text('Twitter_URL', NULL, _t('https://twitter.com/viosey'), _t('Your Twitter URL'), NULL);
+    $form->addInput($TwitterURL);
+
+    $FacebookURL = new Typecho_Widget_Helper_Form_Element_Text('Facebook_URL', NULL, _t('https://www.facebook.com/viosey'), _t('Your Facebook URL'), NULL);
+    $form->addInput($FacebookURL);
+
+    $GooglePlusURL = new Typecho_Widget_Helper_Form_Element_Text('GooglePlus_URL', NULL, _t('https://plus.google.com/116465253856896614917'), _t('Your GooglePlus URL'), NULL);
+    $form->addInput($GooglePlusURL);
+}

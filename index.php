@@ -4,7 +4,7 @@
  *
  * @package MaterialDesignTypechoTheme
  * @author viosey
- * @version Beta 4.3
+ * @version Beta 4.4
  * @link https://viosey.com
  */
 
@@ -118,9 +118,13 @@ $this->need('header.php');?>
                                     <span><?php $this->date('F j, Y'); ?></span>
                                 </div>
                             </div>
-                            <div id="article-category-comment">
+                            <div id="article-category-comment" style="color:#0097a7">
                                 <?php $this->category(', '); ?> | <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>
+                                <?php if (class_exists("Stat_Plugin")): ?>
+                                    |&nbsp;<?php $this->views(); ?> 浏览
+                                <?php endif; ?>
                             </div>
+
                         </div>
 
                     </div>
