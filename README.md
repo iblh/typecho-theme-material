@@ -6,7 +6,14 @@ A Typecho Theme based on Google Material Design
 ## 基本特性
 - [Demo](https://blog.viosey.com)
 - 颜值高 颜值高 颜值高 (重要的事情...
+- 侧边栏包含
 - I'm Feeling Lucky (显示随机文章
+ 	- 用户入口
+	- 最新文章
+	- 最新评论
+	- 归档
+	- 独立页面
+	- 以及一些七七八八的东西...
 - SmoothScroll.js使用中 (滚动如丝般顺滑
 - 中文主题翻译中...
 
