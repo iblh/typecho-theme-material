@@ -12,7 +12,7 @@ A Typecho Theme based on Google Material Design
 
 
 ## 食用方法
-- 可在release中下载, 解压后上传到/usr/themes, 并启用
+- 点击"Download ZIP"下载, 解压后上传到/usr/themes, 并启用主题
 - 可使用自己喜好的背景图替换掉主题文件中img文件夹下的bg.jpg
 - 在 "设置外观" 中设置一些基本选项
 - 关于文章缩略图
