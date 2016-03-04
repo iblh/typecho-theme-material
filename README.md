@@ -5,7 +5,6 @@ A Typecho Theme based on Google Material Design
 
 ## 基本特性
 - [Demo](https://blog.viosey.com)
-- 颜值高 颜值高 颜值高 (重要的事情...
 - 侧边栏包含
 - I'm Feeling Lucky (显示随机文章
  	- 用户入口
@@ -28,6 +27,11 @@ A Typecho Theme based on Google Material Design
 	- 如果某篇文章不想插入图片, 但想自定义该文章的缩略图, 可如上插入一张图片, 然后将该图片注释掉, 格式为 ```<!-- ![图片描述](图片链接) --> ```
 - 侧边栏内含友情链接, 需安装此友情链接插件  [MaterialDesign_TypechoLinks](https://github.com/viosey/MaterialDesign_TypechoLinks) 
 - 使用 [浏览次数统计插件](https://lets.us.to/usr/uploads/2015/01/874979024.zip), 首页文章信息与文章页分享按钮下拉选项中会显示浏览次数统计
+
+## 预览
+![](https://blog.viosey.com/usr/themes/MaterialDesign/screenshot.jpg)
+
+![](https://o27z61k07.qnssl.com/imgpageview.jpg)
 
 ## License
 Open sourced under the MIT license.
