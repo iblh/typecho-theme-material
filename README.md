@@ -4,7 +4,7 @@ A Typecho Theme based on Google Material Design
 >Refer to [Google / material-design-lite](https://github.com/google/material-design-lite)
 
 ## 基本特性
-- [Demo](https://blog.viosey.com)
+- [主题Demo](https://blog.viosey.com)
 - 侧边栏包含
 - I'm Feeling Lucky (显示随机文章
  	- 用户入口
@@ -31,7 +31,7 @@ A Typecho Theme based on Google Material Design
 ## 预览
 ![](https://blog.viosey.com/usr/themes/MaterialDesign/screenshot.jpg)
 
-![](https://o27z61k07.qnssl.com/imgpageview.jpg)
+![](https://viosey.com/img/verticalpageview.jpg)
 
 ## License
 Open sourced under the MIT license.

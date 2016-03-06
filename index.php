@@ -22,7 +22,7 @@ $this->need('header.php');?>
                 <div class="demo-blog__posts mdl-grid">
 
                     <!-- Daily Pic -->
-                    <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col">
+                    <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col index-top-block">
                         <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->dailypic() ?>)">
                             <p class="article-headline-p"><a href="#"><?php $this->options->slogan() ?></a></p>
                         </div>
@@ -37,7 +37,7 @@ $this->need('header.php');?>
                     </div>
 
                     <!-- Blog info -->
-                    <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
+                    <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
                         <!-- Search -->
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
                             <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
