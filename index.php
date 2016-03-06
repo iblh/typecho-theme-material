@@ -4,7 +4,7 @@
  *
  * @package Material Design Theme
  * @author viosey
- * @version 1.1.1
+ * @version 1.1.3
  * @link https://viosey.com
  */
 
@@ -96,7 +96,7 @@ $this->need('header.php');?>
                     <?php while($this->next()): ?>
 
                     <!-- Article module -->
-                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col article-module">
 
                         <!-- Article link & title -->
                         <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">

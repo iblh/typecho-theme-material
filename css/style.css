@@ -19,7 +19,9 @@ a {
 body .demo-blog {
 	font-family: Roboto,Helvetica,sans-serif;
 }
-
+.article-module{
+	margin-bottom: 20px;
+}
 .demo-blog .demo-blog__posts {
 	display: flex;
 	margin: 0 auto;

@@ -51,13 +51,13 @@ function themeConfig($form) {
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon链接'), _t('填写自定义favicon的链接, 默认不显示'));
     $form->addInput($favicon);
 
-    $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', NULL, _t('https://viosey.com/res/DailyPic.jpg'), _t('首页左上角图片链接'), _t('填写自定义图片的链接, 图片显示在首页左上角'));
+    $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', NULL, _t('https://viosey.com/img/hiyou.jpg'), _t('首页左上角图片链接'), _t('填写自定义图片的链接, 图片显示在首页左上角'));
     $form->addInput($dailypic);
 
     $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', NULL, _t('Daily Pic'), _t('首页左上角图片标语'), _t('填写自定义的文字, 文字显示在首页左上角图片上'));
     $form->addInput($slogan);
 
-    $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL, _t('https://viosey.com/res/logo.png'), _t('首页右上角LOGO图片链接'), _t('填写自定义LOGO的链接, 图片显示在首页右上角'));
+    $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL, _t('https://viosey.com/img/logo.png'), _t('首页右上角LOGO图片链接'), _t('填写自定义LOGO的链接, 图片显示在首页右上角'));
     $form->addInput($logo);
 
     $TwitterURL = new Typecho_Widget_Helper_Form_Element_Text('TwitterURL', NULL, _t('https://twitter.com/viosey'), _t('页脚Twitter链接'), _t('填入你的Twitter链接'));
