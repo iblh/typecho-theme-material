@@ -29,7 +29,7 @@ A Typecho Theme based on Google Material Design
 - 使用 [浏览次数统计插件](https://lets.us.to/usr/uploads/2015/01/874979024.zip), 首页文章信息与文章页分享按钮下拉选项中会显示浏览次数统计
 
 ## 预览
-![](https://blog.viosey.com/usr/themes/MaterialDesign/screenshot.jpg)
+![](https://viosey.com/img/screenshot.jpg)
 
 ![](https://viosey.com/img/verticalpageview.jpg)
 
