@@ -4,7 +4,7 @@
  *
  * @package Material Design Theme
  * @author viosey
- * @version 1.1.3
+ * @version 1.1.5
  * @link https://viosey.com
  */
 
@@ -121,7 +121,7 @@ $this->need('header.php');?>
                             <div id="article-category-comment" style="color:#0097a7">
                                 <?php $this->category(', '); ?> | <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>
                                 <?php if (class_exists("Stat_Plugin")): ?>
-                                    |&nbsp;<?php $this->views(); ?> 浏览
+                                    |&nbsp;<?php $this->views(); ?> <?php $this->sticky(); ?>浏览
                                 <?php endif; ?>
                             </div>
 

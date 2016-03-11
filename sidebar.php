@@ -209,4 +209,12 @@
     <a href="mailto:viosey@outlook.com" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">Help & Support</div></a>
     <a href="https://github.com/viosey/MaterialDesign_TypechoTheme/issues" target="_blank" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">Feedback</div></a>
     <a href="https://blog.viosey.com/index.php/MD_TT.html" target="_blank" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">About Theme</div></a>
+
+    <?php if ( !empty($this->options->misc) && in_array('ShowUpyun', $this->options->misc) ) : ?>
+        <div id="upyun-logo">
+            <img src="https://o27z61k07.qnssl.com/upyun_logo_90x45.png" />
+        </div>
+    <?php endif; ?>
+
+
 </aside>
