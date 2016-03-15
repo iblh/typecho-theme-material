@@ -19,10 +19,10 @@ body .demo-blog {
     font-family: Roboto, Helvetica, sans-serif;
 }
 .index-top-block {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .article-module {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .demo-blog .demo-blog__posts {
     display: flex;
@@ -149,7 +149,7 @@ body .demo-blog {
 }
 .demo-blog .demo-blog__posts>.demo-nav {
     display: flex;
-    margin: 9pt 15px;
+    margin: 10px 15px;
     color: #fff;
     font-weight: 500;
     flex-direction: row;
@@ -206,13 +206,13 @@ body .demo-blog {
     /*align-items: center;*/
 }
 .demo-blog--blogpost .meta+.mdl-card__supporting-text {
-    display: flex;
+    display: block;
     border: 0;
     flex-direction: column;
 }
 .demo-blog--blogpost .meta+.mdl-card__supporting-text p {
     margin: 1pc auto;
-    max-width: 32pc;
+    max-width: 50pc;
     font-size: 1pc;
     line-height: 28px;
 }
@@ -532,19 +532,27 @@ body .demo-blog {
     }
 }
 hr {
-    margin: 2em auto;
-    width: 200px;
+    margin: 2.4em 30px 2.4em 30px;
     border: 1px solid #E9E9E6;
     border-width: 2px 0 0 0;
 }
 pre {
     position: relative;
     margin-top: 1pc;
-    max-width: 32pc;
+    /*max-width: 50pc;*/
     word-break: break-all;
     word-wrap: break-word;
     margin-right: auto;
-    margin-left: auto;
+    /*margin-left: auto;*/
+
+    border: 0 solid rgba(102,128,153,0.075);
+    border-left: 2px solid rgba(102,128,153,0.75);
+    border-radius: 0;
+    padding: 10px 15px;
+    background: #23241f;
+    color: #FFF;
+    width: 884px;
+    margin-left: -16px;
 }
 blockquote {
     word-break: break-all;
@@ -553,113 +561,51 @@ blockquote {
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
-    margin-left: 1pc;
-    margin: 24px 10px 16px 10px !important;
+    display: block;
+    width: 884px;
+    margin: 24px 10px 0px -16px !important;
+    padding: 5px 0 5px 15px;
 }
 h1 {
     background-color: #F6F6F6;
     z-index: 0;
     font-size: 48px;
     line-height: 60px;
-}
-h1::after {
-    content: " ";
-    display: block;
-    position: relative;
-    left: 0%;
-    top: 50%;
-    width: 7px;
-    height: 1.25em;
-    margin-left: -7px;
-    margin-top: -1.25em;
-    background-color: #009688;
+    border-left: 7px solid #009688;
 }
 h2 {
     background-color: #F6F6F6;
     z-index: 0;
     font-size: 40px;
     line-height: 50px;
-}
-h2::after {
-    content: " ";
-    display: block;
-    position: relative;
-    left: 0%;
-    top: 50%;
-    width: 6px;
-    height: 1.25em;
-    margin-left: -6px;
-    margin-top: -1.25em;
-    background-color: #00BCD4;
+    border-left: 6px solid #00BCD4;
 }
 h3 {
     background-color: #F6F6F6;
     font-size: 30px;
     line-height: 39px;
+    border-left: 5px solid #8BC34A;
 }
-h3:after {
-    content: " ";
-    display: block;
-    position: relative;
-    left: 0%;
-    top: 50%;
-    width: 5px;
-    height: 1.3em;
-    margin-left: -5px;
-    margin-top: -1.3em;
-    background-color: #8BC34A;
-}
+
 h4 {
     background-color: #F6F6F6;
     font-size: 24px;
     line-height: 32px;
-}
-h4:after {
-    content: " ";
-    display: block;
-    position: relative;
-    left: 0%;
-    top: 50%;
-    width: 4px;
-    height: 1.35em;
-    margin-left: -4px;
-    margin-top: -1.35em;
-    background-color: #E91E63;
+    border-left: 4px solid #E91E63;
 }
 h5 {
     background-color: #F6F6F6;
     font-size: 20px;
     line-height: 30px;
-}
-h5:after {
-    content: " ";
-    display: block;
-    position: relative;
-    left: 0%;
-    top: 50%;
-    width: 3px;
-    height: 1.5em;
-    margin-left: -3px;
-    margin-top: -1.5em;
-    background-color: #9C27B0;
+    border-left: 3px solid #9C27B0;
 }
 h6 {
     background-color: #F6F6F6;
     font-size: 16px;
     line-height: 26px;
+    border-left: 2px solid #CDDC39;
 }
-h6:after {
-    content: " ";
-    display: block;
-    position: relative;
-    left: 0%;
-    top: 50%;
-    width: 2px;
-    height: 1.6em;
-    margin-left: -2px;
-    margin-top: -1.6em;
-    background-color: #CDDC39;
-}
+
 .article-headline-p {
     font-size: 34px;
     line-height: 40px;
@@ -668,6 +614,16 @@ h6:after {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 .article-headline-p a {
+    text-decoration: none;
+}
+.article-headline-p-nopic{
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 400;
+    margin: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+.article-headline-p-nopic a {
     text-decoration: none;
 }
 .more {

@@ -4,7 +4,7 @@
  *
  * @package Material Design Theme
  * @author viosey
- * @version 1.1.5
+ * @version 1.2.0
  * @link https://viosey.com
  */
 
@@ -99,9 +99,19 @@ $this->need('header.php');?>
                     <div class="mdl-card mdl-cell mdl-cell--12-col article-module">
 
                         <!-- Article link & title -->
-                        <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
-                            <p class="article-headline-p"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></p>
-                        </div>
+                        <?php if ( !empty($this->options->misc) && in_array('ThumbnailOption', $this->options->misc) ) : ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
+                                <p class="article-headline-p"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></p>
+                            </div>
+                        <?php else: ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-color:<?php $this->options->TitleColor()?>;color:#757575 !important;">
+                                <p class="article-headline-p-nopic">
+                                    <a href="<?php $this->permalink() ?>">
+                                        “</br><?php $this->title() ?></br>”
+                                    </a>
+                                </p>
+                            </div>
+                        <?php endif; ?>
 
                         <!-- Articel content -->
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
