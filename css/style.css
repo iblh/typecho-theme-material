@@ -537,25 +537,32 @@ hr {
     border-width: 2px 0 0 0;
 }
 pre {
-    position: relative;
-    margin-top: 1pc;
-    /*max-width: 50pc;*/
+    font-size: 1pc;
+    margin: 1pc auto;
     word-break: break-all;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;
-    margin-right: auto;
-    /*margin-left: auto;*/
+    max-width: 50pc;
 
-    border: 0 solid rgba(102,128,153,0.075);
+    /*border: 0 solid rgba(102,128,153,0.075);
     border-left: 2px solid rgba(102,128,153,0.75);
     border-radius: 0;
-    padding: 10px 15px;
+    padding: 10px;
     background: #23241f;
     color: #FFF;
     width: 884px;
-    margin-left: -16px;
+    width: 100%;
+    margin-left: -16px;*/
 }
 blockquote {
     word-break: break-all;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;
     font-size: 14px;
 }
