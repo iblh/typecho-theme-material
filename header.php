@@ -74,6 +74,25 @@
                 }
             </style>
         <?php endif; ?>
+        <?php if ( !empty($this->options->misc) && in_array('ShowBGimg', $this->options->misc) ) : ?>
+            <style>
+                body{
+                    background-image: none !important;
+                    background-color: <?php $this->options->bgcolor() ?>;
+                }
+                .demo-blog .something-else .mdl-card__supporting-text{
+                    background-color: #fff;
+                }
+                .MD-burger-layer{
+                    background-color: #666;
+                }
+                .demo-blog .demo-blog__posts>.demo-nav,
+                .demo-nav a,
+                .demo-blog--blogpost .demo-back{
+                    color: #666;
+                }
+            </style>
+        <?php endif; ?>
 
     </head>
 

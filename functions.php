@@ -53,6 +53,7 @@ function themeConfig($form) {
     $misc = new Typecho_Widget_Helper_Form_Element_Checkbox('misc',
     array(
         'ShowUpyun' => _t('显示upyun联盟LOGO'),
+        'ShowBGimg' => _t('不使用背景图片'),
         'CenterArticle' => _t('文章内容居中显示'),
         'ThumbnailOption' => _t('首页显示文章缩略图'),
     ),
@@ -63,11 +64,15 @@ function themeConfig($form) {
 
     // <?php $this->options->favicon()
     //$form->addInput($favicon)---show in setting.
+
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon链接'), _t('填写自定义favicon的链接, 默认不显示'));
     $form->addInput($favicon);
 
     $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#f5f5f5'), _t('首页标题部分背景色'), _t('当首页不显示缩略图时, 文章标题部分的背景颜色, 填入颜色代码'));
     $form->addInput($TitleColor);
+
+    $bgcolor = new Typecho_Widget_Helper_Form_Element_Text('bgcolor', NULL, _t('#f5f5f5'), _t('背景颜色'), _t('不使用背景图片的背景颜色'));
+    $form->addInput($bgcolor);
 
     $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', NULL, _t('https://viosey.com/img/hiyou.jpg'), _t('首页左上角图片链接'), _t('填写自定义图片的链接, 图片显示在首页左上角'));
     $form->addInput($dailypic);
