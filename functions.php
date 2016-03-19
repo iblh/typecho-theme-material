@@ -58,7 +58,7 @@ function themeConfig($form) {
         'ThumbnailOption' => _t('首页显示文章缩略图'),
     ),
     //Default choose
-    array('ThumbnailOption'), _t('杂项'));
+    array('ThumbnailOption','ShowUpyun'), _t('杂项'));
     //Output
     $form->addInput($misc->multiMode());
 

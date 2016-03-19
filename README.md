@@ -1,6 +1,6 @@
-## MaterialDesign_TypechoTheme
-一款基于Google Material Design的Typecho主题
-A Typecho Theme based on Google Material Design
+## Material
+一款基于Google Material Design的Material Typecho主题
+A Material Typecho Theme based on Google Material Design
 >Refer to [Google / material-design-lite](https://github.com/google/material-design-lite)
 
 ## 基本特性

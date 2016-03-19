@@ -1,11 +1,13 @@
 
                 <!-- Back to Top -->
-                <a href="#top"><button id="back_to_top" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--6dp">
-                    <!-- For modern browsers. -->
-                    <i class="material-icons">expand_less</i>
-                    <!-- For IE9 or below. -->
-                    <i class="material-icons">&#xE5CE;</i>
-                </button></a>
+                <a href="#top" id="back_to_top-a">
+                    <button id="back_to_top" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--6dp">
+                        <!-- For modern browsers. -->
+                        <i class="material-icons">expand_less</i>
+                        <!-- For IE9 or below. -->
+                        <i class="material-icons">&#xE5CE;</i>
+                    </button>
+                </a>
 
                 <!--Footer-->
                 <footer class="mdl-mini-footer">
