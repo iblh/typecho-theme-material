@@ -92,7 +92,4 @@ function themeConfig($form) {
     $GooglePlusURL = new Typecho_Widget_Helper_Form_Element_Text('GooglePlusURL', NULL, _t('https://plus.google.com/116465253856896614917'), _t('页脚GooglePlus链接'), _t('填入你的GooglePlus链接'));
     $form->addInput($GooglePlusURL);
 
-
-
-
 }

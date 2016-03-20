@@ -19,9 +19,6 @@ Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), func
 $("#visitor-url").focus(function() {
     this.value = "http://";
 });
-$("#visitor-url").blur(function() {
-    this.value = "";
-});
 
 
 //
