@@ -39,4 +39,4 @@ A Material Typecho Theme based on Google Material Design
 ![](https://viosey.com/img/verticalpageview.jpg)
 
 ## License
-Open sourced under the GPL license.
+Open sourced under the GPL v3.0 license.

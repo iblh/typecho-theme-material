@@ -212,7 +212,7 @@
 
     <?php if ( !empty($this->options->misc) && in_array('ShowUpyun', $this->options->misc) ) : ?>
         <div id="upyun-logo">
-            <img src="https://o27z61k07.qnssl.com/upyun_logo_90x45.png" />
+            <a href="https://www.upyun.com/" target="_blank"><img src="https://o27z61k07.qnssl.com/upyun_logo_90x45.png" /></a>
         </div>
     <?php endif; ?>
 

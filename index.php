@@ -113,12 +113,12 @@ $this->need('header.php');?>
                             </div>
                         <?php endif; ?>
 
-                        <!-- Articel content -->
+                        <!-- Article content -->
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
                             <?php $this->content('Continue Reading...'); ?>
                         </div>
 
-                        <!-- Articli info-->
+                        <!-- Article info-->
                         <div>
                             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
                                 <!-- Author avatar -->
