@@ -99,7 +99,7 @@ $this->need('header.php');?>
                     <div class="mdl-card mdl-cell mdl-cell--12-col article-module">
 
                         <!-- Article link & title -->
-                        <?php if ( !empty($this->options->misc) && in_array('ThumbnailOption', $this->options->misc) ) : ?>
+                        <?php if ( !empty($this->options->appearance) && in_array('ThumbnailOption', $this->options->appearance) ) : ?>
                             <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
                                 <p class="article-headline-p"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></p>
                             </div>
@@ -115,7 +115,8 @@ $this->need('header.php');?>
 
                         <!-- Article content -->
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
-                            <?php $this->content('Continue Reading...'); ?>
+                            <!--  $this->content('Continue Reading...');  -->
+                            <?php $this->excerpt(80, '...'); ?>
                         </div>
 
                         <!-- Article info-->

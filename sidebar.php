@@ -210,7 +210,7 @@
     <a href="https://github.com/viosey/MaterialDesign_TypechoTheme/issues" target="_blank" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">Feedback</div></a>
     <a href="https://blog.viosey.com/index.php/MD_TT.html" target="_blank" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">About Theme</div></a>
 
-    <?php if ( !empty($this->options->misc) && in_array('ShowUpyun', $this->options->misc) ) : ?>
+    <?php if ( !empty($this->options->switch) && in_array('ShowUpyun', $this->options->switch) ) : ?>
         <div id="upyun-logo">
             <a href="https://www.upyun.com/" target="_blank"><img src="https://o27z61k07.qnssl.com/upyun_logo_90x45.png" /></a>
         </div>

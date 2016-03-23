@@ -45,5 +45,8 @@
     <script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/js.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
+    <?php if( !empty($this->options->switch) && in_array('SmoothScroll',$this->options->switch) ): ?>
+        <script src="<?php $this->options->themeUrl('js/smoothscroll.js'); ?>"></script>
+    <?php endif; ?>
     <?php $this->footer(); ?>
 </html>

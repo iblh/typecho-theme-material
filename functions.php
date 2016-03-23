@@ -51,16 +51,39 @@ function themeConfig($form) {
 
     //<?php if ( !empty($this->options->misc) && in_array('ShowUpyun', $this->options->misc) ) :
     $misc = new Typecho_Widget_Helper_Form_Element_Checkbox('misc',
-    array(
-        'ShowUpyun' => _t('显示upyun联盟LOGO'),
-        'ShowBGimg' => _t('不使用背景图片'),
-        'CenterArticle' => _t('文章内容居中显示'),
-        'ThumbnailOption' => _t('首页显示文章缩略图'),
-    ),
-    //Default choose
-    array('ThumbnailOption','ShowUpyun'), _t('杂项'));
+        array(
+
+        ),
+
+        //Default choose
+        array(), _t('杂项')
+    );
     //Output
-    $form->addInput($misc->multiMode());
+    // $form->addInput($misc->multiMode());
+
+    $switch = new Typecho_Widget_Helper_Form_Element_Checkbox('switch',
+        array(
+            'ShowUpyun' => _t('启用upyun联盟LOGO'),
+            'SmoothScroll' => _t('启用平滑滚动效果'),
+        ),
+
+        //Default choose
+        array('ShowUpyun','SmoothScroll'), _t('功能开关')
+    );
+    $form->addInput($switch->multiMode());
+
+    $appearance = new Typecho_Widget_Helper_Form_Element_Checkbox('appearance',
+        array(
+
+                        'ShowBGimg' => _t('不使用背景图片'),
+                        'CenterArticle' => _t('文章内容居中'),
+                        'ThumbnailOption' => _t('首页显示文章缩略图'),
+        ),
+
+        //Default choose
+        array('ThumbnailOption'), _t('外观选项')
+    );
+    $form->addInput($appearance->multiMode());
 
     // <?php $this->options->favicon()
     //$form->addInput($favicon)---show in setting.
@@ -68,11 +91,17 @@ function themeConfig($form) {
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon链接'), _t('填写自定义favicon的链接, 默认不显示'));
     $form->addInput($favicon);
 
-    $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#f5f5f5'), _t('首页标题部分背景色'), _t('当首页不显示缩略图时, 文章标题部分的背景颜色, 填入颜色代码'));
+    $themecolor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', NULL, _t('#FFF'), _t('主题颜色'), _t('e.g. 使用手机 Chrome时, 博客标签显示的颜色'));
+    $form->addInput($themecolor);
+
+    $bgcolor = new Typecho_Widget_Helper_Form_Element_Text('bgcolor', NULL, _t('#F5F5F5'), _t('背景颜色'), _t('取代背景图片的颜色'));
+    $form->addInput($bgcolor);
+
+    $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#F5F5F5'), _t('首页标题部分背景色'), _t('取代缩略图的颜色'));
     $form->addInput($TitleColor);
 
-    $bgcolor = new Typecho_Widget_Helper_Form_Element_Text('bgcolor', NULL, _t('#f5f5f5'), _t('背景颜色'), _t('不使用背景图片的背景颜色'));
-    $form->addInput($bgcolor);
+    $burgercolor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#F5F5F5'), _t('首页标题部分背景色'), _t('取代缩略图的颜色'));
+    $form->addInput($burgercolor);
 
     $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', NULL, _t('https://viosey.com/img/hiyou.jpg'), _t('首页左上角图片链接'), _t('填写自定义图片的链接, 图片显示在首页左上角'));
     $form->addInput($dailypic);

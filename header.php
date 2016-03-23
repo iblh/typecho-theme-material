@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" />
         <meta name="description" content=" " />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#FFFFFF" />
+        <meta name="theme-color" content="<?php $this->options->themecolor() ?>" />
         <title>
             <?php $this->archiveTitle('','',' - '); ?>
             <?php $this->options->title(); ?>
@@ -54,7 +54,7 @@
                 z-index: 900;
             }
         </style>
-        <?php if ( !empty($this->options->misc) && in_array('CenterArticle', $this->options->misc) ) : ?>
+        <?php if ( !empty($this->options->appearance) && in_array('CenterArticle', $this->options->appearance) ) : ?>
             <style>
                 .demo-blog--blogpost .meta+.mdl-card__supporting-text {
                     display: flex;
@@ -74,7 +74,7 @@
                 }
             </style>
         <?php endif; ?>
-        <?php if ( !empty($this->options->misc) && in_array('ShowBGimg', $this->options->misc) ) : ?>
+        <?php if ( !empty($this->options->appearance) && in_array('ShowBGimg', $this->options->appearance) ) : ?>
             <style>
                 body{
                     background-image: none !important;
