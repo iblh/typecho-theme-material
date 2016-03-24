@@ -207,7 +207,7 @@
 
     <!-- Sidebar bottom text -->
     <a href="mailto:i@viosey.com" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">Help & Support</div></a>
-    <a href="https://github.com/viosey/Material/issues" target="_blank" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">Feedback</div></a>
+    <a href="https://github.com/viosey/typecho-theme-material/issues" target="_blank" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">Feedback</div></a>
     <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">About Theme</div></a>
 
     <?php if ( !empty($this->options->switch) && in_array('ShowUpyun', $this->options->switch) ) : ?>
