@@ -74,7 +74,7 @@
                 }
             </style>
         <?php endif; ?>
-        <?php if ( !empty($this->options->appearance) && in_array('ShowBGimg', $this->options->appearance) ) : ?>
+        <?php if ( !empty($this->options->appearance) && in_array('colorBG', $this->options->appearance) ) : ?>
             <style>
                 body{
                     background-image: none !important;
@@ -94,6 +94,8 @@
             </style>
         <?php endif; ?>
 
+        <!--Analysis code-->
+        <?php $this->options->analysis(); ?>
     </head>
 
     <body>

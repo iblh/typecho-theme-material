@@ -63,7 +63,7 @@ function themeConfig($form) {
 
     $switch = new Typecho_Widget_Helper_Form_Element_Checkbox('switch',
         array(
-            'ShowUpyun' => _t('启用upyun联盟LOGO'),
+            'ShowUpyun' => _t('启用upyun联盟Logo'),
             'SmoothScroll' => _t('启用平滑滚动效果'),
         ),
 
@@ -74,10 +74,9 @@ function themeConfig($form) {
 
     $appearance = new Typecho_Widget_Helper_Form_Element_Checkbox('appearance',
         array(
-
-                        'ShowBGimg' => _t('不使用背景图片'),
-                        'CenterArticle' => _t('文章内容居中'),
-                        'ThumbnailOption' => _t('首页显示文章缩略图'),
+            'colorBG' => _t('使用纯色背景'),
+            'CenterArticle' => _t('文章内容居中'),
+            'ThumbnailOption' => _t('首页显示文章缩略图'),
         ),
 
         //Default choose
@@ -87,9 +86,11 @@ function themeConfig($form) {
 
     // <?php $this->options->favicon()
     //$form->addInput($favicon)---show in setting.
-
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon链接'), _t('填写自定义favicon的链接, 默认不显示'));
     $form->addInput($favicon);
+
+    $analysis = new Typecho_Widget_Helper_Form_Element_Text('analysis', NULL, NULL, _t('网站统计代码'), _t('填入你的统计代码'));
+    $form->addInput($analysis);
 
     $themecolor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', NULL, _t('#FFF'), _t('主题颜色'), _t('e.g. 使用手机 Chrome时, 博客标签显示的颜色'));
     $form->addInput($themecolor);
@@ -100,13 +101,10 @@ function themeConfig($form) {
     $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#F5F5F5'), _t('首页标题部分背景色'), _t('取代缩略图的颜色'));
     $form->addInput($TitleColor);
 
-    $burgercolor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#F5F5F5'), _t('首页标题部分背景色'), _t('取代缩略图的颜色'));
-    $form->addInput($burgercolor);
-
     $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', NULL, _t('https://viosey.com/img/hiyou.jpg'), _t('首页左上角图片链接'), _t('填写自定义图片的链接, 图片显示在首页左上角'));
     $form->addInput($dailypic);
 
-    $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', NULL, _t('Daily Pic'), _t('首页左上角图片标语'), _t('填写自定义的文字, 文字显示在首页左上角图片上'));
+    $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', NULL, _t('Nice to meet you'), _t('首页左上角图片标语'), _t('填写自定义的文字, 文字显示在首页左上角图片上'));
     $form->addInput($slogan);
 
     $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL, _t('https://viosey.com/img/logo.png'), _t('首页右上角LOGO图片链接'), _t('填写自定义LOGO的链接, 图片显示在首页右上角'));
