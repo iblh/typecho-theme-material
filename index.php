@@ -2,9 +2,9 @@
 /**
  * 这是 Viosey 基于 Google Material Design 开发的 Typecho 主题
  *
- * @package Material Design Theme
+ * @package Theme.Material
  * @author viosey
- * @version 1.2.1
+ * @version 1.2.5
  * @link https://viosey.com
  */
 

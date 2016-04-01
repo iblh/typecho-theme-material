@@ -84,6 +84,16 @@ function themeConfig($form) {
     );
     $form->addInput($appearance->multiMode());
 
+    $langis = new Typecho_Widget_Helper_Form_Element_Radio('langis',
+        array(
+            '0' => _t('English'),
+            '1' => _t('中文')
+        ),
+
+        '0',_t('界面语言设置'),_t("默认使用英文, 中文总感觉有些违和_(:3」∠)_")
+    );
+    $form->addInput($langis);
+
     // <?php $this->options->favicon()
     //$form->addInput($favicon)---show in setting.
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon地址'), _t('填入博客favicon的地址, 默认则不显示'));

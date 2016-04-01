@@ -31,33 +31,53 @@
                 <li>
                     <a href="<?php $this->options->adminUrl(); ?>" tabindex="-1">
                         <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >account_circle</i>
-                        Profile
+                        <?php if($this->options->langis == '0'): ?>
+                            Profile
+                        <?php elseif($this->options->langis == '1'): ?>
+                            用户概要
+                        <?php endif; ?>
                     </a>
                 </li>
                 <li>
                     <a href="<?php $this->options->profileUrl(); ?>" tabindex="-1">
                         <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >settings</i>
-                        Settings
+                        <?php if($this->options->langis == '0'): ?>
+                            Settings
+                        <?php elseif($this->options->langis == '1'): ?>
+                            个人设置
+                        <?php endif; ?>
                     </a>
                 </li>
                 <?php if($this->user->hasLogin()): ?>
                     <li>
                         <a href="<?php $this->options->logoutUrl(); ?>" class="md-menu-list-a" tabindex="-1">
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >exit_to_app</i>
-                            Exit
+                            <?php if($this->options->langis == '0'): ?>
+                                Exit
+                            <?php elseif($this->options->langis == '1'): ?>
+                                退出登录
+                            <?php endif; ?>
                         </a>
                     </li>
                 <?php else: ?>
                     <li>
                         <a href="<?php $this->options->loginUrl(); ?>" class="md-menu-list-a" tabindex="-1">
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >fingerprint</i>
-                            Login
+                            <?php if($this->options->langis == '0'): ?>
+                                Login
+                            <?php elseif($this->options->langis == '1'): ?>
+                                用户登录
+                            <?php endif; ?>
                         </a>
                     </li>
                     <li>
                         <a href="<?php $this->options->adminUrl('register.php'); ?>" class="md-menu-list-a" tabindex="-1">
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >person_add</i>
-                            Register
+                            <?php if($this->options->langis == '0'): ?>
+                                Register
+                            <?php elseif($this->options->langis == '1'): ?>
+                                用户注册
+                            <?php endif; ?>
                         </a>
                     </li>
                 <?php endif; ?>
@@ -68,7 +88,11 @@
         <li id="sidebar-first-li">
             <a href="<?php theme_random_posts();?>" target="_blank">
                 <i class="material-icons sidebar-material-icons">explore</i>
-                I'm Feeling Lucky
+                <?php if($this->options->langis == '0'): ?>
+                    I'm Feeling Lucky
+                <?php elseif($this->options->langis == '1'): ?>
+                    手气不错
+                <?php endif; ?>
             </a>
         </li>
 
@@ -76,7 +100,11 @@
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <i class="material-icons sidebar-material-icons">library_books</i>
-                Newest Article
+                <?php if($this->options->langis == '0'): ?>
+                    Newest Article
+                <?php elseif($this->options->langis == '1'): ?>
+                    最新文章
+                <?php endif; ?>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -94,7 +122,11 @@
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <i class="material-icons sidebar-material-icons">forum</i>
-                Newest Comments
+                <?php if($this->options->langis == '0'): ?>
+                    Newest Comments
+                <?php elseif($this->options->langis == '1'): ?>
+                    最新评论
+                <?php endif; ?>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -112,7 +144,11 @@
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <i class="material-icons sidebar-material-icons">inbox</i>
-                Archives
+                <?php if($this->options->langis == '0'): ?>
+                    Archives
+                <?php elseif($this->options->langis == '1'): ?>
+                    按月归档
+                <?php endif; ?>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -132,7 +168,11 @@
         <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=count&ignoreZeroCount=1&desc=1&limit=5')->to($tags); ?>
         <li class="dropdown">
             <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-                Hot Tags
+                <?php if($this->options->langis == '0'): ?>
+                    Hot Tags
+                <?php elseif($this->options->langis == '1'): ?>
+                    热门标签
+                <?php endif; ?>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -154,7 +194,11 @@
         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
         <li class="dropdown">
             <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-                Pages
+                <?php if($this->options->langis == '0'): ?>
+                    Pages
+                <?php elseif($this->options->langis == '1'): ?>
+                    独立页面
+                <?php endif; ?>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -169,7 +213,11 @@
         </li>
         <li class="dropdown">
             <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-                Links
+                <?php if($this->options->langis == '0'): ?>
+                    Links
+                <?php elseif($this->options->langis == '1'): ?>
+                    友情链接
+                <?php endif; ?>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -191,13 +239,21 @@
         <!-- Article Numebr  -->
         <li>
             <a href="#">
-                Article Number
+                <?php if($this->options->langis == '0'): ?>
+                    Article Number
+                <?php elseif($this->options->langis == '1'): ?>
+                    文章总数
+                <?php endif; ?>
                 <span class="sidebar-badge"><?php echo $stat->publishedPostsNum;?></span>
             </a>
         </li>
         <li>
             <a href="https://github.com/viosey/MaterialDesign-TypechoTheme" target="_blank">
-                Follow in Github
+                <?php if($this->options->langis == '0'): ?>
+                    Follow in Github
+                <?php elseif($this->options->langis == '1'): ?>
+                    关注Github
+                <?php endif; ?>
                 <span class="sidebar-badge badge-circle">i</span>
             </a>
         </li>
@@ -206,9 +262,33 @@
      <div class="sidebar-divider"></div>
 
     <!-- Sidebar bottom text -->
-    <a href="mailto:i@viosey.com" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">Help & Support</div></a>
-    <a href="https://github.com/viosey/typecho-theme-material/issues" target="_blank" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">Feedback</div></a>
-    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a"><div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">About Theme</div></a>
+    <a href="mailto:i@viosey.com" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
+        <?php if($this->options->langis == '0'): ?>
+            Help & Support
+        <?php elseif($this->options->langis == '1'): ?>
+            帮助&支持
+        <?php endif; ?>
+        </div>
+    </a>
+    <a href="https://github.com/viosey/typecho-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
+            <?php if($this->options->langis == '0'): ?>
+                Feedback
+            <?php elseif($this->options->langis == '1'): ?>
+                意见反馈
+            <?php endif; ?>
+        </div>
+    </a>
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
+            <?php if($this->options->langis == '0'): ?>
+                About Theme
+            <?php elseif($this->options->langis == '1'): ?>
+                关于主题
+            <?php endif; ?>
+        </div>
+    </a>
 
     <?php if ( !empty($this->options->switch) && in_array('ShowUpyun', $this->options->switch) ) : ?>
         <div id="upyun-logo">
