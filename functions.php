@@ -86,37 +86,37 @@ function themeConfig($form) {
 
     // <?php $this->options->favicon()
     //$form->addInput($favicon)---show in setting.
-    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon链接'), _t('填写自定义favicon的链接, 默认不显示'));
+    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon地址'), _t('填入博客favicon的地址, 默认则不显示'));
     $form->addInput($favicon);
 
-    $analysis = new Typecho_Widget_Helper_Form_Element_Text('analysis', NULL, NULL, _t('网站统计代码'), _t('填入你的统计代码'));
+    $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', NULL, NULL, _t('网站统计代码'), _t('填入如Google Analysis的第三方统计代码'));
     $form->addInput($analysis);
 
-    $themecolor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', NULL, _t('#FFF'), _t('主题颜色'), _t('e.g. 使用手机 Chrome时, 博客标签显示的颜色'));
+    $themecolor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', NULL, _t('#FFF'), _t('主题颜色'), _t('e.g. 使用手机版Chrome时, 博客标签显示的颜色'));
     $form->addInput($themecolor);
 
     $bgcolor = new Typecho_Widget_Helper_Form_Element_Text('bgcolor', NULL, _t('#F5F5F5'), _t('背景颜色'), _t('取代背景图片的颜色'));
     $form->addInput($bgcolor);
 
-    $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#F5F5F5'), _t('首页标题部分背景色'), _t('取代缩略图的颜色'));
+    $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#F5F5F5'), _t('首页标题部分背景色'), _t('取代文章缩略图的颜色'));
     $form->addInput($TitleColor);
 
-    $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', NULL, _t('https://viosey.com/img/hiyou.jpg'), _t('首页左上角图片链接'), _t('填写自定义图片的链接, 图片显示在首页左上角'));
+    $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', NULL, _t('https://viosey.com/img/hiyou.jpg'), _t('首页左上角图片地址'), _t('填入图片地址, 图片显示在首页左上角'));
     $form->addInput($dailypic);
 
-    $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', NULL, _t('Nice to meet you'), _t('首页左上角图片标语'), _t('填写自定义的文字, 文字显示在首页左上角图片上'));
+    $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', NULL, _t('Nice to meet you'), _t('首页左上角图片标语'), _t('填入自定义文字, 显示于首页左上角图片上'));
     $form->addInput($slogan);
 
-    $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL, _t('https://viosey.com/img/logo.png'), _t('首页右上角LOGO图片链接'), _t('填写自定义LOGO的链接, 图片显示在首页右上角'));
+    $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL, _t('https://viosey.com/img/logo.png'), _t('首页右上角LOGO图片地址'), _t('填入LOGO地址, 图片将显示于首页右上角板块'));
     $form->addInput($logo);
 
-    $TwitterURL = new Typecho_Widget_Helper_Form_Element_Text('TwitterURL', NULL, _t('https://twitter.com/viosey'), _t('页脚Twitter链接'), _t('填入你的Twitter链接'));
+    $TwitterURL = new Typecho_Widget_Helper_Form_Element_Text('TwitterURL', NULL, _t('https://twitter.com/viosey'), _t('Twitter地址'), _t('填入你的Twitter地址, 显示于博客页脚'));
     $form->addInput($TwitterURL);
 
-    $FacebookURL = new Typecho_Widget_Helper_Form_Element_Text('FacebookURL', NULL, _t('https://www.facebook.com/viosey'), _t('页脚Facebook链接'), _t('填入你的Facebookr链接'));
+    $FacebookURL = new Typecho_Widget_Helper_Form_Element_Text('FacebookURL', NULL, _t('https://www.facebook.com/viosey'), _t('Facebook地址'), _t('填入你的Facebookr地址, 显示于博客页脚'));
     $form->addInput($FacebookURL);
 
-    $GooglePlusURL = new Typecho_Widget_Helper_Form_Element_Text('GooglePlusURL', NULL, _t('https://plus.google.com/116465253856896614917'), _t('页脚GooglePlus链接'), _t('填入你的GooglePlus链接'));
+    $GooglePlusURL = new Typecho_Widget_Helper_Form_Element_Text('GooglePlusURL', NULL, _t('https://plus.google.com/116465253856896614917'), _t('Google Plus地址'), _t('填入你的GooglePlus地址, 显示于博客页脚'));
     $form->addInput($GooglePlusURL);
 
 }

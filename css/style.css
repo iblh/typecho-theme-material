@@ -11,6 +11,7 @@ body {
     content: '';
     will-change: transform;
 }
+
 a {
     color: #0097a7;
     font-weight: 400;
