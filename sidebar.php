@@ -262,7 +262,7 @@
      <div class="sidebar-divider"></div>
 
     <!-- Sidebar bottom text -->
-    <a href="mailto:i@viosey.com" class="sidebar-footer-text-a">
+    <a href="mailto:viosey@outlook.com" class="sidebar-footer-text-a">
         <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
         <?php if($this->options->langis == '0'): ?>
             Help & Support

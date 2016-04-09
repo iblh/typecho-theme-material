@@ -6,7 +6,7 @@ A Material Typecho Theme based on Google Material Design
 ## 基本特性
 - [主题Demo](https://blog.viosey.com)
 - 侧边栏包含
-- I'm Feeling Lucky (显示随机文章
+	- I'm Feeling Lucky (显示随机文章
  	- 用户入口
 	- 最新文章
 	- 最新评论
@@ -14,7 +14,8 @@ A Material Typecho Theme based on Google Material Design
 	- 友情链接
 	- 独立页面
 	- ...
-- 中文主题翻译中...
+- 不断丰富的自定义设置
+- 自带中英文界面语言
 
 
 ## 食用方法
@@ -24,6 +25,7 @@ A Material Typecho Theme based on Google Material Design
 	- 是否居中文章内容
 	- 是否启用平滑滚动
 	- 是否显示缩略图
+	- 背景设置
 	- 图片链接设置
 	- 社交链接设置
 	- 各种颜色设置

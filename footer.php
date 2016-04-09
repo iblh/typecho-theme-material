@@ -37,6 +37,9 @@
             </main>
             <div class="mdl-layout__obfuscator"></div>
         </div>
+
+        <!--Analysis code-->
+        <?php $this->options->analysis(); ?>
     </body>
 
 
