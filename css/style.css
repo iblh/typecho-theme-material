@@ -37,6 +37,12 @@ body .demo-blog {
 .index-top-block {
     margin-bottom: 30px;
 }
+@media screen and (max-device-width: 480px){
+    .index-top-block {
+        min-height: 200px !important;
+        transition: 1s;
+    }
+}
 .article-module {
     margin-bottom: 30px;
 }
@@ -145,6 +151,11 @@ body .demo-blog {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+@media screen and (max-device-width: 480px){
+    .demo-blog .something-else .mdl-card__media {
+        padding: 0px;
+    }
 }
 .demo-blog .something-else>button {
     position: absolute;
@@ -718,6 +729,8 @@ h6 {
 }
 .sidebar-material-icons {
     margin-right: 2pc;
+    width: 24px;
+    height: 24px;
     top: 15%;
     position: relative;
     /*vertical-align: middle;*/
