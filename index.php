@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.2.6
+ * @version 1.2.7
  * @link https://viosey.com
  */
 
@@ -101,12 +101,12 @@ $this->need('header.php');?>
                         <!-- Article link & title -->
                         <?php if ( !empty($this->options->appearance) && in_array('ThumbnailOption', $this->options->appearance) ) : ?>
                             <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
-                                <p class="article-headline-p"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></p>
+                                <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
                             </div>
                         <?php else: ?>
                             <div class="mdl-card__media mdl-color-text--grey-50" style="background-color:<?php $this->options->TitleColor()?>;color:#757575 !important;">
                                 <p class="article-headline-p-nopic">
-                                    <a href="<?php $this->permalink() ?>">
+                                    <a href="<?php $this->permalink() ?>" target="_self">
                                         “</br><?php $this->title() ?></br>”
                                     </a>
                                 </p>
@@ -117,6 +117,7 @@ $this->need('header.php');?>
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
                             <!--  $this->content('Continue Reading...');  -->
                             <?php $this->excerpt(80, '...'); ?>
+                            &nbsp;&nbsp;&nbsp;<span><a href="<?php $this->permalink(); ?>" target="_self">Continue Reading</a></span>
                         </div>
 
                         <!-- Article info-->

@@ -20,6 +20,18 @@ $("#visitor-url").focus(function() {
     this.value = "http://";
 });
 
+// //Add target="_blank" to a tags
+// $(document).bind('DOMNodeInserted', function(event) {
+//   $('a[href^="http"]').each(
+//         function(){
+//           if (!$(this).attr('target')) {
+//               $(this).attr('target', '_blank')
+//           }
+//         }
+//     );
+// });
+
+
 
 //
 //   sidebar.js

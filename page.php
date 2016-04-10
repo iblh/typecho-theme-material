@@ -10,7 +10,7 @@
                 </button>
                 <!-- Top-left-corner home button -->
                 <div class="demo-back" id="backhome-div">
-                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" role="button">
+                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" target="_self" role="button">
                         <!-- For modern browsers. -->
                         <i class="material-icons" role="presentation">arrow_back</i>
                         <!-- For IE9 or below. -->
