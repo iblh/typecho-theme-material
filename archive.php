@@ -1,6 +1,6 @@
 <?php $this->need('header.php'); ?>
 
-        <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded demo-blog--blogpost">
+        <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>fade out<?php endif; ?>">
 
             <main class="mdl-layout__content">
                 <div id="top"></div>
@@ -10,30 +10,42 @@
                 </button>
                 <!-- Top-left-corner home button -->
                 <div class="demo-back" id="backhome-div">
-                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" title="go back" role="button">
+                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onClick="javascript :history.back();" title="go back" role="button">
                         <!-- For modern browsers. -->
                         <i class="material-icons" role="presentation">arrow_back</i>
                         <!-- For IE9 or below. -->
                         <i class="material-icons">&#xE5C4;</i>
                     </a>
                 </div>
-                <div class="mdl-tooltip" for="backhome-div">Home</div>
+                <div class="mdl-tooltip" for="backhome-div">Back</div>
 
                 <div class="demo-blog__posts mdl-grid">
 
                     <?php while($this->next()): ?>
 
                     <!-- Article fragment -->
-                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col article-module">
 
                         <!-- Article link & title -->
-                        <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
-                            <p class="article-headline-p"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></p>
-                        </div>
+                        <?php if ( !empty($this->options->appearance) && in_array('ThumbnailOption', $this->options->appearance) ) : ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
+                                <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
+                            </div>
+                        <?php else: ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-color:<?php $this->options->TitleColor()?>;color:#757575 !important;">
+                                <p class="article-headline-p-nopic">
+                                    <a href="<?php $this->permalink() ?>" target="_self">
+                                        “</br><?php $this->title() ?></br>”
+                                    </a>
+                                </p>
+                            </div>
+                        <?php endif; ?>
 
-                        <!-- Articel content -->
+                        <!-- Article content -->
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
-                            <?php $this->content('Continue Reading...'); ?>
+                            <!--  $this->content('Continue Reading...');  -->
+                            <?php $this->excerpt(80, '...'); ?>
+                            &nbsp;&nbsp;&nbsp;<span><a href="<?php $this->permalink(); ?>" target="_self">Continue Reading</a></span>
                         </div>
 
                         <!-- Articli info-->

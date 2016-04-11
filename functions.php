@@ -52,7 +52,7 @@ function themeConfig($form) {
     <span style="    display: block;
     margin-bottom: .5em;
     font-weight: bold;">感谢您使用 Material 主题</span>
-    请关注 Github 以获得最新版本支持 <a href="https://github.com/viosey/typecho-theme-material" target="_blank">Github-Material</a> <br />
+    请关注 <a href="https://github.com/viosey/typecho-theme-material" target="_blank" style="color:#3384da;font-weight:bold;">Github-Material</a> 以获得<span style="color:#df3827;font-weight:bold;">最新版本支持</span>  <br />
     <a href="mailto:viosey@outlook.com" >帮助&支持</a> &nbsp;
     <a href="https://github.com/viosey/typecho-theme-material/issues" target="_blank">建议&反馈</a>
     </p>';
@@ -82,7 +82,7 @@ function themeConfig($form) {
 
     $switch = new Typecho_Widget_Helper_Form_Element_Checkbox('switch',
         array(
-            'ShowUpyun' => _t('启用 upyun 联盟 logo'),
+            'ShowUpyun' => _t('侧边栏显示 upyun 联盟 logo'),
             'SmoothScroll' => _t('平滑滚动效果'),
             'ShowLoadingLine' => _t('页面顶部 loading 加载进度条效果'),
             'atargetblank' => _t('链接以新标签页形式打开'),
@@ -93,9 +93,13 @@ function themeConfig($form) {
     );
     $form->addInput($switch->multiMode());
 
-    $loadingcolor = new Typecho_Widget_Helper_Form_Element_Text('loadingcolor', NULL, _t('#c0392b'), _t('loading 加载进度条颜色'),_t('打开"功能开关"中的loading 加载进度条后, 在这里设置进度条的颜色'));
+    $loadingcolor = new Typecho_Widget_Helper_Form_Element_Text('loadingcolor', NULL, NULL, _t('loading 加载进度条颜色'),_t('打开"功能开关"中的loading 加载进度条后, 在这里设置进度条的颜色, 默认为蓝色'));
     $loadingcolor->input->setAttribute('class','mini');
     $form->addInput($loadingcolor);
+
+    $loadingbuffer = new Typecho_Widget_Helper_Form_Element_Text('loadingbuffer', NULL, _t('800'), _t('loading 加载缓冲时间'),_t('loading 加载进度条的缓冲时间, 单位为毫秒 ms, 默认为800ms'));
+    $loadingbuffer->input->setAttribute('class','mini');
+    $form->addInput($loadingbuffer);
 
     $BGtype = new Typecho_Widget_Helper_Form_Element_Radio('BGtype',
         array(
@@ -105,7 +109,7 @@ function themeConfig($form) {
         ),
 
         //Default choose
-        '1',_t('背景设置'),_t("选择背景方案，对应填写下方的 '背景颜色 / 图片' ，这里默认使用图片背景.<br />
+        '0',_t('背景设置'),_t("选择背景方案，对应填写下方的 '背景颜色 / 图片' ，这里默认使用纯色背景.<br />
         美观: 图片 > 渐变 > 纯色<br />性能: 渐变 = 纯色 > 图片")
     );
     $form->addInput($BGtype);

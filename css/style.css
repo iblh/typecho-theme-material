@@ -210,7 +210,22 @@ body .demo-blog {
 .demo-blog .mdl-card h3 {
     margin: 0;
 }
+.demo-blog .mdl-card h1 a {
+    text-decoration: none;
+}
+.demo-blog .mdl-card h2 a {
+    text-decoration: none;
+}
 .demo-blog .mdl-card h3 a {
+    text-decoration: none;
+}
+.demo-blog .mdl-card h4 a {
+    text-decoration: none;
+}
+.demo-blog .mdl-card h5 a {
+    text-decoration: none;
+}
+.demo-blog .mdl-card h6 a {
     text-decoration: none;
 }
 .demo-blog .mdl-card h3.quote:after, .demo-blog .mdl-card h3.quote:before {
@@ -229,7 +244,6 @@ body .demo-blog {
 }
 .demo-blog--blogpost .demo-blog__posts>.mdl-card .mdl-card__media {
     height: 280px;
-    background-image: url(../img/road_big.jpg);
 }
 .demo-blog--blogpost .comments {
     background-color: #eee;
@@ -319,7 +333,7 @@ body .demo-blog {
     padding-top: 2pc;
     padding-left: 3pc;
 }
-.demo-blog--blogpost .demo-back {
+.demo-back {
     position: fixed;
     top: 5pc;
     left: 1pc;
@@ -1181,7 +1195,7 @@ h6 {
 #upyun-logo {
     padding-left: 16px;
     position: relative;
-    top: 150px;
+    top: 100px;
 }
 
 /*

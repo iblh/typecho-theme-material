@@ -55,6 +55,25 @@
                 z-index: 900;
             }
         </style>
+
+        <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>
+            <style>
+                .fade {
+                  transition: all <?php $this->options->loadingbuffer(); ?>ms linear;
+                  -webkit-transform: translate3d(0,0,0);
+                  -moz-transform: translate3d(0,0,0);
+                  -ms-transform: translate3d(0,0,0);
+                  -o-transform: translate3d(0,0,0);
+                  transform: translate3d(0,0,0);
+                  opacity: 1;
+                }
+
+                .fade.out {
+                  opacity: 0;
+                }
+            </style>
+        <?php endif; ?>
+
         <?php if ( !empty($this->options->appearance) && in_array('CenterArticle', $this->options->appearance) ) : ?>
             <style>
                 .demo-blog--blogpost .meta+.mdl-card__supporting-text {

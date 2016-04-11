@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.2.8
+ * @version 1.2.9
  * @link https://viosey.com
  */
 
@@ -96,7 +96,7 @@ $this->need('header.php');?>
                     <?php while($this->next()): ?>
 
                     <!-- Article module -->
-                    <div class="mdl-card mdl-cell mdl-cell--12-col article-module">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col article-module <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>fade out<?php endif; ?>">
 
                         <!-- Article link & title -->
                         <?php if ( !empty($this->options->appearance) && in_array('ThumbnailOption', $this->options->appearance) ) : ?>

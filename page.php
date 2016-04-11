@@ -10,14 +10,14 @@
                 </button>
                 <!-- Top-left-corner home button -->
                 <div class="demo-back" id="backhome-div">
-                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php $this->options->siteUrl(); ?>" target="_self" role="button">
+                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onClick="javascript :history.back();" target="_self" role="button">
                         <!-- For modern browsers. -->
                         <i class="material-icons" role="presentation">arrow_back</i>
                         <!-- For IE9 or below. -->
                         <i class="material-icons">&#xE5C4;</i>
                     </a>
                 </div>
-                <div class="mdl-tooltip" for="backhome-div">Home</div>
+                <div class="mdl-tooltip" for="backhome-div">Back</div>
 
                 <!-- Article module -->
                 <div class="demo-blog__posts mdl-grid">
@@ -29,7 +29,7 @@
                         </div>
 
                         <!-- Articli info -->
-                        <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                        <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>fade out<?php endif; ?>">
                             <!-- Author avatar -->
                             <div id="author-avatar"><?php $this->author->gravatar(44); ?></div>
                             <div>
@@ -69,7 +69,7 @@
                         </div>
 
                         <!-- Articel content -->
-                        <div id="article-content-div" class="mdl-color-text--grey-700 mdl-card__supporting-text post-article-content">
+                        <div id="article-content-div" class="mdl-color-text--grey-700 mdl-card__supporting-text post-article-content <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>fade out<?php endif; ?>">
                             <?php $this->content(); ?>
                         </div>
 

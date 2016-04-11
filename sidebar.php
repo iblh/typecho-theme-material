@@ -84,9 +84,21 @@
             </ul>
         </li>
 
-        <!-- I'm Feeling Lucky -->
+        <!-- Homepage -->
         <li id="sidebar-first-li">
-            <a href="<?php theme_random_posts();?>" target="_blank">
+            <a href="<?php $this->options->siteUrl(); ?>" target="_self">
+                <i class="material-icons sidebar-material-icons">home</i>
+                <?php if($this->options->langis == '0'): ?>
+                    Homepage
+                <?php elseif($this->options->langis == '1'): ?>
+                    网站首页
+                <?php endif; ?>
+            </a>
+        </li>
+
+        <!-- I'm Feeling Lucky -->
+        <li class="dropdown">
+            <a href="<?php theme_random_posts();?>" target="_self">
                 <i class="material-icons sidebar-material-icons">explore</i>
                 <?php if($this->options->langis == '0'): ?>
                     I'm Feeling Lucky
