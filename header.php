@@ -54,6 +54,10 @@
                 margin-bottom: 40px;
                 z-index: 900;
             }
+            
+            a{
+                color: <?php $this->options->alinkcolor(); ?>;
+            }
         </style>
 
         <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>

@@ -29,7 +29,7 @@
                         </div>
 
                         <!-- Articli info -->
-                        <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>fade out<?php endif; ?>">
+                        <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
                             <!-- Author avatar -->
                             <div id="author-avatar"><?php $this->author->gravatar(44); ?></div>
                             <div>
@@ -74,9 +74,33 @@
                                 <?php if (class_exists("Stat_Plugin")): ?>
                                     <a class="md-menu-list-a" href="#"><li class="mdl-menu__item"><?php $this->views(); ?> 浏览</li></a>
                                 <?php endif; ?>
-                                <a class="md-menu-list-a" target="_blank" href="<?php $this->permalink(); ?>"><li class="mdl-menu__item">Open in New Tab</li></a>
-                                <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->title(); ?>&url=<?php $this->permalink() ?>&via=<?php $this->user->screenName(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
-                                <a class="md-menu-list-a" href="https://plus.google.com/share?url=<?php $this->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="mdl-menu__item">Share to Google+</li></a>
+                                <a class="md-menu-list-a" target="_blank" href="<?php $this->permalink(); ?>">
+                                    <li class="mdl-menu__item">
+                                        <?php if($this->options->langis == '0'): ?>
+                                            Open in New Tab
+                                        <?php elseif($this->options->langis == '1'): ?>
+                                            新标签页打开
+                                        <?php endif; ?>
+                                    </li>
+                                </a>
+                                <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->title(); ?>&url=<?php $this->permalink() ?>&via=<?php $this->user->screenName(); ?>">
+                                    <li class="mdl-menu__item" >
+                                        <?php if($this->options->langis == '0'): ?>
+                                            Share to Twitter
+                                        <?php elseif($this->options->langis == '1'): ?>
+                                            分享到 Twitter
+                                        <?php endif; ?>
+                                    </li>
+                                </a>
+                                <a class="md-menu-list-a" href="https://plus.google.com/share?url=<?php $this->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                                    <li class="mdl-menu__item">
+                                        <?php if($this->options->langis == '0'): ?>
+                                            Share to Google+
+                                        <?php elseif($this->options->langis == '1'): ?>
+                                            分享到 Google+
+                                        <?php endif; ?>
+                                    </li>
+                                </a>
                             </ul>
                         </div>
 

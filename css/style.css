@@ -28,20 +28,28 @@ body {
 }
 
 a {
-    color: #0097a7;
     font-weight: 400;
 }
 body .demo-blog {
     font-family: Roboto, Helvetica, sans-serif;
 }
 .index-top-block {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 @media screen and (max-device-width: 480px){
     .index-top-block {
         min-height: 200px !important;
         transition: 1s;
     }
+}
+.mdl-article-top{
+    padding-left: 24px;
+    font-weight: 400;
+    z-index: 1;
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    margin-bottom: 20px;
 }
 .article-module {
     margin-bottom: 30px;
@@ -671,8 +679,17 @@ h6 {
     margin: 0;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
-.article-headline-p a {
+.article-headline-p a,
+.article-headline-p-top a {
     text-decoration: none;
+}
+.article-headline-p-top{
+    padding: 10px 0;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 .article-headline-p-nopic{
     font-size: 34px;

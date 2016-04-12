@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.2.9
+ * @version 1.6.0
  * @link https://viosey.com
  */
 
@@ -84,23 +84,90 @@ $this->need('header.php');?>
                                 <span class="visuallyhidden">show menu</span>
                             </button>
                             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-                                <a href="<?php $this->options->feedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Article RSS</li></a> <!-- 文章的RSS地址连接 -->
-                                <a href="<?php $this->options->commentsFeedUrl(); ?>" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Comment RSS</li></a> <!-- 评论的RSS地址连接 -->
-                                <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->options->title(); ?>&url=<?php $this->options->siteUrl(); ?>&via=<?php $this->author->screenName(); ?>"><li class="mdl-menu__item" >Share to Twitter</li></a>
-                                <a class="md-menu-list-a" href="https://plus.google.com/share?url=<?php $this->options->siteUrl(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="mdl-menu__item">Share to Google+</li></a>
-                                <a href="<?php $this->options->siteUrl(); ?>" target="_blank" class="md-menu-list-a" ><li class="mdl-menu__item mdl-js-ripple-effect">Open in New Tab</li></a>
+
+                                <a href="<?php $this->options->feedUrl(); ?>" class="md-menu-list-a" >
+                                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                                        <?php if($this->options->langis == '0'): ?>
+                                            Article RSS
+                                        <?php elseif($this->options->langis == '1'): ?>
+                                            文章 RSS
+                                        <?php endif; ?>
+                                    </li>
+                                </a> <!-- 文章的RSS地址连接 -->
+                                <a href="<?php $this->options->commentsFeedUrl(); ?>" class="md-menu-list-a" >
+                                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                                        <?php if($this->options->langis == '0'): ?>
+                                            Comment RSS
+                                        <?php elseif($this->options->langis == '1'): ?>
+                                            评论 RSS
+                                        <?php endif; ?>
+                                    </li>
+                                </a> <!-- 评论的RSS地址连接 -->
+                                <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->options->title(); ?>&url=<?php $this->options->siteUrl(); ?>&via=<?php $this->author->screenName(); ?>">
+                                    <li class="mdl-menu__item" >
+                                        <?php if($this->options->langis == '0'): ?>
+                                            Share to Twitter
+                                        <?php elseif($this->options->langis == '1'): ?>
+                                            分享到 Twitter
+                                        <?php endif; ?>
+                                    </li>
+                                </a>
+                                <a class="md-menu-list-a" href="https://plus.google.com/share?url=<?php $this->options->siteUrl(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                                    <li class="mdl-menu__item">
+                                        <?php if($this->options->langis == '0'): ?>
+                                            Share to Google+
+                                        <?php elseif($this->options->langis == '1'): ?>
+                                            分享到 Google+
+                                        <?php endif; ?>
+                                    </li>
+                                </a>
+                                <a href="<?php $this->options->siteUrl(); ?>" target="_blank" class="md-menu-list-a" >
+                                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                                        <?php if($this->options->langis == '0'): ?>
+                                            Open in New Tab
+                                        <?php elseif($this->options->langis == '1'): ?>
+                                            新标签页打开
+                                        <?php endif; ?>
+                                    </li>
+                                </a>
+
                             </ul>
                         </div>
                     </div>
+                    <?php if($this->is('index')): ?>
+                    <?php
+                    $db = Typecho_Db::get();
+                    $prefix = $db->getPrefix();
+                    $sticky_posts = $db->fetchAll($this->db
+                    	->select()->from($prefix.'contents')
+                    	->orWhere('cid = ?',$this->options->sticky_1)
+                    	->orWhere('cid = ?',$this->options->sticky_2)
+                    	->where('type = ? AND status = ? AND password IS NULL', 'post', 'publish'));
+                    	rsort( $sticky_posts );//对数组逆向排序，即大ID在前
+                    	foreach ($sticky_posts as $sticky_posts) {
+                    		$result = Typecho_Widget::widget('Widget_Abstract_Contents')->push($sticky_posts);
+                    		$post_views = number_format($result['views']);
+                    		$post_title = htmlspecialchars($result['title']);
+                    		$post_date = date('M d,Y', $result['created']);
+                    		$permalink = $result['permalink'];
+                    		/*if($post_views > $this->options->view_num){echo 'HOT';} else {echo ''.$post_views.''' VIEW';};*/
+                    		echo '
+                            <!-- Article module -->
+                            <div class="mdl-article-top mdl-cell mdl-cell--12-col '.((!empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch))?"fade out":"").' ">
+                                <p class="article-headline-p-top"><a href="'.$permalink.'" target="_self"><span style="color:">[置顶]&nbsp;</span><span style="color:#757575">'.$post_title .'</span></a></p>
+                            </div>
+                            '."\n\r";}
+                    ?>
+                    <?php endif; ?>
 
                     <?php while($this->next()): ?>
 
                     <!-- Article module -->
-                    <div class="mdl-card mdl-cell mdl-cell--12-col article-module <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>fade out<?php endif; ?>">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col article-module <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch)): ?>fade out<?php endif; ?>">
 
                         <!-- Article link & title -->
                         <?php if ( !empty($this->options->appearance) && in_array('ThumbnailOption', $this->options->appearance) ) : ?>
-                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
+                            <div class="mdl-card__media mdl-color-text--grey-50 " style="background-image:url(<?php showThumbnail($this); ?>)">
                                 <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
                             </div>
                         <?php else: ?>
@@ -130,7 +197,7 @@ $this->need('header.php');?>
                                     <span><?php $this->date('F j, Y'); ?></span>
                                 </div>
                             </div>
-                            <div id="article-category-comment" style="color:#0097a7">
+                            <div id="article-category-comment" style="color:#3697D5">
                                 <?php $this->category(', '); ?> | <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>
                                 <?php if (class_exists("Stat_Plugin")): ?>
                                     |&nbsp;<?php $this->views(); ?> <?php $this->sticky(); ?>浏览

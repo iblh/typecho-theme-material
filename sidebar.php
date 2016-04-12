@@ -260,11 +260,11 @@
             </a>
         </li>
         <li>
-            <a href="https://github.com/viosey/MaterialDesign-TypechoTheme" target="_blank">
+            <a href="https://github.com/viosey/typecho-theme-material" target="_blank">
                 <?php if($this->options->langis == '0'): ?>
-                    Follow in Github
+                    Theme in Github
                 <?php elseif($this->options->langis == '1'): ?>
-                    关注Github
+                    主题Github
                 <?php endif; ?>
                 <span class="sidebar-badge badge-circle">i</span>
             </a>
@@ -277,7 +277,7 @@
     <a href="mailto:viosey@outlook.com" class="sidebar-footer-text-a">
         <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div">
         <?php if($this->options->langis == '0'): ?>
-            Help & Support
+            Help&Support
         <?php elseif($this->options->langis == '1'): ?>
             帮助&支持
         <?php endif; ?>

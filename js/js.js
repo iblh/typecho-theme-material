@@ -20,6 +20,11 @@ $("#visitor-url").focus(function() {
     this.value = "http://";
 });
 
+//Auto delete input content
+$(".mdl-textfield__input").blur(function() {
+    this.value = "";
+});
+
 
 //
 //   sidebar.js

@@ -93,11 +93,11 @@ function themeConfig($form) {
     );
     $form->addInput($switch->multiMode());
 
-    $loadingcolor = new Typecho_Widget_Helper_Form_Element_Text('loadingcolor', NULL, NULL, _t('loading 加载进度条颜色'),_t('打开"功能开关"中的loading 加载进度条后, 在这里设置进度条的颜色, 默认为蓝色'));
+    $loadingcolor = new Typecho_Widget_Helper_Form_Element_Text('loadingcolor', NULL, NULL, _t('loading 加载进度条颜色'),_t('打开 "功能开关" 中的 loading 加载进度条后, 在这里设置进度条的颜色, 默认为蓝色'));
     $loadingcolor->input->setAttribute('class','mini');
     $form->addInput($loadingcolor);
 
-    $loadingbuffer = new Typecho_Widget_Helper_Form_Element_Text('loadingbuffer', NULL, _t('800'), _t('loading 加载缓冲时间'),_t('loading 加载进度条的缓冲时间, 单位为毫秒 ms, 默认为800ms'));
+    $loadingbuffer = new Typecho_Widget_Helper_Form_Element_Text('loadingbuffer', NULL, _t('800'), _t('loading 加载缓冲时间'),_t('loading 加载进度条的缓冲时间, 单位为毫秒 ms, 默认为 800ms'));
     $loadingbuffer->input->setAttribute('class','mini');
     $form->addInput($loadingbuffer);
 
@@ -142,9 +142,21 @@ function themeConfig($form) {
     );
     $form->addInput($langis);
 
+    $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1',NULL, NULL,'置顶文章ID', '填写对应主题的 id 即可使文章标题在置顶首页显示');
+    $sticky_1->input->setAttribute('class', 'mini');
+    $form->addInput($sticky_1->addRule('isInteger', '请填入数字'));
+
+    $sticky_2 = new Typecho_Widget_Helper_Form_Element_Text('sticky_2',NULL, NULL,'置顶文章ID', '填写对应主题的 id 即可使文章标题在置顶首页显示');
+    $sticky_2->input->setAttribute('class', 'mini');
+    $form->addInput($sticky_2->addRule('isInteger', '请填入数字'));
+
     $themecolor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', NULL, _t('#FFF'), _t('主题颜色'), _t('设置 Android Chrome 选项卡颜色'));
     $themecolor->input->setAttribute('class', 'mini');
     $form->addInput($themecolor);
+
+    $alinkcolor = new Typecho_Widget_Helper_Form_Element_Text('alinkcolor', NULL, _t('#3697D5'), _t('超链接颜色'), _t('设置博客的超链接字体颜色, 默认为蓝色'));
+    $alinkcolor->input->setAttribute('class','mini');
+    $form->addInput($alinkcolor);
 
     $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#F5F5F5'), _t('首页标题部分背景色'), _t('如果不显示文章缩略图, 则以该颜色替代'));
     $TitleColor->input->setAttribute('class', 'mini');
