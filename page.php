@@ -59,9 +59,7 @@
                             <div class="mdl-tooltip" for="article-fuctions-share-button">Share</div>
                             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="article-fuctions-share-button">
-                                <?php if (class_exists("Stat_Plugin")): ?>
-                                    <a class="md-menu-list-a" href="#"><li class="mdl-menu__item"><?php $this->views(); ?> 浏览</li></a>
-                                <?php endif; ?>
+                                <a class="md-menu-list-a" href="#"><li class="mdl-menu__item"><?php get_post_view($this) ?>&nbsp;浏览</li></a>
                                 <a class="md-menu-list-a" target="_blank" href="<?php $this->permalink(); ?>">
                                     <li class="mdl-menu__item">
                                         <?php if($this->options->langis == '0'): ?>

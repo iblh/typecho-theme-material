@@ -198,10 +198,7 @@ $this->need('header.php');?>
                                 </div>
                             </div>
                             <div id="article-category-comment" style="color:#3697D5">
-                                <?php $this->category(', '); ?> | <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>
-                                <?php if (class_exists("Stat_Plugin")): ?>
-                                    |&nbsp;<?php $this->views(); ?> <?php $this->sticky(); ?>浏览
-                                <?php endif; ?>
+                                <?php $this->category(', '); ?>&nbsp;|&nbsp;<a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>&nbsp;|&nbsp;<?php get_post_view($this) ?>&nbsp;浏览
                             </div>
 
                         </div>

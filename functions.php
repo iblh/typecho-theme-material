@@ -1,51 +1,5 @@
 <?php
 
-//Homepage thumbnail
-function showThumbnail($widget)
-{
-    //If article no include picture, display random default picture
-    $rand = rand(1,5); //Random number
-    $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg'; //Random picture path
-
-    // If only on random default picture, delete the following "//"
-    //$random = $widget->widget('Widget_Options')->themeUrl . '/img/random.jpg';
-
-    $attach = $widget->attachments(1)->attachment;
-    $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
-
-
-    if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
-             echo $thumbUrl[1][0];
-    }
-    else if ($attach->isImage) {
-        echo $attach->url;
-    }
-    else {
-        echo $random;
-    }
-}
-
-//Random article
-function theme_random_posts(){
-    $defaults = array(
-        'number' => 1,
-    );
-    $db = Typecho_Db::get();
-
-    $sql = $db->select()->from('table.contents')
-        ->where('status = ?','publish')
-        ->where('type = ?', 'post')
-        ->where('created <= unix_timestamp(now())', 'post') //avoid display the article which don't reach the publish time
-        ->limit($defaults['number'])
-        ->order('RAND()');
-
-    $result = $db->fetchAll($sql);
-    foreach($result as $val){
-        $val = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($val);
-        echo $val['permalink'];
-    }
-}
-
 //Appearance setup
 function themeConfig($form) {
     echo '<p style="font-size:14px;">
@@ -202,4 +156,68 @@ function themeConfig($form) {
 
     $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', NULL, NULL, _t('网站统计代码'), _t('填入如 Google Analysis 的第三方统计代码'));
     $form->addInput($analysis);
+}
+
+//Homepage thumbnail
+function showThumbnail($widget)
+{
+    //If article no include picture, display random default picture
+    $rand = rand(1,5); //Random number
+    $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg'; //Random picture path
+
+    // If only on random default picture, delete the following "//"
+    //$random = $widget->widget('Widget_Options')->themeUrl . '/img/random.jpg';
+
+    $attach = $widget->attachments(1)->attachment;
+    $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
+
+
+    if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
+             echo $thumbUrl[1][0];
+    }
+    else if ($attach->isImage) {
+        echo $attach->url;
+    }
+    else {
+        echo $random;
+    }
+}
+
+//Random article
+function theme_random_posts(){
+    $defaults = array(
+        'number' => 1,
+    );
+    $db = Typecho_Db::get();
+
+    $sql = $db->select()->from('table.contents')
+        ->where('status = ?','publish')
+        ->where('type = ?', 'post')
+        ->where('created <= unix_timestamp(now())', 'post') //avoid display the article which don't reach the publish time
+        ->limit($defaults['number'])
+        ->order('RAND()');
+
+    $result = $db->fetchAll($sql);
+    foreach($result as $val){
+        $val = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($val);
+        echo $val['permalink'];
+    }
+}
+
+
+function get_post_view($archive)
+{
+    $cid    = $archive->cid;
+    $db     = Typecho_Db::get();
+    $prefix = $db->getPrefix();
+    if (!array_key_exists('views', $db->fetchRow($db->select()->from('table.contents')))) {
+        $db->query('ALTER TABLE `' . $prefix . 'contents` ADD `views` INT(10) DEFAULT 0;');
+        echo 0;
+        return;
+    }
+    $row = $db->fetchRow($db->select('views')->from('table.contents')->where('cid = ?', $cid));
+    if ($archive->is('single')) {
+       $db->query($db->update('table.contents')->rows(array('views' => (int) $row['views'] + 1))->where('cid = ?', $cid));
+    }
+    echo $row['views'];
 }
