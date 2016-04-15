@@ -31,7 +31,14 @@
                         <!-- Articli info -->
                         <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
                             <!-- Author avatar -->
-                            <div id="author-avatar"><?php $this->author->gravatar(44); ?></div>
+                            <div id="author-avatar">
+                                <?php if(!empty($this->options->avatarURL)): ?>
+                                    <img src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                <?php else: ?>
+                                    <?php $this->author->gravatar(44); ?>
+                                <?php endif; ?>
+                            </div>
+                            
                             <div>
                                 <!-- Author name -->
                                 <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>

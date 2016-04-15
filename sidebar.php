@@ -14,7 +14,11 @@
         </button>
         <!-- Sidebar brand image -->
         <div class="sidebar-image">
-            <?php $this->author->gravatar(); ?>
+            <?php if(!empty($this->options->avatarURL)): ?>
+                <img src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+            <?php else: ?>
+                <?php $this->author->gravatar(44); ?>
+            <?php endif; ?>
         </div>
         <!-- Sidebar brand name -->
         <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">

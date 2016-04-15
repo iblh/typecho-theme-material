@@ -52,7 +52,15 @@
                         <div>
                             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
                                 <!-- Author avatar -->
-                                <div id="author-avatar"><?php $this->author->gravatar(44); ?></div>
+                                <div id="author-avatar">
+                                    <div id="author-avatar">
+                                        <?php if(!empty($this->options->avatarURL)): ?>
+                                            <img src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                        <?php else: ?>
+                                            <?php $this->author->gravatar(44); ?>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
                                 <div>
                                     <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
                                     <span><?php $this->date('F j, Y'); ?></span>

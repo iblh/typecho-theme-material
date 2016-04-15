@@ -1,51 +1,5 @@
 <?php
 
-//Homepage thumbnail
-function showThumbnail($widget)
-{
-    //If article no include picture, display random default picture
-    $rand = rand(1,5); //Random number
-    $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg'; //Random picture path
-
-    // If only on random default picture, delete the following "//"
-    //$random = $widget->widget('Widget_Options')->themeUrl . '/img/random.jpg';
-
-    $attach = $widget->attachments(1)->attachment;
-    $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
-
-
-    if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
-             echo $thumbUrl[1][0];
-    }
-    else if ($attach->isImage) {
-        echo $attach->url;
-    }
-    else {
-        echo $random;
-    }
-}
-
-//Random article
-function theme_random_posts(){
-    $defaults = array(
-        'number' => 1,
-    );
-    $db = Typecho_Db::get();
-
-    $sql = $db->select()->from('table.contents')
-        ->where('status = ?','publish')
-        ->where('type = ?', 'post')
-        ->where('created <= unix_timestamp(now())', 'post') //avoid display the article which don't reach the publish time
-        ->limit($defaults['number'])
-        ->order('RAND()');
-
-    $result = $db->fetchAll($sql);
-    foreach($result as $val){
-        $val = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($val);
-        echo $val['permalink'];
-    }
-}
-
 //Appearance setup
 function themeConfig($form) {
     echo '<p style="font-size:14px;">
@@ -57,7 +11,6 @@ function themeConfig($form) {
     <a href="https://github.com/viosey/typecho-theme-material/issues" target="_blank">建议&反馈</a>
     </p>';
 
-    //<?php if ( !empty($this->options->misc) && in_array('ShowUpyun', $this->options->misc) ) :
     $misc = new Typecho_Widget_Helper_Form_Element_Checkbox('misc',
         array(
 
@@ -142,11 +95,11 @@ function themeConfig($form) {
     );
     $form->addInput($langis);
 
-    $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1',NULL, NULL,'置顶文章ID', '填写对应主题的 id 即可使文章标题在置顶首页显示');
+    $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', NULL, NULL,'置顶文章ID', '填写对应主题的 id 即可使文章标题在置顶首页显示');
     $sticky_1->input->setAttribute('class', 'mini');
     $form->addInput($sticky_1->addRule('isInteger', '请填入数字'));
 
-    $sticky_2 = new Typecho_Widget_Helper_Form_Element_Text('sticky_2',NULL, NULL,'置顶文章ID', '填写对应主题的 id 即可使文章标题在置顶首页显示');
+    $sticky_2 = new Typecho_Widget_Helper_Form_Element_Text('sticky_2', NULL, NULL,'置顶文章ID', '填写对应主题的 id 即可使文章标题在置顶首页显示');
     $sticky_2->input->setAttribute('class', 'mini');
     $form->addInput($sticky_2->addRule('isInteger', '请填入数字'));
 
@@ -162,8 +115,9 @@ function themeConfig($form) {
     $TitleColor->input->setAttribute('class', 'mini');
     $form->addInput($TitleColor);
 
-    // <?php $this->options->favicon()
-    //$form->addInput($favicon)---show in setting.
+    $avatarURL = new Typecho_Widget_Helper_Form_Element_Text('avatarURL', NULL, NULL, '个人头像地址', '填入头像的地址, 如不填写则使用默认头像');
+    $form->addInput($avatarURL);
+
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon 地址'), _t('填入博客 favicon 的地址, 默认则不显示'));
     $form->addInput($favicon);
 
@@ -202,4 +156,50 @@ function themeConfig($form) {
 
     $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', NULL, NULL, _t('网站统计代码'), _t('填入如 Google Analysis 的第三方统计代码'));
     $form->addInput($analysis);
+}
+
+//Homepage thumbnail
+function showThumbnail($widget)
+{
+    //If article no include picture, display random default picture
+    $rand = rand(1,5); //Random number
+    $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg'; //Random picture path
+
+    // If only on random default picture, delete the following "//"
+    //$random = $widget->widget('Widget_Options')->themeUrl . '/img/random.jpg';
+
+    $attach = $widget->attachments(1)->attachment;
+    $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
+
+
+    if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
+             echo $thumbUrl[1][0];
+    }
+    else if ($attach->isImage) {
+        echo $attach->url;
+    }
+    else {
+        echo $random;
+    }
+}
+
+//Random article
+function theme_random_posts(){
+    $defaults = array(
+        'number' => 1,
+    );
+    $db = Typecho_Db::get();
+
+    $sql = $db->select()->from('table.contents')
+        ->where('status = ?','publish')
+        ->where('type = ?', 'post')
+        ->where('created <= unix_timestamp(now())', 'post') //avoid display the article which don't reach the publish time
+        ->limit($defaults['number'])
+        ->order('RAND()');
+
+    $result = $db->fetchAll($sql);
+    foreach($result as $val){
+        $val = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($val);
+        echo $val['permalink'];
+    }
 }
