@@ -18,7 +18,7 @@ A Material Typecho Theme based on Google Material Design
 - 关于文章缩略图
 	- 文章缩略图为文章内第一张图片
 	- 缩略图支持 Markdown 格式, HTML 格式以及附件形式, Markdown 格式为 ```![图片描述](图片链接)```
-	- 如果某篇文章不想插入图片, 但想自定义该文章的缩略图, 可如上插入一张图片后, 将该图片注释掉, 格式为 ```<!-- ![图片描述](图片链接) --> ```
+	- 如果想要自定义某篇文章的缩略图, 但是不想让该图片在文章中出现, 则可以使用该格式 ```<img src="图片链接" width="0px" /> ```
 - 在侧边栏中使用友情链接, 需安装此友情链接插件  [typecho-links-material](https://github.com/viosey/typecho-links-material)
 - 安装使用 [浏览次数统计插件](https://lets.us.to/usr/uploads/2015/01/874979024.zip) 后, 首页文章信息与文章页分享按钮下拉选项中会显示浏览次数统计
 

@@ -4,13 +4,16 @@ html {
 body {
     margin: 0;
     padding: 0;
-    position: fixed;
+    /*position: fixed; iOS's background-image not work with this property*/
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: -1;
-    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-attachment: fixed;
     content: '';
     will-change: transform;
@@ -45,13 +48,17 @@ body .demo-blog {
         margin-bottom: 20px;
     }
 }
-@media screen and (max-device-width: 768px){
+@media screen and (min-device-width: 481px) and (max-device-width: 768px){
     .index-top-block {
         min-height: 200px !important;
         transition: 1s;
-        width: 48%;
-        margin: 1%;
         margin-bottom: 20px;
+    }
+    .demo-blog .daily-pic{
+        width: calc(66.6666666667% - 16px);
+    }
+    .demo-blog .something-else{
+        width: calc(33.3333333333% - 16px);
     }
 }
 .mdl-article-top{
@@ -433,7 +440,7 @@ body .demo-blog {
     width: 98%;
 }
 .post-article-content img {
-    width: 100%;
+    max-width: 100%;
 }
 .page-navigator {
     display: inline-block;
@@ -756,6 +763,8 @@ h6 {
     }
 }
 #top {
+    width: 0px;
+    height: 0px;
     position: absolute;
     top: 0px;
 }

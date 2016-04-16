@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.6.3
+ * @version 1.6.5
  * @link https://viosey.com
  */
 
@@ -209,7 +209,7 @@ $this->need('header.php');?>
                                     <span><?php $this->date('F j, Y'); ?></span>
                                 </div>
                             </div>
-                            <div id="article-category-comment" style="color:#3697D5">
+                            <div id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
                                 <?php $this->category(', '); ?> | <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>
                                 <?php if (class_exists("Stat_Plugin")): ?>
                                     |&nbsp;<?php $this->views(); ?> <?php $this->sticky(); ?>浏览
