@@ -13,8 +13,6 @@
                   <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onClick="javascript :history.back();" target="_self" role="button">
                       <!-- For modern browsers. -->
                       <i class="material-icons" role="presentation">arrow_back</i>
-                      <!-- For IE9 or below. -->
-                      <i class="material-icons">&#xE5C4;</i>
                   </a>
                 </div>
                 <div class="mdl-tooltip" for="backhome-div">Back</div>
@@ -38,20 +36,24 @@
                                     <?php $this->author->gravatar(44); ?>
                                 <?php endif; ?>
                             </div>
-                            
+
                             <div>
                                 <!-- Author name -->
                                 <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
                                 <!-- Articel date -->
-                                <span><?php $this->date('F j, Y'); ?></span>
+                                <span>
+                                    <?php if($this->options->langis == '0'): ?>
+                                        <?php $this->date('F j, Y'); ?>
+                                    <?php elseif($this->options->langis == '1'): ?>
+                                        <?php $this->dateWord(); ?>
+                                    <?php endif; ?>
+                                </span>
                             </div>
                             <div class="section-spacer"></div>
                             <!-- favorite -->
                             <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">favorite</i>
-                                <!-- For IE9 or below. -->
-                                <i class="material-icons">&#xE87D;</i>
                                 <span class="visuallyhidden">favorites</span>
                             </button>
                             <div class="mdl-tooltip" for="article-functions-like-button">Like</div>
@@ -59,8 +61,6 @@
                             <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
                                 <i class="material-icons">view_carousel</i>
-                                <!-- For IE9 or below. -->
-                                <i class="material-icons">&#xE8EB;</i>
                                 <span class="visuallyhidden">tags</span>
                             </button>
                             <div class="mdl-tooltip" for="article-functions-viewtags-button">Tags</div>
@@ -71,8 +71,6 @@
                             <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">share</i>
-                                <!-- For IE9 or below. -->
-                                <i class="material-icons">&#xE80D;</i>
                                 <span class="visuallyhidden">share</span>
                             </button>
                             <div class="mdl-tooltip" for="article-fuctions-share-button">Share</div>
@@ -126,15 +124,11 @@
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                             <!-- For modern browsers. -->
                             <i class="material-icons">arrow_back</i>
-                            <!-- For IE9 or below. -->
-                            <i class="material-icons">&#xE5C4;</i>
                         </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Newer', 'tagClass' => 'prev-content')); ?>
                         <div class="section-spacer"></div>
                         <?php $this->thePrev('%s', NULL, array('title' => 'Older&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                             <!-- For modern browsers. -->
                             <i class="material-icons">arrow_forward</i>
-                            <!-- For IE9 or below. -->
-                            <i class="material-icons">&#xE5C8;</i>
                         </button>', 'tagClass' => 'prev-content')); ?>
                     </nav>
                 </div>

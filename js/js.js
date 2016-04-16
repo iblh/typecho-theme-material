@@ -20,9 +20,10 @@ $("#visitor-url").focus(function() {
     this.value = "http://";
 });
 
-//Auto delete input content
-$(".mdl-textfield__input").blur(function() {
+//Auto delete input content & placeholder
+$(".search-input").blur(function() {
     this.value = "";
+    this.placeholder="";
 });
 
 

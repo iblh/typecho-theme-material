@@ -4,8 +4,6 @@
                     <button id="back_to_top" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--6dp">
                         <!-- For modern browsers. -->
                         <i class="material-icons">expand_less</i>
-                        <!-- For IE9 or below. -->
-                        <i class="material-icons">&#xE5CE;</i>
                     </button>
                 </a>
 
@@ -61,6 +59,23 @@
     <script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/js.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
+
+
+    <?php if($this->options->langis == '0'): ?>
+        <script>
+            //Auto fill input placeholder
+            $(".search-input").focus(function() {
+                this.placeholder = "Press enter to search";
+            });
+        </script>
+    <?php elseif($this->options->langis == '1'): ?>
+        <script>
+            //Auto fill input placeholder
+            $(".search-input").focus(function() {
+                this.placeholder = "输入后回车以搜索";
+            });
+        </script>
+    <?php endif; ?>
 
     <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>
         <link rel="stylesheet" href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" />

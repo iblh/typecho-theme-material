@@ -25,7 +25,7 @@
                 <!--Commenter name -->
                 <span class="visitor-name-span" ><?php $comments->author(); ?></span>
                 <!--Comment date -->
-                <span><?php $comments->date('F j, Y'); ?></span>    <!-- CN: dateWord(); -->
+                <span><?php $comments->date('F j, Y'); ?></span>
             </div>
         </header>
 
@@ -102,7 +102,13 @@
     		    	<div class="login-form-group">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input type="text" name="author" class="mdl-textfield__input login-input-info" />
-                            <label for="author" class="mdl-textfield__label">Name*</label>
+                            <label for="author" class="mdl-textfield__label">
+                                <?php if($this->options->langis == '0'): ?>
+                                    Name*
+                                <?php elseif($this->options->langis == '1'): ?>
+                                    名称*
+                                <?php endif; ?>
+                            </label>
                         </div>
     		    	</div>
 
@@ -110,7 +116,13 @@
                     <div class="login-form-group">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input type="email" name="mail" class="mdl-textfield__input login-input-info" />
-                            <label for="mail" class="mdl-textfield__label">Email*</label>
+                            <label for="mail" class="mdl-textfield__label">
+                                <?php if($this->options->langis == '0'): ?>
+                                    Email*
+                                <?php elseif($this->options->langis == '1'): ?>
+                                    邮箱*
+                                <?php endif; ?>
+                            </label>
                         </div>
     		    	</div>
 
@@ -118,7 +130,13 @@
     		    	<div class="login-form-group">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input type="url" name="url" id="visitor-url" class="mdl-textfield__input login-input-info" />  <!--  placeholder="http://"-->
-                            <label for="url" class="mdl-textfield__label">Website</label>
+                            <label for="url" class="mdl-textfield__label">
+                                <?php if($this->options->langis == '0'): ?>
+                                    Website
+                                <?php elseif($this->options->langis == '1'): ?>
+                                    网站
+                                <?php endif; ?>
+                            </label>
                         </div>
     		    	</div>
 		        <?php endif; ?>
@@ -126,7 +144,13 @@
                 <!-- Input comment content -->
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="comment-input-div">
                     <textarea name="text" rows="1" id="comment" class="mdl-textfield__input" ></textarea>
-                    <label for="comment" class="mdl-textfield__label">Join the discussion</label>
+                    <label for="comment" class="mdl-textfield__label">
+                        <?php if($this->options->langis == '0'): ?>
+                            Join the discussion
+                        <?php elseif($this->options->langis == '1'): ?>
+                            加入讨论吧
+                        <?php endif; ?>
+                    </label>
                 </div>
 
                 <!-- Submit comment content button -->

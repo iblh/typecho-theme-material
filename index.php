@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.6.5
+ * @version 1.7.0
  * @link https://viosey.com
  */
 
@@ -37,7 +37,13 @@ $this->need('header.php');?>
                             </div>
                             <div>
                                 <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
-                                <span><?php $this->date('F j, Y'); ?></span>
+                                <span>
+                                    <?php if($this->options->langis == '0'): ?>
+                                        <?php $this->date('F j, Y'); ?>
+                                    <?php elseif($this->options->langis == '1'): ?>
+                                        <?php $this->dateWord(); ?>
+                                    <?php endif; ?>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -49,11 +55,9 @@ $this->need('header.php');?>
                             <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
                                 <!-- For modern browsers. -->
                                 <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-                                <!-- For IE9 or below. -->
-                                <i class="material-icons mdl-color-text--white">&#xE8B6;</i>
                             </label>
                             <form id="search-form" method="post" action="" class="mdl-textfield__expandable-holder">
-                                <input class="mdl-textfield__input" type="text" name="s" id="search">
+                                <input class="mdl-textfield__input search-input" type="text" name="s" id="search">
                                 <label id="search-form-label" class="mdl-textfield__label" for="search">Enter your query...</label>
                             </form>
                         </div>
@@ -71,8 +75,7 @@ $this->need('header.php');?>
                             <button id="show-category-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">apps</i>
-                                <!-- For IE9 or below. -->
-                                <i class="material-icons">&#xE5C3;</i>
+
                                 <span class="visuallyhidden">Category</span>
                             </button>
                             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-category-button">
@@ -85,8 +88,6 @@ $this->need('header.php');?>
                             <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">more_vert</i>
-                                <!-- For IE9 or below. -->
-                                <i class="material-icons">&#xE5D4;</i>
                                 <span class="visuallyhidden">show menu</span>
                             </button>
                             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
@@ -190,7 +191,16 @@ $this->need('header.php');?>
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
                             <!--  $this->content('Continue Reading...');  -->
                             <?php $this->excerpt(80, '...'); ?>
-                            &nbsp;&nbsp;&nbsp;<span><a href="<?php $this->permalink(); ?>" target="_self">Continue Reading</a></span>
+                            &nbsp;&nbsp;&nbsp;
+                            <span>
+                                <a href="<?php $this->permalink(); ?>" target="_self">
+                                    <?php if($this->options->langis == '0'): ?>
+                                        Continue Reading
+                                    <?php elseif($this->options->langis == '1'): ?>
+                                        继续阅读
+                                    <?php endif; ?>
+                                </a>
+                            </span>
                         </div>
 
                         <!-- Article info-->
@@ -206,13 +216,19 @@ $this->need('header.php');?>
                                 </div>
                                 <div>
                                     <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
-                                    <span><?php $this->date('F j, Y'); ?></span>
+                                    <span>
+                                        <?php if($this->options->langis == '0'): ?>
+                                            <?php $this->date('F j, Y'); ?>
+                                        <?php elseif($this->options->langis == '1'): ?>
+                                            <?php $this->dateWord(); ?>
+                                        <?php endif; ?>
+                                    </span>
                                 </div>
                             </div>
                             <div id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
                                 <?php $this->category(', '); ?> | <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>
                                 <?php if (class_exists("Stat_Plugin")): ?>
-                                    |&nbsp;<?php $this->views(); ?> <?php $this->sticky(); ?>浏览
+                                    |&nbsp;<?php $this->views(); ?> <?php $this->sticky(); ?><?php if($this->options->langis == '0'): ?>Views<?php elseif($this->options->langis == '1'): ?>浏览<?php endif; ?>
                                 <?php endif; ?>
                             </div>
 
@@ -227,8 +243,6 @@ $this->need('header.php');?>
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                             <!-- For modern browsers. -->
                             <i class="material-icons" role="presentation">arrow_back</i>
-                            <!-- For IE9 or below. -->
-                            <i class="material-icons">&#xE5C4;</i>
                         </button>
                         '); ?>
                         <div class="section-spacer"></div>
@@ -239,8 +253,6 @@ $this->need('header.php');?>
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                             <!-- For modern browsers. -->
                             <i class="material-icons" role="presentation">arrow_forward</i>
-                            <!-- For IE9 or below. -->
-                            <i class="material-icons">&#xE5C8;</i>
                         </button>','next'); ?>
                     </nav>
 

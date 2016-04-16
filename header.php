@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN">
+<html >
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" />
         <meta name="description" content=" " />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="<?php $this->options->themecolor() ?>" />
+        <meta name="theme-color" content="<?php $this->options->ThemeColor() ?>" />
         <title>
             <?php $this->archiveTitle('','',' - '); ?>
             <?php $this->options->title(); ?>
@@ -44,6 +44,15 @@
         <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
         <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
 
+        <!--[if lte IE 9]>
+           <link rel="stylesheet" href="<?php $this->options->themeUrl('css/ie-blocker.css'); ?>">
+           <?php if($this->options->langis == '0'): ?>
+               <script src="<?php $this->options->themeUrl('js/ie-blocker.en.js'); ?>" img-path="../img/"></script>
+           <?php elseif($this->options->langis == '1'): ?>
+               <script src="<?php $this->options->themeUrl('js/ie-blocker.zhCN.js'); ?>" img-path="../img/"></script>
+           <?php endif; ?>
+       <![endif]-->
+
         <style>
             #view-source {
                 position: fixed;
@@ -54,7 +63,7 @@
                 margin-bottom: 40px;
                 z-index: 900;
             }
-            
+
             a{
                 color: <?php $this->options->alinkcolor(); ?>;
             }

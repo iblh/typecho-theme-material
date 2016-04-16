@@ -103,9 +103,9 @@ function themeConfig($form) {
     $sticky_2->input->setAttribute('class', 'mini');
     $form->addInput($sticky_2->addRule('isInteger', '请填入数字'));
 
-    $themecolor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', NULL, _t('#FFF'), _t('主题颜色'), _t('设置 Android Chrome 选项卡颜色'));
-    $themecolor->input->setAttribute('class', 'mini');
-    $form->addInput($themecolor);
+    $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', NULL, _t('#FFF'), _t('Android Chrome 地址栏颜色'), _t('设置 Android Chrome 地址栏颜色'));
+    $ThemeColor->input->setAttribute('class', 'mini');
+    $form->addInput($ThemeColor);
 
     $alinkcolor = new Typecho_Widget_Helper_Form_Element_Text('alinkcolor', NULL, _t('#3697D5'), _t('超链接颜色'), _t('设置博客的超链接字体颜色, 默认为蓝色'));
     $alinkcolor->input->setAttribute('class','mini');

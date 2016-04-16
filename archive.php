@@ -13,8 +13,6 @@
                     <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onClick="javascript :history.back();" title="go back" role="button">
                         <!-- For modern browsers. -->
                         <i class="material-icons" role="presentation">arrow_back</i>
-                        <!-- For IE9 or below. -->
-                        <i class="material-icons">&#xE5C4;</i>
                     </a>
                 </div>
                 <div class="mdl-tooltip" for="backhome-div">Back</div>
@@ -63,7 +61,13 @@
                                 </div>
                                 <div>
                                     <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
-                                    <span><?php $this->date('F j, Y'); ?></span>
+                                    <span>
+                                        <?php if($this->options->langis == '0'): ?>
+                                            <?php $this->date('F j, Y'); ?>
+                                        <?php elseif($this->options->langis == '1'): ?>
+                                            <?php $this->dateWord(); ?>
+                                        <?php endif; ?>
+                                    </span>
                                 </div>
                             </div>
                             <div id="article-category-comment">
@@ -80,8 +84,6 @@
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                             <!-- For modern browsers. -->
                             <i class="material-icons" role="presentation">arrow_back</i>
-                            <!-- For IE9 or below. -->
-                            <i class="material-icons">&#xE5C4;</i>
                         </button>
                         '); ?>
                         <div class="section-spacer"></div>
@@ -92,8 +94,6 @@
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                             <!-- For modern browsers. -->
                             <i class="material-icons" role="presentation">arrow_forward</i>
-                            <!-- For IE9 or below. -->
-                            <i class="material-icons">&#xE5C8;</i>
                         </button>
                         ','next'); ?>
                     </nav>
