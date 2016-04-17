@@ -39,18 +39,38 @@
         <?php $this->header(); ?>
 
         <!-- Material style -->
-        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.font.css'); ?>" />
-        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.min.css'); ?>" />
-        <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
-        <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
+        <?php if(!empty($this->options->CDNURL)): ?>
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/material.font.css" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/material.min.css" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/style.css" />
+            <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/jquery-2.2.0.min.js"></script>
+        <?php else: ?>
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.font.css'); ?>" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.min.css'); ?>" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
+            <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
+        <?php endif; ?>
 
         <!--[if lte IE 9]>
-           <link rel="stylesheet" href="<?php $this->options->themeUrl('css/ie-blocker.css'); ?>">
-           <?php if($this->options->langis == '0'): ?>
-               <script src="<?php $this->options->themeUrl('js/ie-blocker.en.js'); ?>" img-path="../img/"></script>
-           <?php elseif($this->options->langis == '1'): ?>
-               <script src="<?php $this->options->themeUrl('js/ie-blocker.zhCN.js'); ?>" img-path="../img/"></script>
-           <?php endif; ?>
+            <?php if(!empty($this->options->CDNURL)): ?>
+                <link rel="stylesheet" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/ie-blocker.css">
+            <?php else: ?>
+                <link rel="stylesheet" href="<?php $this->options->themeUrl('css/ie-blocker.css'); ?>">
+            <?php endif; ?>
+
+            <?php if($this->options->langis == '0'): ?>
+                <?php if(!empty($this->options->CDNURL)): ?>
+                   <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/ie-blocker.en.js" img-path="../img/ie-blocker/"></script>
+                <?php else: ?>
+                   <script src="<?php $this->options->themeUrl('js/ie-blocker.en.js'); ?>" img-path="../img/ie-blocker/"></script>
+                <?php endif; ?>
+            <?php elseif($this->options->langis == '1'): ?>
+                <?php if(!empty($this->options->CDNURL)): ?>
+                    <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/ie-blocker.zhCN.js" img-path="../img/ie-blocker/"></script>
+                <?php else: ?>
+                    <script src="<?php $this->options->themeUrl('js/ie-blocker.zhCN.js'); ?>" img-path="../img/ie-blocker/"></script>
+                <?php endif; ?>
+            <?php endif; ?>
        <![endif]-->
 
         <style>
@@ -247,7 +267,11 @@
                     <?php if (!empty($this->options->bgcolor)): ?>
                         background-image: url(<?php $this->options->bgcolor() ?>);
                     <?php else: ?>
-                        background-image: url(<?php $this->options->themeUrl('img/bg.jpg'); ?>);
+                        <?php if(!empty($this->options->CDNURL)): ?>
+                            background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/bg.jpg);
+                        <?php else: ?>
+                            background-image: url(<?php $this->options->themeUrl('img/bg.jpg'); ?>);
+                        <?php endif; ?>
                     <?php endif; ?>
                 }
             </style>

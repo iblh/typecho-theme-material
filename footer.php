@@ -12,25 +12,41 @@
                     <!--mdl-mini-footer-left-section-->
                     <div class="mdl-mini-footer--left-section">
                         <?php if ( !empty($this->options->footersns) && in_array('ShowTwitter', $this->options->footersns) ) : ?>
-                            <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-twitter.png'); ?>);">
+                            <?php if(!empty($this->options->CDNURL)): ?>
+                                <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer-ico-twitter.png);">
+                            <?php else: ?>
+                               <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-twitter.png'); ?>);">
+                            <?php endif; ?>
                                 <span class="visuallyhidden">Twitter</span>
                             </button></a>
                         <?php endif;?>
 
                         <?php if ( !empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns) ) : ?>
-                            <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-facebook.png'); ?>);">
+                            <?php if(!empty($this->options->CDNURL)): ?>
+                                <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer-ico-facebook.png);">
+                            <?php else: ?>
+                               <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-facebook.png'); ?>);">
+                            <?php endif; ?>
                                 <span class="visuallyhidden">Facebook</span>
                             </button></a>
                         <?php endif;?>
 
                         <?php if ( !empty($this->options->footersns) && in_array('ShowGooglePlus', $this->options->footersns) ) : ?>
-                            <a href="<?php $this->options->GooglePlusURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-gplus.png'); ?>);">
+                            <?php if(!empty($this->options->CDNURL)): ?>
+                                <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer-ico-gplus.png);">
+                            <?php else: ?>
+                               <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-gplus.png'); ?>);">
+                            <?php endif; ?>
                                 <span class="visuallyhidden">Google Plus</span>
                             </button></a>
                         <?php endif;?>
 
                         <?php if ( !empty($this->options->footersns) && in_array('ShowWeibo', $this->options->footersns) ) : ?>
-                            <a href="<?php $this->options->GooglePlusURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-weibo.png'); ?>);">
+                            <?php if(!empty($this->options->CDNURL)): ?>
+                                <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer-ico-weibo.png);">
+                            <?php else: ?>
+                               <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer-ico-weibo.png'); ?>);">
+                            <?php endif; ?>
                                 <span class="visuallyhidden">Sina Weibo</span>
                             </button></a>
                         <?php endif;?>
@@ -54,11 +70,18 @@
         <?php $this->options->analysis(); ?>
     </body>
 
-
-    <script src="<?php $this->options->themeUrl('js/ripples.min.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('js/js.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
+    <!-- Material style -->
+    <?php if(!empty($this->options->CDNURL)): ?>
+        <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/ripples.min.js"></script>
+        <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/material.min.js"></script>
+        <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/js.js"></script>
+        <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/bootstrap.min.js"></script>
+    <?php else: ?>
+        <script src="<?php $this->options->themeUrl('js/ripples.min.js'); ?>"></script>
+        <script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
+        <script src="<?php $this->options->themeUrl('js/js.js'); ?>"></script>
+        <script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
+    <?php endif; ?>
 
 
     <?php if($this->options->langis == '0'): ?>
@@ -78,8 +101,14 @@
     <?php endif; ?>
 
     <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>
-        <link rel="stylesheet" href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" />
-        <script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
+        <?php if(!empty($this->options->CDNURL)): ?>
+            <link rel="stylesheet" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/nprogress.css" />
+            <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/nprogress.js"></script>
+        <?php else: ?>
+            <link rel="stylesheet" href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" />
+            <script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
+        <?php endif; ?>
+
         <script type="text/javascript">
             NProgress.configure({ showSpinner: true });
             NProgress.start();
@@ -91,7 +120,11 @@
     <?php endif; ?>
 
     <?php if( !empty($this->options->switch) && in_array('SmoothScroll',$this->options->switch) ): ?>
-        <script src="<?php $this->options->themeUrl('js/smoothscroll.js'); ?>"></script>
+        <?php if(!empty($this->options->CDNURL)): ?>
+            <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/smoothscroll.js"></script>
+        <?php else: ?>
+            <script src="<?php $this->options->themeUrl('js/smoothscroll.js'); ?>"></script>
+        <?php endif; ?>
     <?php endif; ?>
 
     <?php if( !empty($this->options->switch) && in_array('atargetblank',$this->options->switch) ): ?>

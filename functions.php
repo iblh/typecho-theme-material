@@ -121,14 +121,20 @@ function themeConfig($form) {
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon 地址'), _t('填入博客 favicon 的地址, 默认则不显示'));
     $form->addInput($favicon);
 
-    $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', NULL, _t('https://viosey.com/img/hiyou.jpg'), _t('首页左上图片地址'), _t('填入图片地址, 图片显示在首页左上位置'));
+    $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', NULL, NULL, _t('首页左上图片地址'), _t('填入图片地址, 图片显示在首页左上位置'));
     $form->addInput($dailypic);
 
     $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', NULL, _t('Nice to meet you'), _t('首页左上图片标语'), _t('填入自定义文字, 显示于首页左上位置的图片上面'));
     $form->addInput($slogan);
 
-    $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL, _t('https://viosey.com/img/logo.png'), _t('首页右上角 LOGO 图片地址'), _t('填入 LOGO 地址, 图片将显示于首页右上角板块'));
+    $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL, NULL, _t('首页右上角 LOGO 图片地址'), _t('填入 LOGO 地址, 图片将显示于首页右上角板块'));
     $form->addInput($logo);
+
+    $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', NULL, NULL, _t('CDN 地址'), _t("
+    新建一个'MaterialCDN' 文件夹, 把'css, fonts, img, js' 文件夹放进去, 然后把'MaterialCDN' 上传到到你的 CDN 储存空间根目录下<br />
+    填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b><br />
+    目前 CDN 地址对随机默认缩略图不生效, 所以请勿删除主题文件夹下的 img/random 文件夹 (css, js, fonts 文件夹则可删除)"));
+    $form->addInput($CDNURL);
 
     $footersns = new Typecho_Widget_Helper_Form_Element_Checkbox('footersns',
         array(

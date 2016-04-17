@@ -5,7 +5,11 @@
 <aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
 
     <!-- Sidebar header -->
-    <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl('img/sidebarheader.jpg'); ?>);">
+    <?php if(!empty($this->options->CDNURL)): ?>
+        <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/sidebarheader.jpg); ?>);">
+    <?php else: ?>
+        <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl('img/sidebarheader.jpg'); ?>);">
+    <?php endif; ?>
         <!-- Top bar -->
         <div class="top-bar"></div>
         <!-- Sidebar toggle button -->
@@ -308,7 +312,13 @@
 
     <?php if ( !empty($this->options->switch) && in_array('ShowUpyun', $this->options->switch) ) : ?>
         <div id="upyun-logo">
-            <a href="https://www.upyun.com/" target="_blank"><img src="https://o27z61k07.qnssl.com/upyun_logo_90x45.png" /></a>
+            <a href="https://www.upyun.com/" target="_blank">
+                <?php if(!empty($this->options->CDNURL)): ?>
+                   <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/upyun_logo_90x45.png" />
+                <?php else: ?>
+                    <img src="<?php $this->options->themeUrl('img/upyun_logo_90x45.png'); ?>" />
+                <?php endif; ?>
+            </a>
         </div>
     <?php endif; ?>
 

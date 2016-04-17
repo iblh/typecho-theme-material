@@ -23,7 +23,15 @@ $this->need('header.php');?>
 
                     <!-- Daily Pic -->
                     <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col index-top-block">
+                    <?php if(!empty($this->options->dailypic)): ?>
                         <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->dailypic() ?>)">
+                    <?php else: ?>
+                        <?php if(!empty($this->options->CDNURL)): ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/hiyou.jpg)">
+                        <?php else: ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->themeUrl('img/hiyou.jpg') ?>)">
+                        <?php endif; ?>
+                    <?php endif; ?>
                             <p class="article-headline-p"><a href="#"><?php $this->options->slogan() ?></a></p>
                         </div>
                         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
@@ -63,7 +71,15 @@ $this->need('header.php');?>
                         </div>
                         <!-- LOGO -->
                         <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-                            <img src="<?php $this->options->logo() ?>">
+                            <?php if(!empty($this->options->logo)): ?>
+                                <img src="<?php $this->options->logo() ?>">
+                            <?php else: ?>
+                                <?php if(!empty($this->options->CDNURL)): ?>
+                                    <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/MaterialLOGO.png">
+                                <?php else: ?>
+                                    <img src="<?php $this->options->themeUrl('img/MaterialLOGO.png') ?>">
+                                <?php endif; ?>
+                            <?php endif; ?>
                         </div>
                         <!-- Infomation -->
                         <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
