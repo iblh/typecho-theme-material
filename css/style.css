@@ -70,6 +70,19 @@ body .demo-blog {
     }
 }
 
+
+.index-top-block-slogan{
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.index-top-block-slogan a{
+    text-decoration: none;
+}
+
 .mdl-article-top{
     padding-left: 24px;
     font-weight: 400;

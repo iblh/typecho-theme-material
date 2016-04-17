@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.7.0
+ * @version 1.7.3
  * @link https://viosey.com
  */
 
@@ -32,7 +32,7 @@ $this->need('header.php');?>
                             <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->themeUrl('img/hiyou.jpg') ?>)">
                         <?php endif; ?>
                     <?php endif; ?>
-                            <p class="article-headline-p"><a href="#"><?php $this->options->slogan() ?></a></p>
+                            <p class="index-top-block-slogan"><a href="#"><?php $this->options->slogan() ?></a></p>
                         </div>
                         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
                             <!-- Author avatar -->
