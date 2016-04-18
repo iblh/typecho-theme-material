@@ -66,10 +66,7 @@ $this->need('header.php');?>
                         </div>
                         <!-- LOGO -->
                         <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-                            <?php if(!empty($this->options->logoLink)): ?>
-                            <a href="<?php $this->options->logoLink() ?>" target="_blank">
-                            <?php else: ?>
-                            <?php endif; ?>
+                            <a href="<?php $this->options->logoLink() ?>">
                                 <?php if(!empty($this->options->logo)): ?>
                                     <img src="<?php $this->options->logo() ?>">
                                 <?php else: ?>
