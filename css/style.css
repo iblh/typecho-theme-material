@@ -83,6 +83,12 @@ body .demo-blog {
     text-decoration: none;
 }
 
+@media screen and (max-device-width:480px) {
+    .index-top-block-date{
+        display: none;
+    }
+}
+
 .mdl-article-top{
     padding-left: 24px;
     font-weight: 400;
@@ -160,6 +166,7 @@ body .demo-blog {
 
 @media screen and (max-device-width: 480px) {
     .demo-blog .mdl-card__supporting-text {
+        display: inline;
         padding-bottom: 0px;
     }
 }
@@ -704,8 +711,6 @@ body .demo-blog {
 
 #author-avatar {
     margin-right: 1pc;
-    width: 44px;
-    height: 44px;
     border-radius: 50%;
     overflow: hidden;
 }

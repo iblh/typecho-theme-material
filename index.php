@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.7.3
+ * @version 1.7.4
  * @link https://viosey.com
  */
 
@@ -23,35 +23,30 @@ $this->need('header.php');?>
 
                     <!-- Daily Pic -->
                     <div class="mdl-card daily-pic mdl-cell mdl-cell--8-col index-top-block">
-                    <?php if(!empty($this->options->dailypic)): ?>
+                        <?php if(!empty($this->options->dailypic)): ?>
                         <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->dailypic() ?>)">
-                    <?php else: ?>
-                        <?php if(!empty($this->options->CDNURL)): ?>
-                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/hiyou.jpg)">
                         <?php else: ?>
-                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->themeUrl('img/hiyou.jpg') ?>)">
+                        <?php if(!empty($this->options->CDNURL)): ?>
+                        <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/hiyou.jpg)">
+                        <?php else: ?>
+                        <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php $this->options->themeUrl('img/hiyou.jpg') ?>)">
                         <?php endif; ?>
-                    <?php endif; ?>
-                            <p class="index-top-block-slogan"><a href="#"><?php $this->options->slogan() ?></a></p>
+                        <?php endif; ?>
+                            <p class="index-top-block-slogan"><a href="<?php $this->options->dailypicLink() ?>"><?php $this->options->slogan() ?></a></p>
                         </div>
+
                         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
                             <!-- Author avatar -->
                             <div id="author-avatar">
                                 <?php if(!empty($this->options->avatarURL)): ?>
-                                    <img src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
+                                    <img src="<?php $this->options->avatarURL() ?>" width="32px" height="32px" />
                                 <?php else: ?>
-                                    <?php $this->author->gravatar(44); ?>
+                                    <?php $this->author->gravatar(32); ?>
                                 <?php endif; ?>
                             </div>
                             <div>
                                 <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
-                                <span>
-                                    <?php if($this->options->langis == '0'): ?>
-                                        <?php $this->date('F j, Y'); ?>
-                                    <?php elseif($this->options->langis == '1'): ?>
-                                        <?php $this->dateWord(); ?>
-                                    <?php endif; ?>
-                                </span>
+                                <span class="index-top-block-date"></span>
                             </div>
                         </div>
                     </div>
@@ -71,15 +66,20 @@ $this->need('header.php');?>
                         </div>
                         <!-- LOGO -->
                         <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-                            <?php if(!empty($this->options->logo)): ?>
-                                <img src="<?php $this->options->logo() ?>">
+                            <?php if(!empty($this->options->logoLink)): ?>
+                            <a href="<?php $this->options->logoLink() ?>" target="_blank">
                             <?php else: ?>
-                                <?php if(!empty($this->options->CDNURL)): ?>
-                                    <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/MaterialLOGO.png">
-                                <?php else: ?>
-                                    <img src="<?php $this->options->themeUrl('img/MaterialLOGO.png') ?>">
-                                <?php endif; ?>
                             <?php endif; ?>
+                                <?php if(!empty($this->options->logo)): ?>
+                                    <img src="<?php $this->options->logo() ?>">
+                                <?php else: ?>
+                                    <?php if(!empty($this->options->CDNURL)): ?>
+                                        <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/MaterialLOGO.png">
+                                    <?php else: ?>
+                                        <img src="<?php $this->options->themeUrl('img/MaterialLOGO.png') ?>">
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            </a>
                         </div>
                         <!-- Infomation -->
                         <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">

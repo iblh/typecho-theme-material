@@ -26,6 +26,12 @@ $(".search-input").blur(function() {
     this.placeholder="";
 });
 
+//Append the date to index-top-block-date
+$(document).ready(function(){
+    var myDate = new Date();
+    $('.index-top-block-date').append(myDate);
+});
+
 
 //
 //   sidebar.js
