@@ -23,9 +23,9 @@
             <!-- Comment author -->
             <div class="comment__author">
                 <!--Commenter name -->
-                <span class="visitor-name-span" ><?php $comments->author(); ?></span>
+                <span class="visitor-name-span" ><?php $comments->author(); ?>&nbsp;</span>
                 <!--Comment date -->
-                <span><?php $comments->date('F j, Y'); ?></span>
+                <span><?php $comments->date('Y-m-d, H:i'); ?></span>
             </div>
         </header>
 
