@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.7.7
+ * @version 1.7.8
  * @link https://viosey.com
  */
 
@@ -65,8 +65,10 @@ $this->need('header.php');?>
                             </form>
                         </div>
                         <!-- LOGO -->
-                        <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
+                        <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
+                            <?php if(!empty($this->options->logoLink)): ?>
                             <a href="<?php $this->options->logoLink() ?>">
+                            <?php endif; ?>
                                 <?php if(!empty($this->options->logo)): ?>
                                     <img src="<?php $this->options->logo() ?>">
                                 <?php else: ?>

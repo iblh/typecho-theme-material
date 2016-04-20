@@ -33,6 +33,10 @@ function themeConfig($form) {
     );
     $form->addInput($appearance->multiMode());
 
+    $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#F5F5F5'), _t('关闭缩略图后, 取代缩略图的颜色'), _t('如果不显示文章缩略图, 则以该颜色替代'));
+    $TitleColor->input->setAttribute('class', 'mini');
+    $form->addInput($TitleColor);
+
     $switch = new Typecho_Widget_Helper_Form_Element_Checkbox('switch',
         array(
             'ShowUpyun' => _t('侧边栏显示 upyun 联盟 logo'),
@@ -103,17 +107,17 @@ function themeConfig($form) {
     $sticky_2->input->setAttribute('class', 'mini');
     $form->addInput($sticky_2->addRule('isInteger', '请填入数字'));
 
-    $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', NULL, _t('#FFF'), _t('Android Chrome 地址栏颜色'), _t('设置 Android Chrome 地址栏颜色'));
-    $ThemeColor->input->setAttribute('class', 'mini');
+    $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', NULL, _t('#039BE5'), _t('主题颜色'), _t('博客主题颜色'));
+    $ThemeColor->input->setAttribute('class','mini');
     $form->addInput($ThemeColor);
 
-    $alinkcolor = new Typecho_Widget_Helper_Form_Element_Text('alinkcolor', NULL, _t('#3697D5'), _t('超链接颜色'), _t('设置博客的超链接字体颜色, 默认为蓝色'));
+    $alinkcolor = new Typecho_Widget_Helper_Form_Element_Text('alinkcolor', NULL, _t('#039BE5'), _t('超链接颜色'), _t('设置博客的超链接字体颜色, 默认为蓝色'));
     $alinkcolor->input->setAttribute('class','mini');
     $form->addInput($alinkcolor);
 
-    $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#F5F5F5'), _t('首页标题部分背景色'), _t('如果不显示文章缩略图, 则以该颜色替代'));
-    $TitleColor->input->setAttribute('class', 'mini');
-    $form->addInput($TitleColor);
+    $ChromeThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ChromeThemeColor', NULL, _t('#039BE5'), _t('Android Chrome 地址栏颜色'), _t('设置 Android Chrome 地址栏颜色'));
+    $ChromeThemeColor->input->setAttribute('class', 'mini');
+    $form->addInput($ChromeThemeColor);
 
     $avatarURL = new Typecho_Widget_Helper_Form_Element_Text('avatarURL', NULL, NULL, '个人头像地址', '填入头像的地址, 如不填写则使用默认头像');
     $form->addInput($avatarURL);

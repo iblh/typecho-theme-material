@@ -77,7 +77,7 @@ body .demo-blog {
     font-weight: 400;
     margin: 0;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    text-shadow: 1px 1px 8px #111;
+    text-shadow: 1px 1px 8px #444;
 }
 
 .index-top-block-slogan a{
@@ -243,18 +243,6 @@ body .demo-blog {
     order: -1;
 }*/
 
-.demo-blog .something-else .mdl-card__media {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@media screen and (max-device-width: 480px){
-    .demo-blog .something-else .mdl-card__media {
-        padding: 0px;
-    }
-}
 
 .demo-blog .something-else>button {
     position: absolute;
@@ -263,14 +251,28 @@ body .demo-blog {
     transform: translate(0, -28px);
 }
 
-.demo-blog .something-else .mdl-card__media {
+.demo-blog .something-else .something-else-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
     font-weight: 500;
     font-size: 13px;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 24px;
+    background-size: cover;
 }
 
-.demo-blog .something-else .mdl-card__media img {
+@media screen and (max-device-width: 480px){
+    .demo-blog .demo-blog .something-else .something-else-logo {
+        padding: 0px;
+    }
+}
+
+.demo-blog .something-else .something-else-logo img {
     margin-bottom: 10px;
     width: 10pc;
     height: 10pc;
@@ -865,7 +867,7 @@ h6 {
     font-weight: 400;
     margin: 0;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    text-shadow: 1px 1px 8px #111;
+    text-shadow: 1px 1px 8px #444;
 }
 .article-headline-p a,
 .article-headline-p-top a {
@@ -1314,6 +1316,7 @@ h6 {
 .sidebar-colored .sidebar-badge {
     color: #fff;
     background-color: #ec407a;
+    text-shadow: 1px 1px 3px #444;
 }
 .sidebar-colored .sidebar-divider, .sidebar-colored .sidebar-nav .divider {
     background-color: #bdbdbd;

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" />
         <meta name="description" content=" " />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="<?php $this->options->ThemeColor() ?>" />
+        <meta name="theme-color" content="<?php $this->options->ChromeThemeColor() ?>" />
         <title>
             <?php $this->archiveTitle('','',' - '); ?>
             <?php $this->options->title(); ?>
@@ -86,6 +86,25 @@
 
             a{
                 color: <?php $this->options->alinkcolor(); ?>;
+            }
+
+            .mdl-card__media,
+            #search-label,
+            #search-form-label:after,
+            .sidebar-colored .sidebar-header,
+            .sidebar-colored .sidebar-badge{
+                background-color: <?php $this->options->ThemeColor() ?> !important;
+            }
+
+            .sidebar-colored .sidebar-nav li:hover > a,
+            .sidebar-colored .sidebar-nav li:hover > a i,
+            .sidebar-colored .sidebar-nav li > a:hover,
+            .sidebar-colored .sidebar-nav li > a:hover i,
+            .sidebar-colored .sidebar-nav li > a:focus i,
+            .sidebar-colored .sidebar-nav > .open > a,
+            .sidebar-colored .sidebar-nav > .open > a:hover,
+            .sidebar-colored .sidebar-nav > .open > a:focus{
+                color: <?php $this->options->ThemeColor() ?> !important;
             }
         </style>
 
