@@ -77,7 +77,7 @@ body .demo-blog {
     font-weight: 400;
     margin: 0;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    text-shadow: 1px 1px 6px #111;
+    text-shadow: 1px 1px 8px #111;
 }
 
 .index-top-block-slogan a{
@@ -424,7 +424,7 @@ body .demo-blog {
 }
 
 .demo-blog--blogpost .comments .comment {
-    display: flex;
+    /*display: flex; 注释后 评论者昵称, 时间, 评论内容上移*/
     flex-direction: column;
     align-items: stretch;
 }
@@ -460,6 +460,7 @@ body .demo-blog {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 64px;
 }
 
 .demo-blog--blogpost .comments .comment>.comment__actions button {
@@ -683,6 +684,10 @@ body .demo-blog {
 .comment__text {
     font-weight: 400 !important;
     font-size: 13px !important;
+    padding-left: 64px;
+}
+.comment__text p{
+    margin-bottom: 6px;
 }
 
 .comments__closed {
@@ -704,10 +709,9 @@ body .demo-blog {
 
 #comment__avatar {
     margin-right: 1pc;
-    width: 48px;
-    height: 48px;
     border-radius: 50%;
     overflow: hidden;
+    float: left;
 }
 
 #author-avatar {

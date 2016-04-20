@@ -18,7 +18,7 @@
         <header class="comment header">
 
             <!-- Comment avatar -->
-            <div id="comment__avatar"><?php $comments->gravatar(48); ?></div>
+            <div id="comment__avatar"><?php $comments->gravatar(52); ?></div>
 
             <!-- Comment author -->
             <div class="comment__author">
@@ -106,7 +106,7 @@
                                 <?php if($this->options->langis == '0'): ?>
                                     Name*
                                 <?php elseif($this->options->langis == '1'): ?>
-                                    名称*
+                                    昵称*
                                 <?php endif; ?>
                             </label>
                         </div>
