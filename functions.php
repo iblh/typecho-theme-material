@@ -105,11 +105,11 @@ function themeConfig($form) {
             '1' => _t('使用多说评论')
         ),
 
-        '0', _t('文章评论'), _t("默认使用原生评论")
+        '0', _t('文章评论'), _t("默认使用原生评论, 如果使用多说评论, 在 <b>'多说评论 short_name'</b> 中填入多说 short_name")
     );
     $form->addInput($commentis);
 
-    $DSshortname = new Typecho_Widget_Helper_Form_Element_Text('DSshortname', NULL, NULL, '多说评论 short_name', '填入你的多说评论 short_name');
+    $DSshortname = new Typecho_Widget_Helper_Form_Element_Text('DSshortname', NULL, NULL, '多说评论 short_name', '要使用多说评论, 在这里填入多说的 short_name. <br />如果开启了多说评论, 而此项又为空, 则会出现错误');
     $DSshortname->input->setAttribute('class', 'mini');
     $form->addInput($DSshortname);
 

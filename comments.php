@@ -350,7 +350,7 @@
     </script>
 
 <!-- 使用原生评论 -->
-<?php elseif($this->options->commentis == '0'): ?>
+<?php else: ?>
 
         <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
 
