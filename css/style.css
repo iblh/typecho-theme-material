@@ -18,6 +18,12 @@ body {
     background-attachment: fixed;
     content: '';
     will-change: transform;
+    font-family: 'Roboto', 'HanHei SC', 'PingFang SC', 'Open Sans', 'Droid Sans', 'Source Sans Pro', 'Source Hans Sans', 'Helvetica Neue', 'Segoe UI', 'Verdana', 'Tahoma', 'Arial', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', 'Microsoft YaHei UI', 'sans-serif' !important;
+}
+
+@font-face{
+    font-family: Roboto;
+    src: url('../fonts/Roboto.ttf');
 }
 
 ::-webkit-scrollbar-track{
@@ -35,11 +41,15 @@ body {
 }
 
 a {
-    font-weight: 400;
+    font-weight: 300;
 }
 
-body .demo-blog {
-    font-family: Roboto, Helvetica, sans-serif;
+.mdl-button{
+    font-family: 'Roboto', 'HanHei SC', 'PingFang SC', 'Open Sans', 'Droid Sans', 'Source Sans Pro', 'Source Hans Sans', 'Helvetica Neue', 'Segoe UI', 'Verdana', 'Tahoma', 'Arial', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', 'Microsoft YaHei UI', 'sans-serif' !important;
+}
+
+.mdl-menu__item{
+    font-weight: 300;
 }
 
 .index-top-block {
@@ -76,7 +86,6 @@ body .demo-blog {
     line-height: 26px;
     font-weight: 400;
     margin: 0;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     text-shadow: 1px 1px 8px #444;
 }
 
@@ -158,8 +167,9 @@ body .demo-blog {
 }
 
 .demo-blog .mdl-card__supporting-text {
-    display: flex;
+    display: inline;
     padding: 1pc;
+    padding-top: 20px;
     width: 100%;
     min-height: 4pc;
     align-items: center;
@@ -167,7 +177,7 @@ body .demo-blog {
 
 @media screen and (max-device-width: 480px) {
     .demo-blog .mdl-card__supporting-text {
-        display: inline;
+        padding-top: 12px;
         padding-bottom: 0px;
     }
 }
@@ -258,7 +268,6 @@ body .demo-blog {
     align-items: center;
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
-    font-weight: 500;
     font-size: 13px;
     flex-grow: 1;
     box-sizing: border-box;
@@ -409,10 +418,6 @@ body .demo-blog {
     margin-right: 1pc;
     color: #616161;
     flex-grow: 1;
-}
-
-.demo-blog--blogpost .comments>form .mdl-textfield .mdl-textfield__input {
-    font-family: Roboto, Helvetica, sans-serif;
 }
 
 .demo-blog--blogpost .comments>form .mdl-textfield input, .demo-blog--blogpost .comments>form .mdl-textfield textarea {
@@ -866,7 +871,6 @@ h6 {
     line-height: 40px;
     font-weight: 400;
     margin: 0;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     text-shadow: 1px 1px 8px #444;
 }
 .article-headline-p a,
@@ -879,14 +883,12 @@ h6 {
     line-height: 26px;
     font-weight: 400;
     margin: 0;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 .article-headline-p-nopic{
     font-size: 34px;
     line-height: 40px;
     font-weight: 400;
     margin: 0;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 .article-headline-p-nopic a {
     text-decoration: none;
@@ -1203,7 +1205,7 @@ h6 {
     padding-right: 56px;
     text-decoration: none;
     clear: both;
-    font-weight: 500;
+    font-weight: 400;
     overflow: hidden;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -1258,7 +1260,7 @@ h6 {
     padding-right: 56px;
     text-decoration: none;
     clear: both;
-    font-weight: 500;
+    font-weight: 400;
     overflow: hidden;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;

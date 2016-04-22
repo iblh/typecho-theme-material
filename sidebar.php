@@ -272,7 +272,7 @@
                 <?php if($this->options->langis == '0'): ?>
                     Theme in Github
                 <?php elseif($this->options->langis == '1'): ?>
-                    主题Github
+                    主题 Github
                 <?php endif; ?>
                 <span class="sidebar-badge badge-circle">i</span>
             </a>
