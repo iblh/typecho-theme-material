@@ -84,7 +84,7 @@ function themeConfig($form) {
             '4' => _t('渐变样式 5'),
         ),
 
-        '0',_t('渐变样式'),_t("背景设置如果选择渐变背景, 在这里选择想要的渐变样式.")
+        '0', _t('渐变样式'), _t("背景设置如果选择渐变背景, 在这里选择想要的渐变样式.")
     );
     $form->addInput($GradientType);
 
@@ -95,9 +95,23 @@ function themeConfig($form) {
             '1' => _t('中文')
         ),
 
-        '0',_t('界面语言设置'),_t("默认使用英文, 中文总感觉有些违和_(:3」∠)_")
+        '0', _t('界面语言设置'), _t("默认使用英文, 中文总感觉有些违和_(:3」∠)_")
     );
     $form->addInput($langis);
+
+    $commentis = new Typecho_Widget_Helper_Form_Element_Radio('commentis',
+        array(
+            '0' => _t('使用原生评论'),
+            '1' => _t('使用多说评论')
+        ),
+
+        '0', _t('文章评论'), _t("默认使用原生评论")
+    );
+    $form->addInput($commentis);
+
+    $DSshortname = new Typecho_Widget_Helper_Form_Element_Text('DSshortname', NULL, NULL, '多说评论 short_name', '填入你的多说评论 short_name');
+    $DSshortname->input->setAttribute('class', 'mini');
+    $form->addInput($DSshortname);
 
     $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', NULL, NULL,'置顶文章 1 ID', '填写对应主题的 id 即可使文章标题在首页置顶显示');
     $sticky_1->input->setAttribute('class', 'mini');

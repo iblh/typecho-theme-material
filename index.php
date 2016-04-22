@@ -193,7 +193,7 @@ $this->need('header.php');?>
                                 <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
                             </div>
                         <?php else: ?>
-                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-color:<?php $this->options->TitleColor()?>;color:#757575 !important;">
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-color:<?php $this->options->TitleColor()?> !important;color:#757575 !important;">
                                 <p class="article-headline-p-nopic">
                                     <a href="<?php $this->permalink() ?>" target="_self">
                                         “</br><?php $this->title() ?></br>”

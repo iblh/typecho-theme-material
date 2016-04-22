@@ -73,6 +73,7 @@
             <?php endif; ?>
        <![endif]-->
 
+       <!-- 根据function.php设置的样式 -->
         <style>
             #view-source {
                 position: fixed;
@@ -85,7 +86,10 @@
             }
 
             a{
-                color: <?php $this->options->alinkcolor(); ?>;
+                color: <?php $this->options->alinkcolor(); ?> ;
+            }
+            #ds-thread #ds-reset a{
+                color: <?php $this->options->alinkcolor(); ?> !important;
             }
 
             .mdl-card__media,
