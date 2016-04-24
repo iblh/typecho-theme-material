@@ -17,7 +17,11 @@ Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), func
 
 //Auto fill visitor-url "http://"
 $("#visitor-url").focus(function() {
-    this.value = "http://";
+    this.placeholder = "http://";
+});
+
+$("#visitor-url").blur(function() {
+    this.placeholder = "";
 });
 
 //Auto delete input content & placeholder

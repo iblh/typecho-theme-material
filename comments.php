@@ -120,8 +120,9 @@
             position: relative;
         }
 
-        #ds-thread #ds-reset .ds-replybox{
+        #ds-thread #ds-reset .ds-replybox {
             margin: 20px 0 20px 0;
+            padding: 0 0 0 40px;
         }
 
         #ds-reset .ds-avatar,
@@ -134,13 +135,17 @@
         }
 
         #ds-thread #ds-reset ul.ds-children .ds-avatar,
-        #ds-thread #ds-reset ul.ds-children .ds-avatar img{
+        #ds-thread #ds-reset ul.ds-children .ds-avatar img {
             width: 50px;
             height: 50px;
             border:0px !important;
         }
 
-        #ds-thread #ds-reset .ds-replybox .ds-avatar img{
+        #ds-thread #ds-reset .ds-replybox .ds-avatar{
+            top: 5px;
+        }
+
+        #ds-thread #ds-reset .ds-replybox .ds-avatar img {
             width: 30px !important;
             height: 30px !important;
         }
@@ -150,24 +155,24 @@
             padding-left: 60px;
         }
 
-        #ds-thread #ds-reset ul.ds-children{
+        #ds-thread #ds-reset ul.ds-children {
             margin-left: 3pc;
         }
 
-        #ds-reset .ds-highlight{
+        #ds-reset .ds-highlight {
             color: #000;
         }
 
         #ds-thread #ds-reset li.ds-post,
-        #ds-thread #ds-reset .ds-post-self{
+        #ds-thread #ds-reset .ds-post-self {
             border-top: 0px;
         }
 
-        #ds-thread #ds-reset .ds-post-toolbar span, #ds-thread #ds-reset .ds-post-toolbar input, #ds-thread #ds-reset .ds-post-toolbar label, #ds-thread #ds-reset .ds-post-toolbar a{
+        #ds-thread #ds-reset .ds-post-toolbar span, #ds-thread #ds-reset .ds-post-toolbar input, #ds-thread #ds-reset .ds-post-toolbar label, #ds-thread #ds-reset .ds-post-toolbar a {
             display:none;
         }
 
-        #ds-thread #ds-reset a.ds-like-thread-button{
+        #ds-thread #ds-reset a.ds-like-thread-button {
             height: 30px;
             line-height: 30px;
             margin: 0;
@@ -195,7 +200,8 @@
             text-shadow: 0 0 0;
         }
 
-        #ds-thread #ds-reset li.ds-tab{
+        #ds-thread #ds-reset li.ds-tab,
+        #ds-wrapper #ds-reset button {
             height: 30px;
             line-height: 30px;
             margin: 0;
@@ -218,37 +224,40 @@
             border: none;
             background: 0 0;
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-            color: #3f51b5;
             text-shadow: 0 0 0;
         }
 
-        #ds-thread #ds-reset li.ds-tab:hover{
+        #ds-thread #ds-reset li.ds-tab:hover,
+        #ds-wrapper #ds-reset button:hover {
             background-color: rgba(102, 102, 102, 0.1);
         }
 
-        #ds-thread #ds-reset li.ds-tab:active{
-            background-color: rgba(102, 102, 102, 0.2);
+        #ds-thread #ds-reset li.ds-tab:active,
+        #ds-wrapper #ds-reset button:active {
+            background-color: rgba(102, 102, 102, 0.1);
+            -webkit-box-shadow: none;
+            box-shadow: none;
         }
 
-        #ds-thread #ds-reset li.ds-tab a.ds-current{
+        #ds-thread #ds-reset li.ds-tab a.ds-current {
             border: none;
             background-color: rgba(255, 255, 255, 0);
         }
 
-        #ds-thread #ds-reset a.ds-like-thread-button span{
+        #ds-thread #ds-reset a.ds-like-thread-button span {
             font-family: "Roboto","Helvetica","Arial",sans-serif;
             font-size: 14px;
             color: #fff;
             font-weight: 400;
         }
 
-        #ds-thread #ds-reset li.ds-tab a{
+        #ds-thread #ds-reset li.ds-tab a {
             -webkit-border-radius: 0px;
             border-radius: 0px;
             text-shadow: 0 0 0;
         }
 
-        #ds-thread #ds-reset .ds-textarea-wrapper{
+        #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
             border: none;
             border-bottom: 1px solid rgba(0,0,0,.12);
@@ -258,7 +267,7 @@
             float:left;
         }
 
-        #ds-thread #ds-reset .ds-post-toolbar{
+        #ds-thread #ds-reset .ds-post-toolbar {
             width: 10%;
             padding: 0;
             margin: 0;
@@ -266,17 +275,18 @@
             float:left;
         }
 
-        #ds-thread #ds-reset .ds-post-options{
+        #ds-thread #ds-reset .ds-post-options {
             border: none;
             -webkit-border-bottom-left-radius: 0px;
             background: none;
         }
 
-        #ds-thread #ds-reset .ds-post-button{
+        #ds-thread #ds-reset .ds-post-button {
             height: 30px;
+            width: 100%;
+            min-width: 64px;
             line-height: 30px;
             margin: 0;
-            min-width: 64px;
             padding: 0 16px;
             display: inline-block;
             font-family: "Roboto","Helvetica","Arial",sans-serif;
@@ -299,52 +309,77 @@
             background-color: <?php $this->options->ThemeColor() ?> !important;
         }
 
-        #ds-thread #ds-reset .ds-post-button:hover{
+        #ds-thread #ds-reset .ds-post-button:hover {
             box-shadow: 0 5px 5px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 3px 7px 0 rgba(0,0,0,.12);
+            color: #fff;
         }
 
-        #ds-thread #ds-reset #ds-bubble{
+        #ds-thread #ds-reset .ds-meta {
+            border-bottom: none;
+        }
+
+        #ds-thread #ds-reset #ds-bubble {
             border: none;
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-            background-color: rgba(255,255,255,.8)
+            background-color: rgba(255,255,255,.9);
+            border-radius: 3px;
         }
 
-        #ds-thread #ds-reset .ds-textarea-wrapper textarea{
+        #ds-thread #ds-reset .ds-textarea-wrapper textarea {
             height: 16px !important;
             font-size: 16px !important;
             line-height: 16px !important;
         }
 
-        #ds-thread #ds-reset .ds-textarea-wrapper textarea, #ds-thread #ds-reset .ds-textarea-wrapper .ds-hidden-text{
+        #ds-thread #ds-reset .ds-textarea-wrapper textarea, #ds-thread #ds-reset .ds-textarea-wrapper .ds-hidden-text {
         }
 
-        #ds-thread #ds-reset .ds-like-tooltip{
+        #ds-thread #ds-reset .ds-like-tooltip {
             box-shadow: 0 2px 24px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 55px 0 rgba(0,0,0,.12);
             border-radius: 2px;
             background: #FFF;
             border: none;
         }
 
-        #ds-wrapper #ds-reset .ds-dialog-inner{
-            box-shadow: 3px 5px 5px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),1px 3px 7px 0 rgba(0,0,0,.12);
+        #ds-wrapper #ds-reset .ds-dialog-inner {
+            box-shadow: 0px 10px 10px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),1px 3px 7px 0 rgba(0,0,0,.12),0px 0px 20px 5px rgba(0,0,0,.12);
             border: 0px;
             background: #fff;
         }
 
-        #ds-wrapper #ds-reset .ds-dialog-body{
+        #ds-wrapper #ds-reset .ds-dialog-body {
             padding: 0px 30px 25px;
         }
 
-        #ds-thread #ds-reset .ds-powered-by{
+        #ds-thread #ds-reset .ds-powered-by {
             display: none;
         }
 
-        #ds-thread #ds-reset .ds-comments, #ds-thread #ds-reset .ds-paginator{
+        #ds-thread #ds-reset .ds-comments, #ds-thread #ds-reset .ds-paginator {
             border-bottom: none;
+        }
+
+        #ds-wrapper #ds-reset .ds-dialog-footer {
+            border-top: 1px solid rgba(0,0,0,.1);
+        }
+
+        #ds-wrapper #ds-reset .ds-control-group input{
+            border: none;
+            box-shadow: none;
+            border-bottom: 1px solid rgba(0,0,0,.12);
+            display: block;
+            font-size: 16px;
+            font-family: "Helvetica","Arial",sans-serif;
+            margin: 0;
+            padding: 4px 0;
+            width: 100%;
+            background: 0 0;
+            text-align: left;
+            color: inherit;
         }
     </style>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('.ds-comment-footer').children().remove();
         });
     </script>
