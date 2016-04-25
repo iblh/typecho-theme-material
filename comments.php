@@ -574,6 +574,20 @@
             font-family: 'FontAwesome';
             margin-right: 3px;
         }
+        .ds-qzone::before{
+            content: "\f005";
+            font-family: 'FontAwesome';
+            margin-right: 3px;
+        }
+
+        .ds-meta .ds-like-panel{
+            margin-left: 10px !important;
+        }
+
+        #ds-reset .ds-highlight{
+            color: <?php $this->options->ThemeColor() ?> !important;
+        }
+
 
         #ds-thread #ds-reset .ds-post-button::before{
             content: '\E5CA';
