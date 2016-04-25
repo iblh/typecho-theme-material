@@ -125,7 +125,7 @@
             position: relative;
         }
 
-        #ds-thread #ds-reset .ds-comment-body p{
+        #ds-thread #ds-reset .ds-comment-body p {
             padding-bottom: 5px;
         }
 
@@ -136,6 +136,7 @@
 
         #ds-reset .ds-avatar,
         #ds-reset .ds-avatar img {
+            background: none;
             width:50px;
             height:50px;
             -webkit-border-radius:  50%;
@@ -150,7 +151,7 @@
             border:0px !important;
         }
 
-        #ds-thread #ds-reset .ds-replybox .ds-avatar{
+        #ds-thread #ds-reset .ds-replybox .ds-avatar {
             top: 5px;
         }
 
@@ -159,7 +160,7 @@
             height: 30px !important;
         }
 
-        #ds-thread #ds-reset .ds-user-name{
+        #ds-thread #ds-reset .ds-user-name {
             font-size: 13px;
         }
 
@@ -185,7 +186,7 @@
             display:none;
         }
 
-        #ds-thread #ds-reset .ds-account-control ul{
+        #ds-thread #ds-reset .ds-account-control ul {
             border: 0;
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
         }
@@ -377,12 +378,12 @@
             border-bottom: none;
         }
 
-        #ds-wrapper #ds-reset .ds-icons-32{
+        #ds-wrapper #ds-reset .ds-icons-32 {
             background-color: <?php $this->options->ThemeColor() ?>;
             height: 100px;
         }
 
-        #ds-wrapper #ds-reset .ds-icons-32::before{
+        #ds-wrapper #ds-reset .ds-icons-32::before {
             content: 'Welcome';
             font-family: 'Roboto';
             font-size: 24px;
@@ -394,12 +395,12 @@
             left: 40px;
         }
 
-        #ds-wrapper #ds-reset .ds-service-list{
+        #ds-wrapper #ds-reset .ds-service-list {
             margin: 10px 0px 10px 0px;
             text-align: center;
         }
 
-        #ds-wrapper #ds-reset .ds-actions{
+        #ds-wrapper #ds-reset .ds-actions {
             padding-bottom: 30px;
             padding-top: 12px;
             margin: 10px 10px 20px 10px;
@@ -407,25 +408,25 @@
             font-size: 13px;
         }
 
-        #ds-wrapper #ds-reset .ds-actions label{
+        #ds-wrapper #ds-reset .ds-actions label {
             margin-right: 12px;
         }
 
-        #ds-wrapper #ds-reset .ds-quote{
+        #ds-wrapper #ds-reset .ds-quote {
             margin: 0;
             padding: 20px 20px;
         }
 
-        #ds-reset .ds-service-icon, #ds-reset .ds-service-icon-grey{
+        #ds-reset .ds-service-icon, #ds-reset .ds-service-icon-grey {
             background: none;
             width: 5px !important;
         }
 
-        #ds-reset input[type='checkbox']{
+        #ds-reset input[type='checkbox'] {
             width: 12px;
         }
 
-        #ds-wrapper #ds-reset .ds-textarea-wrapper{
+        #ds-wrapper #ds-reset .ds-textarea-wrapper {
             border: 0;
             margin: 0;
         }
@@ -435,15 +436,15 @@
             display: none;
         }
 
-        #ds-wrapper #ds-reset .ds-control-group{
+        #ds-wrapper #ds-reset .ds-control-group {
             margin-left: 40px;
         }
 
-        #ds-thread #ds-reset .ds-post-liked a.ds-post-likes{
+        #ds-thread #ds-reset .ds-post-liked a.ds-post-likes {
             font-size: 12px;
         }
 
-        #ds-wrapper #ds-reset .ds-control-group input{
+        #ds-wrapper #ds-reset .ds-control-group input {
             border: none;
             box-shadow: none;
             border-bottom: 1px solid rgba(0,0,0,.12);
@@ -458,150 +459,165 @@
             color: inherit;
         }
 
-        #ds-wrapper #ds-reset .ds-dialog-body button{
+        #ds-wrapper #ds-reset .ds-dialog-body button {
             margin: 10px 0 20px 40px;
         }
 
-        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li{
+        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li {
             margin: 0;
             margin-left: 5px;
             text-align: center;
         }
 
-        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li a{
+        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li a {
             color: rgba(0, 0, 0, .6) !important;
         }
 
-        #ds-reset .ds-service-link{
+        #ds-reset .ds-service-link {
             background: none;
             padding-left: 0;
         }
 
-        /*.ds-weibo::before{
+        /*.ds-weibo::before {
             content: "book";
             font-family: 'Material Icons';
         }*/
 
-        #ds-reset .ds-icon{
+        #ds-reset .ds-icon {
             background: none;
             display: none;
         }
 
-        #ds-thread #ds-reset .ds-comment-actions a{
+        #ds-thread #ds-reset .ds-comment-actions a {
             font-size: 0px;
             color: rgba(0, 0, 0, .24) !important;
         }
 
-        #ds-thread #ds-reset .ds-comment-actions a:hover{
+        #ds-thread #ds-reset .ds-comment-actions a:hover {
             color: rgba(0, 0, 0, .4) !important;
         }
 
-        #ds-thread #ds-reset .ds-comment-footer{
+        #ds-thread #ds-reset .ds-comment-footer {
             line-height: normal;
         }
 
-        #ds-thread #ds-reset .ds-time{
+        #ds-thread #ds-reset .ds-time {
             font-size: 13px;
             position: relative;
             top: -8px;
         }
 
-        .ds-post-reply{
+        .ds-post-reply {
             left: -20px;
         }
 
-        .ds-post-likes::before{
+        .ds-post-likes::before {
             content: "thumb_up";
             font-family: 'Material Icons';
             font-size: 24px;
         }
-        .ds-post-reply::before{
+        .ds-post-reply::before {
             content: "forum";
             font-family: 'Material Icons';
             font-size: 24px;
         }
-        .ds-post-repost::before{
+        .ds-post-repost::before {
             content: "share";
             font-family: 'Material Icons';
             font-size: 24px;
         }
-        .ds-post-report{
+        .ds-post-report {
             color: rgba(0, 0, 0, .14) !important;
         }
-        .ds-post-report::before{
+        .ds-post-report::before {
             content: "report_problem";
             font-family: 'Material Icons';
             font-size: 24px;
         }
 
-        .ds-weixin::before{
+        .ds-weixin::before {
             content: "\f1d7";
             font-family: 'FontAwesome';
             margin-right: 3px;
         }
-        .ds-weibo::before{
+        .ds-weibo::before {
             content: "\f18a";
             font-family: 'FontAwesome';
             margin-right: 3px;
         }
-        .ds-qq::before{
+        .ds-qq::before {
             content: "\f1d6";
             font-family: 'FontAwesome';
             margin-right: 3px;
         }
-        .ds-renren::before{
+        .ds-renren::before {
             content: "\f18b";
             font-family: 'FontAwesome';
             margin-right: 3px;
         }
-        .ds-douban::before{
+        .ds-douban::before {
             content: "\f10e";
             font-family: 'FontAwesome';
             margin-right: 3px;
         }
-        .ds-kaixin::before{
+        .ds-kaixin::before {
             content: "\f004";
             font-family: 'FontAwesome';
             margin-right: 3px;
         }
-        .ds-baidu::before{
+        .ds-baidu::before {
             content: "\f1b0";
             font-family: 'FontAwesome';
             margin-right: 3px;
         }
-        .ds-google::before{
+        .ds-google::before {
             content: "\f1a0";
             font-family: 'FontAwesome';
             margin-right: 3px;
         }
-        .ds-qzone::before{
+        .ds-qzone::before {
             content: "\f005";
             font-family: 'FontAwesome';
             margin-right: 3px;
         }
 
-        .ds-meta .ds-like-panel{
+        .ds-meta .ds-like-panel {
             margin-left: 10px !important;
         }
 
-        #ds-reset .ds-highlight{
+        #ds-reset .ds-highlight {
             color: <?php $this->options->ThemeColor() ?> !important;
         }
 
 
-        #ds-thread #ds-reset .ds-post-button::before{
+        #ds-thread #ds-reset .ds-post-button::before {
             content: '\E5CA';
             font-family: 'Material Icons';
             font-weight: 100;
             font-size: 20px;
         }
 
-        .ds-icons-32 a{
+        .ds-icons-32 a {
             background: none !important;
         }
 
-        .ds-dialog-body h2{
+        .ds-dialog-body h2 {
             display: none !important;
+        }
+        /* mobile terminal */
+        #ds-thread.ds-narrow #ds-reset .ds-post-button {
+            width: 35px;
+        }
+
+        .ds-comments-info .ds-sort {
+            display: none !important;
+        }
+
+        @media screen and (max-device-width: 480px) {
+            .ds-comments-tabs,
+            .ds-comments-info {
+                display: none !important;
+            }
         }
     </style>
 

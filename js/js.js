@@ -31,9 +31,12 @@ $(".search-input").blur(function() {
 });
 
 //Append the date to index-top-block-date
-$(document).ready(function(){
-    var myDate = new Date();
-    $('.index-top-block-date').append(myDate);
+var myDate = new Date();
+$('.index-top-block-date').append(myDate);
+
+//Auto hidden share/tags popup block
+$('#article-fuctions-share-button, #article-functions-viewtags-button').click(function() {
+    $('.is-visible').removeClass('is-visible');
 });
 
 
