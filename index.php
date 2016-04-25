@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.8.6
+ * @version 1.8.7
  * @link https://viosey.com
  */
 
@@ -241,7 +241,9 @@ $this->need('header.php');?>
                                 </div>
                             </div>
                             <div id="article-category-comment" style="color:<?php $this->options->alinkcolor(); ?>">
-                                <?php $this->category(', '); ?> | <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>
+                                <?php $this->category(', '); ?> | <a href="<?php $this->permalink() ?>"><!-- 使用多说评论 -->
+                                <?php if($this->options->commentis == '1'): ?><span class="ds-thread-count" data-thread-key="<?php echo $this->cid;?>" data-count-type="comments"></span><!-- 使用原生评论 -->
+                                <?php else: ?><?php $this->commentsNum('%d 评论'); ?><?php endif; ?></a>
                                 <?php if (class_exists("Stat_Plugin")): ?>
                                     |&nbsp;<?php $this->views(); ?> <?php $this->sticky(); ?><?php if($this->options->langis == '0'): ?>Views<?php elseif($this->options->langis == '1'): ?>浏览<?php endif; ?>
                                 <?php endif; ?>

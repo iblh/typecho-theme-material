@@ -1196,6 +1196,7 @@ h6 {
     height: 54px;
     margin: 16px;
     border-radius: 50%;
+    background-color: rgba(255,255,255,.2);
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
