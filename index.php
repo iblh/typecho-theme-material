@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.8.7
+ * @version 1.8.8
  * @link https://viosey.com
  */
 

@@ -493,17 +493,17 @@
         }
 
         .ds-post-likes::before {
-            content: "thumb_up";
+            content: "\E8DC";
             font-family: 'Material Icons';
             font-size: 24px;
         }
         .ds-post-reply::before {
-            content: "forum";
+            content: "\E0BF";
             font-family: 'Material Icons';
             font-size: 24px;
         }
         .ds-post-repost::before {
-            content: "share";
+            content: "\E80D";
             font-family: 'Material Icons';
             font-size: 24px;
         }
@@ -511,7 +511,7 @@
             color: rgba(0, 0, 0, .14) !important;
         }
         .ds-post-report::before {
-            content: "report_problem";
+            content: "\E8B2";
             font-family: 'Material Icons';
             font-size: 24px;
         }
@@ -599,6 +599,24 @@
             .ds-comments-info {
                 display: none !important;
             }
+        }
+
+        #ds-reset #ds-ctx{
+            max-width: none;
+        }
+
+        #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-content{
+            margin: 5px 0;
+            line-height: 20px;
+        }
+
+        #ds-reset #ds-ctx .ds-comment-actions{
+            margin-top: 10px;
+            position: relative;
+        }
+
+        #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
+            top: 0px;
         }
     </style>
 

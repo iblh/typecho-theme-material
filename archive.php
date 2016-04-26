@@ -43,7 +43,16 @@
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text index-article-content">
                             <!--  $this->content('Continue Reading...');  -->
                             <?php $this->excerpt(80, '...'); ?>
-                            &nbsp;&nbsp;&nbsp;<span><a href="<?php $this->permalink(); ?>" target="_self">Continue Reading</a></span>
+                            &nbsp;&nbsp;&nbsp;
+                            <span>
+                                <a href="<?php $this->permalink(); ?>" target="_self">
+                                    <?php if($this->options->langis == '0'): ?>
+                                        Continue Reading
+                                    <?php elseif($this->options->langis == '1'): ?>
+                                        继续阅读
+                                    <?php endif; ?>
+                                </a>
+                            </span>
                         </div>
 
                         <!-- Articli info-->

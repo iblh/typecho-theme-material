@@ -937,8 +937,10 @@ h6 {
 #back_to_top {
     float: right;
     background: #00BCD4;
-    margin-right: 8pc;
-    top: 50px;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 997;
 }
 
 @media screen and (max-device-width: 480px) {
