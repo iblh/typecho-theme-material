@@ -51,8 +51,8 @@
                             </div>
                             <div class="section-spacer"></div>
                             <!-- favorite -->
-                            <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                                <!-- For modern browsers. -->
+                            <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like" data-cid="<?php $this->cid();?>" data-num="<?php $this->likesNum();?>">
+                                <span class="post-likes-num"><?php $this->likesNum();?></span>
                                 <i class="material-icons" role="presentation">favorite</i>
                                 <span class="visuallyhidden">favorites</span>
                             </button>

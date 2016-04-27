@@ -12,7 +12,7 @@ A Material Typecho Theme based on Google Material Design
 
 
 ## 使用方法
-- [Github 地址](https://github.com/viosey/typecho-theme-material), 点击"Download ZIP"下载, 解压后上传到/usr/themes, 并启用主题
+- [Github 地址](https://github.com/viosey/typecho-theme-material), 点击"Download ZIP"下载, 解压后更改名字上传到/usr/themes, 并启用主题
 - 如遇到 "Database Query Error" 错误, 试着修改一下主题文件夹的名字, 也许就解决了呢
 - 在 "设置外观" 中打造一个属于你自己的博客
 - 关于文章缩略图
@@ -22,6 +22,7 @@ A Material Typecho Theme based on Google Material Design
 - 首页文章概览默认最大输出80个字符, 可手动添加截断符```<!-- more -->```控制输出
 - 在侧边栏中使用友情链接, 需安装此友情链接插件  [typecho-links-material](https://github.com/viosey/typecho-links-material)
 - 安装使用 [浏览次数统计插件](https://lets.us.to/usr/uploads/2015/01/874979024.zip) 后, 首页文章信息与文章页分享按钮下拉选项中会显示浏览次数统计
+- 点赞功能需使用该 [点赞插件](http://7xqdyf.com1.z0.glb.clouddn.com/zipTeStat.zip)
 
 ## 预览
 ![](https://viosey.com/img/screenshot.jpg)

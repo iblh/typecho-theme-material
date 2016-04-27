@@ -849,6 +849,24 @@ h6 {
     color: #FFF;
 }
 
+#article-functions-like-button {
+    overflow: visible;
+}
+
+#article-functions-like-button:hover {
+    color: red;
+}
+
+.testat-dialog{
+}
+
+.post-likes-num {
+    font-size: 13px;
+    position: relative;
+    top: 8px;
+    left: -20px;
+}
+
 #article-functions-viewtags-ul li {
     padding: 0;
 }
