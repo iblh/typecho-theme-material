@@ -37,18 +37,20 @@ body {
     font-family: 'Roboto', 'HanHei SC', 'PingFang SC', 'Open Sans', 'Droid Sans', 'Source Sans Pro', 'Source Hans Sans', 'Helvetica Neue', 'Segoe UI', 'Verdana', 'Tahoma', 'Arial', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', 'Microsoft YaHei UI', 'sans-serif' !important;
 }
 
-::-webkit-scrollbar-track {
-	background-color: rgba(255,255,255,0);
-}
+@media screen and (min-device-width: 1024px) {
+    ::-webkit-scrollbar-track {
+    	background-color: rgba(255,255,255,0);
+    }
 
-::-webkit-scrollbar {
-	width: 6px;
-	background-color: rgba(255,255,255,0);
-}
+    ::-webkit-scrollbar {
+    	width: 6px;
+    	background-color: rgba(255,255,255,0);
+    }
 
-::-webkit-scrollbar-thumb {
-    border-radius: 3px;
-	background-color: rgba(193,193,193,1);
+    ::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+    	background-color: rgba(193,193,193,1);
+    }
 }
 
 a {
