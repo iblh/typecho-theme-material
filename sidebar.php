@@ -241,6 +241,27 @@
         </li>
         <!-- divider -->
         <li class="divider"></li>
+        <!-- Pages  -->
+        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+        <li class="dropdown">
+            <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
+                <?php if($this->options->langis == '0'): ?>
+                    Pages
+                <?php elseif($this->options->langis == '1'): ?>
+                    独立页面
+                <?php endif; ?>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <?php while ($pages->next()): ?>
+                    <li>
+                        <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>" tabindex="-1">
+                            <?php $pages->title(); ?>
+                        </a>
+                    </li>
+                <?php endwhile; ?>
+            </ul>
+        </li>
         <!-- Hot tags  -->
         <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=count&ignoreZeroCount=1&desc=1&limit=5')->to($tags); ?>
         <li class="dropdown">
@@ -267,27 +288,7 @@
                 <?php endif; ?>
             </ul>
         </li>
-        <!-- Pages  -->
-        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-        <li class="dropdown">
-            <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-                <?php if($this->options->langis == '0'): ?>
-                    Pages
-                <?php elseif($this->options->langis == '1'): ?>
-                    独立页面
-                <?php endif; ?>
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <?php while ($pages->next()): ?>
-                    <li>
-                        <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>" tabindex="-1">
-                            <?php $pages->title(); ?>
-                        </a>
-                    </li>
-                <?php endwhile; ?>
-            </ul>
-        </li>
+        <!-- Links -->
         <li class="dropdown">
             <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
                 <?php if($this->options->langis == '0'): ?>

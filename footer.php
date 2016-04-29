@@ -1,11 +1,28 @@
 
-                <!-- Back to Top -->
-                <a href="#top" id="back_to_top-a">
+                <!-- Material Toggle Button -->
+                <div class="fabs">
+                  <a href="#top" class="fab">
+                      <i class="material-icons">expand_less</i>
+                  </a>
+                  <a class="fab">
+                      <i class="material-icons">keyboard_arrow_left</i>
+                  </a>
+                  <a class="fab">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                  </a>
+                  <a class="fab">
+                      <i class="material-icons">keyboard_arrow_down</i>
+                  </a>
+                  <a id="prime" class="fab">
+                      <i class="material-icons prime-i-add">add</i>
+                  </a>
+                </div>
+
+                <!-- <a href="#top">
                     <button id="back_to_top" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--6dp">
-                        <!-- For modern browsers. -->
                         <i class="material-icons">expand_less</i>
                     </button>
-                </a>
+                </a> -->
 
                 <!--Footer-->
                 <footer class="mdl-mini-footer">
