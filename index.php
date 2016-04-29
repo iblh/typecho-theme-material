@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 1.9.0
+ * @version 1.9.1
  * @link https://viosey.com
  */
 
@@ -256,19 +256,16 @@ $this->need('header.php');?>
                     <?php endwhile; ?>
 
                     <nav class="demo-nav mdl-cell mdl-cell--12-col">
-                        <?php $this->pageLink('
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                            <!-- For modern browsers. -->
+                        <?php $this->pageLink(
+                        '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                             <i class="material-icons" role="presentation">arrow_back</i>
-                        </button>
-                        '); ?>
+                        </button>'); ?>
                         <div class="section-spacer"></div>
                         page <?php if($this->_currentPage>1) echo $this->_currentPage;  else echo 1;?>
                         of <?php echo   ceil($this->getTotal() / $this->parameter->pageSize); ?>
                         <div class="section-spacer"></div>
-                        <?php $this->pageLink('
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                            <!-- For modern browsers. -->
+                        <?php $this->pageLink(
+                        '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                             <i class="material-icons" role="presentation">arrow_forward</i>
                         </button>','next'); ?>
                     </nav>

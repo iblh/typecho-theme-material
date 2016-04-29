@@ -1,31 +1,41 @@
 
                 <!-- Material Toggle Button -->
                 <div class="fabs">
-                  <a href="#top" class="fab">
-                      <i class="material-icons">expand_less</i>
-                  </a>
-                  <a class="fab">
-                      <i class="material-icons">keyboard_arrow_left</i>
-                  </a>
-                  <a class="fab">
-                      <i class="material-icons">keyboard_arrow_right</i>
-                  </a>
-                  <a class="fab">
-                      <i class="material-icons">keyboard_arrow_down</i>
-                  </a>
-                  <a id="prime" class="fab">
-                      <i class="material-icons prime-i-add">add</i>
-                  </a>
+                    <a href="#top" class="fab">
+                        <i class="material-icons">expand_less</i>
+                    </a>
+
+                    <?php if($this->is('index')||$this->is('archive')): ?>
+                        <?php $this->pageLink('
+                            <i class="material-icons">keyboard_arrow_left</i>
+                        '); ?>
+                    <?php else: ?>
+                        <?php $this->theNext('%s', NULL, array('title' =>
+                        '<i class="material-icons">keyboard_arrow_left</i>',
+                        'tagClass' => 'prev-content')); ?>
+                    <?php endif;?>
+
+                    <?php if($this->is('index')||$this->is('archive')): ?>
+                        <?php $this->pageLink('
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        ','next'); ?>
+                    <?php else: ?>
+                        <?php $this->thePrev('%s', NULL, array('title' =>
+                        '<i class="material-icons">keyboard_arrow_right</i>',
+                        'tagClass' => 'prev-content')); ?>
+                    <?php endif;?>
+
+                    <a href="#bottom" class="fab">
+                        <i class="material-icons">keyboard_arrow_down</i>
+                    </a>
+
+                    <a id="prime" class="fab">
+                        <i class="material-icons prime-i-add">add</i>
+                    </a>
                 </div>
 
-                <!-- <a href="#top">
-                    <button id="back_to_top" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--6dp">
-                        <i class="material-icons">expand_less</i>
-                    </button>
-                </a> -->
-
                 <!--Footer-->
-                <footer class="mdl-mini-footer">
+                <footer class="mdl-mini-footer" id="bottom">
                     <!--mdl-mini-footer-left-section-->
                     <div class="mdl-mini-footer--left-section">
                         <?php if ( !empty($this->options->footersns) && in_array('ShowTwitter', $this->options->footersns) ) : ?>

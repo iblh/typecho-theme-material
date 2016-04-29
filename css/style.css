@@ -2010,21 +2010,11 @@ h6 {
 /*Animation*/
 
 @keyframes status-x {
-    /*0% {}
-    100% {
-        -webkit-transform: rotate(225deg);
-        transform: rotate(225deg);
-    }*/
     from {transform: rotate(0deg);}
     to {transform: rotate(225deg);}
 }
 
 @keyframes status-add {
-    /*0% {}
-    100% {
-        -webkit-transform: rotate(-270deg);
-        transform: rotate(-270deg);
-    }*/
     from {transform: rotate(225deg);}
     to {transform: rotate(0deg);}
 }

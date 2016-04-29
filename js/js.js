@@ -18,30 +18,31 @@ Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), func
     });
 });
 
-//Auto fill visitor-url "http://"
+// Auto fill visitor-url "http://"
 $("#visitor-url").focus(function() {
     this.placeholder = "http://";
 });
-
 $("#visitor-url").blur(function() {
     this.placeholder = "";
 });
 
-//Auto delete input content & placeholder
+// Auto delete input content & placeholder
 $(".search-input").blur(function() {
     this.value = "";
     this.placeholder="";
 });
 
-//Append the date to index-top-block-date
+// Append the date to index-top-block-date
 var myDate = new Date();
 $('.index-top-block-date').append(myDate);
 
-//Auto hidden share/tags popup block
+// Auto hidden share/tags popup block
 $('#article-fuctions-share-button, #article-functions-viewtags-button').click(function() {
     $('.is-visible').removeClass('is-visible');
 });
 
+// Add 'fab' class to the PageNav <a>
+$('.fabs .prev, .fabs .next, .fabs .prev-content').addClass('fab');
 
 //**********************************
 //**********************************
