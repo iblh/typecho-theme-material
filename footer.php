@@ -1,5 +1,5 @@
 
-                <!-- Material Toggle Button -->
+                <!-- Floating Action Button -->
                 <div class="fabs">
                     <a href="#top" class="fab">
                         <i class="material-icons">expand_less</i>

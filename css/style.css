@@ -34,7 +34,7 @@ body {
     background-attachment: fixed;
     content: '';
     will-change: transform;
-    font-family: 'Roboto', 'HanHei SC', 'PingFang SC', 'Open Sans', 'Droid Sans', 'Source Sans Pro', 'Source Hans Sans', 'Helvetica Neue', 'Segoe UI', 'Verdana', 'Tahoma', 'Arial', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', 'Microsoft YaHei UI', 'sans-serif' !important;
+    font-family: 'Roboto', "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif; !important;
 }
 
 @media screen and (min-device-width: 1024px) {
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 884px;
     margin: 24px 10px 0px -16px !important;
     padding: 5px 0 5px 15px;
-    font-family: 'Roboto', 'HanHei SC', 'PingFang SC', 'Open Sans', 'Droid Sans', 'Source Sans Pro', 'Source Hans Sans', 'Helvetica Neue', 'Segoe UI', 'Verdana', 'Tahoma', 'Arial', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', 'Microsoft YaHei UI', 'sans-serif' !important;
+    font-family: 'Roboto', "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif; !important;
 }
 
 h1 {
@@ -147,7 +147,7 @@ h6 {
 }
 
 .mdl-button {
-    font-family: 'Roboto', 'HanHei SC', 'PingFang SC', 'Open Sans', 'Droid Sans', 'Source Sans Pro', 'Source Hans Sans', 'Helvetica Neue', 'Segoe UI', 'Verdana', 'Tahoma', 'Arial', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', 'Microsoft YaHei UI', 'sans-serif' !important;
+    font-family: 'Roboto', "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif; !important;
 }
 
 .mdl-menu__item {
@@ -225,14 +225,14 @@ h6 {
     max-width: 900px;
     flex-shrink: 0;
 }
-.demo-blog.mdl-layout .mdl-layout__content {
+.demo-blog.mdl-layout .mdl-main {
     position: relative;
     padding-top: 230px;
     -webkit-overflow-scrolling: touch;
 }
 
 @media screen and (max-device-width: 480px) {
-    .demo-blog.mdl-layout .mdl-layout__content {
+    .demo-blog.mdl-layout .mdl-main {
         padding-top: 80px;
     }
 }
@@ -952,21 +952,6 @@ h6 {
 
 .more {
     margin-left: 1pc;
-}
-
-#back_to_top {
-    float: right;
-    background: #00BCD4;
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    z-index: 996;
-}
-
-@media screen and (max-device-width: 480px) {
-    #back_to_top {
-        margin-right: 1pc;
-    }
 }
 
 #top {
@@ -1819,7 +1804,7 @@ h6 {
 
 /**************************************************************************************************************/
 /**********************************                                          **********************************/
-/**********************************          Material Toggle Button          **********************************/
+/**********************************          Floating Action Button          **********************************/
 /**********************************                                          **********************************/
 /**************************************************************************************************************/
 
