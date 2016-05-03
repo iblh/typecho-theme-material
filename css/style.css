@@ -225,14 +225,14 @@ h6 {
     max-width: 900px;
     flex-shrink: 0;
 }
-.demo-blog.mdl-layout .mdl-main {
+.demo-blog.mdl-layout .mdl-layout__content {
     position: relative;
     padding-top: 230px;
     -webkit-overflow-scrolling: touch;
 }
 
 @media screen and (max-device-width: 480px) {
-    .demo-blog.mdl-layout .mdl-main {
+    .demo-blog.mdl-layout .mdl-layout__content {
         padding-top: 80px;
     }
 }

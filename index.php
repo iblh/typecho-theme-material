@@ -12,7 +12,7 @@ $this->need('header.php');?>
 
         <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
 
-            <main class="mdl-main" id="main">
+            <main class="mdl-layout__content" id="main">
                 <div id="top"></div>
                 <!-- Sidebar hamburger button -->
                 <button class="MD-burger-icon sidebar-toggle">
