@@ -156,8 +156,7 @@ function themeConfig($form) {
 
     $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', NULL, NULL, _t('CDN 地址'), _t("
     新建一个'MaterialCDN' 文件夹, 把'css, fonts, img, js' 文件夹放进去, 然后把'MaterialCDN' 上传到到你的 CDN 储存空间根目录下<br />
-    填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b><br />
-    目前 CDN 地址对随机默认缩略图不生效, 所以请勿删除主题文件夹下的 img/random 文件夹 (css, js, fonts 文件夹则可删除)"));
+    填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b>"));
     $form->addInput($CDNURL);
 
     $footersns = new Typecho_Widget_Helper_Form_Element_Checkbox('footersns',
@@ -193,14 +192,19 @@ function showThumbnail($widget)
 {
     //If article no include picture, display random default picture
     $rand = rand(1,5); //Random number
-    $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg'; //Random picture path
+
+    if(!empty($widget->widget('Widget_Options')->CDNURL)){
+		$random = $widget->widget('Widget_Options')->CDNURL(). '/MaterialCDN/img/random/' . $rand . '.jpg';
+	}else{
+        $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg';
+	}//Random picture path
+
 
     // If only on random default picture, delete the following "//"
     //$random = $widget->widget('Widget_Options')->themeUrl . '/img/random.jpg';
 
     $attach = $widget->attachments(1)->attachment;
     $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
-
 
     if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
              echo $thumbUrl[1][0];

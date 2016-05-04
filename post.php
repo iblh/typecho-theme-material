@@ -55,14 +55,12 @@
                                 <i class="material-icons mdl-badge mdl-badge--overlap" role="presentation" data-badge="<?php $this->likesNum();?>">favorite</i>
                                 <span class="visuallyhidden">favorites</span>
                             </button>
-                            <div class="mdl-tooltip" for="article-functions-like-button">Like</div>
                             <!-- view tags -->
                             <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
                                 <i class="material-icons">view_carousel</i>
                                 <span class="visuallyhidden">tags</span>
                             </button>
-                            <div class="mdl-tooltip" for="article-functions-viewtags-button">Tags</div>
                             <ul id="article-functions-viewtags-ul" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
                               <li class="mdl-menu__item"><?php $this->tags('<li class="mdl-menu__item"> ', true, ''); ?></li>
                             </ul>
@@ -72,7 +70,6 @@
                                 <i class="material-icons" role="presentation">share</i>
                                 <span class="visuallyhidden">share</span>
                             </button>
-                            <div class="mdl-tooltip" for="article-fuctions-share-button">Share</div>
                             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="article-fuctions-share-button">
                                 <?php if (class_exists("Stat_Plugin")): ?>

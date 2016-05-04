@@ -55,14 +55,12 @@
                                 <i class="material-icons mdl-badge mdl-badge--overlap" role="presentation" data-badge="<?php $this->likesNum();?>">favorite</i>
                                 <span class="visuallyhidden">favorites</span>
                             </button>
-                            <div class="mdl-tooltip" for="article-functions-like-button">Like</div>
                             <!-- share -->
                             <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">share</i>
                                 <span class="visuallyhidden">share</span>
                             </button>
-                            <div class="mdl-tooltip" for="article-fuctions-share-button">Share</div>
                             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="article-fuctions-share-button">
                                 <?php if (class_exists("Stat_Plugin")): ?>
