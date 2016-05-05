@@ -11,17 +11,6 @@ function themeConfig($form) {
     <a href="https://github.com/viosey/typecho-theme-material/issues" target="_blank">建议&反馈</a>
     </p>';
 
-    $misc = new Typecho_Widget_Helper_Form_Element_Checkbox('misc',
-        array(
-
-        ),
-
-        //Default choose
-        array(), _t('杂项')
-    );
-    //Output
-    // $form->addInput($misc->multiMode());
-
     $appearance = new Typecho_Widget_Helper_Form_Element_Checkbox('appearance',
         array(
             'CenterArticle' => _t('文章内容居中'),
@@ -194,7 +183,7 @@ function showThumbnail($widget)
     $rand = rand(1,5); //Random number
 
     if(!empty($widget->widget('Widget_Options')->CDNURL)){
-		$random = $widget->widget('Widget_Options')->CDNURL(). '/MaterialCDN/img/random/' . $rand . '.jpg';
+		$random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/' . $rand . '.jpg';
 	}else{
         $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg';
 	}//Random picture path
