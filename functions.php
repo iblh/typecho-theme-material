@@ -8,6 +8,87 @@ function themeConfig($form) {
         body{
             background-color:#F5F5F5;
         }
+        .typecho-head-nav{
+            // display:none;
+            background-color:#673AB7;
+        }
+        #typecho-nav-list .parent a:hover, #typecho-nav-list .focus .parent a, #typecho-nav-list .root:hover .parent a{
+            background: RGBA(255, 255, 255, 0);
+        }
+        #typecho-nav-list{
+            display: none;
+        }
+        .typecho-head-nav .operate a{
+            border:0;
+            color:rgba(255,255,255,.6);
+        }
+        .typecho-head-nav .operate a:hover{
+            color:rgba(255,255,255,.8);
+            background-color:#673AB7;
+        }
+        .body.container{
+            min-width: 100% !important;
+            padding:0px;
+        }
+        .row {
+            margin:0px;
+        }
+        .col-mb-12{
+            padding:0 !important;
+        }
+        .typecho-page-title{
+            height:100px;
+            padding: 10px 40px 20px 40px;
+            background-color:#673AB7;
+            color:#FFF;
+            font-size: 24px;
+        }
+        .typecho-option-tabs{
+            padding: 0;
+            margin: 0;
+            height: 60px;
+            background-color: #512DA8;
+            margin-bottom: 40px !important;
+            padding-left:25px;
+        }
+        .typecho-option-tabs li{
+            margin: 0;
+            border: none;
+            float: left;
+            position: relative;
+            display: block;
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .typecho-option-tabs a{
+            height:auto;
+            border:0;
+            color: rgba(255,255,255,.6);
+            background-color:rgba(255,255,255,0) !important;
+            padding: 17px 24px;
+        }
+        .typecho-option-tabs a:hover{
+            color:rgba(255,255,255,.8);
+        }
+        .message{
+            background-color:#673AB7 !important;
+            color:#fff;
+        }
+        .success{
+            background-color:#673AB7;
+            color:#fff;
+        }
+        .current{
+            background-color: #FFF;
+            height: 4px;
+            padding:0 !important;
+            bottom:0px;
+        }
+        .current a{
+            color:#FFF;
+        }
         input[type=text],
         textarea{
             border: none;
@@ -16,6 +97,9 @@ function themeConfig($form) {
         }
         .typecho-option{
             float:left;
+        }
+        .typecho-option span{
+            margin-right:0;
         }
         .typecho-option-submit{
             position: fixed;
@@ -242,6 +326,12 @@ function themeConfig($form) {
                 width:94% !important;
             }
         }
+        .typecho-foot{
+            padding: 16px 40px;
+            color: rgb(158, 158, 158);
+            background-color: rgb(66, 66, 66);
+            margin-top: 80px;
+        }
     </style>
     ";
 
@@ -281,9 +371,9 @@ function themeConfig($form) {
 
     $BGtype = new Typecho_Widget_Helper_Form_Element_Radio('BGtype',
         array(
-            '0' => _t('纯色背景'),
-            '1' => _t('图片背景'),
-            '2' => _t('渐变背景')
+            '0' => _t('纯色背景 &emsp;'),
+            '1' => _t('图片背景 &emsp;'),
+            '2' => _t('渐变背景 &emsp;')
         ),
 
         //Default choose
@@ -311,7 +401,7 @@ function themeConfig($form) {
     $ThumbnailOption = new Typecho_Widget_Helper_Form_Element_Radio('ThumbnailOption',
         array(
             '1' => _t('显示文章内第一张图片 (若无图片则显示随机图片)<br />'),
-            '2' => _t('只显示纯色'),
+            '2' => _t('只显示纯色 &emsp;'),
             '3' => _t('只显示随机图片'),
         ),
 
@@ -325,8 +415,8 @@ function themeConfig($form) {
 
     $commentis = new Typecho_Widget_Helper_Form_Element_Radio('commentis',
         array(
-            '0' => _t('使用原生评论'),
-            '1' => _t('使用多说评论')
+            '0' => _t('使用原生评论 &emsp;'),
+            '1' => _t('使用多说评论 &emsp;')
         ),
 
         '0', _t('文章评论'), _t("默认使用原生评论, 如果使用多说评论, 在 <b>'多说二级域名 (short_name)'</b> 中填入多说 short_name")
@@ -390,10 +480,10 @@ function themeConfig($form) {
 
     $footersns = new Typecho_Widget_Helper_Form_Element_Checkbox('footersns',
         array(
-            'ShowTwitter' => _t('显示 Twitter 图标'),
-            'ShowFacebook' => _t('显示 Facebook 图标'),
-            'ShowGooglePlus' => _t('显示 Google+ 图标'),
-            'ShowWeibo' => _t('显示新浪微博图标'),
+            'ShowTwitter' => _t('显示 Twitter 图标 &emsp;'),
+            'ShowFacebook' => _t('显示 Facebook 图标 &emsp;'),
+            'ShowGooglePlus' => _t('显示 Google+ 图标 &emsp;'),
+            'ShowWeibo' => _t('显示新浪微博图标 &emsp;'),
         ),
 
         array('ShowTwitter','ShowFacebook','ShowGooglePlus'), _t('页脚 SNS 图标按钮显示设置'),_t('开启后, 按钮显示于博客页脚位置')
