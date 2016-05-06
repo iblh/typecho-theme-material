@@ -188,17 +188,21 @@ $this->need('header.php');?>
                     <div class="mdl-card mdl-cell mdl-cell--12-col article-module <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch)): ?>fade out<?php endif; ?>">
 
                         <!-- Article link & title -->
-                        <?php if ( !empty($this->options->appearance) && in_array('ThumbnailOption', $this->options->appearance) ) : ?>
+                        <?php if( $this->options->ThumbnailOption == '1' ): ?>
                             <div class="mdl-card__media mdl-color-text--grey-50 " style="background-image:url(<?php showThumbnail($this); ?>)">
                                 <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
                             </div>
-                        <?php else: ?>
+                        <?php elseif( $this->options->ThumbnailOption == '2'): ?>
                             <div class="mdl-card__media mdl-color-text--grey-50" style="background-color:<?php $this->options->TitleColor()?> !important;color:#757575 !important;">
                                 <p class="article-headline-p-nopic">
                                     <a href="<?php $this->permalink() ?>" target="_self">
                                         “</br><?php $this->title() ?></br>”
                                     </a>
                                 </p>
+                            </div>
+                        <?php elseif( $this->options->ThumbnailOption == '3'): ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50 " style="background-image:url(<?php randomThumbnail($this); ?>)">
+                                <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
                             </div>
                         <?php endif; ?>
 

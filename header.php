@@ -130,28 +130,6 @@
             </style>
         <?php endif; ?>
 
-        <?php if ( !empty($this->options->appearance) && in_array('CenterArticle', $this->options->appearance) ) : ?>
-            <style>
-                .demo-blog--blogpost .meta+.mdl-card__supporting-text {
-                    display: flex;
-                }
-                .demo-blog--blogpost .meta+.mdl-card__supporting-text p {
-                    max-width: 32pc;
-                }
-                pre {
-                    max-width: 32pc;
-                }
-                h1, h2, h3, h4, h5, h6 {
-                    margin-left: 0px !important;
-                }
-                hr{
-                    width: 200px;
-                    margin: 2em auto;
-                }
-            </style>
-        <?php endif; ?>
-
-
         <?php if ( $this->options->BGtype =='0' ) : ?>
             <style>
                 body{
