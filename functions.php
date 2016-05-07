@@ -8,8 +8,22 @@ function themeConfig($form) {
         body{
             background-color:#F5F5F5;
         }
+        @media screen and (min-device-width: 1024px) {
+            ::-webkit-scrollbar-track {
+            	background-color: rgba(255,255,255,0);
+            }
+
+            ::-webkit-scrollbar {
+            	width: 6px;
+            	background-color: rgba(255,255,255,0);
+            }
+
+            ::-webkit-scrollbar-thumb {
+                border-radius: 3px;
+            	background-color: rgba(193,193,193,1);
+            }
+        }
         .typecho-head-nav{
-            // display:none;
             background-color:#673AB7;
         }
         #typecho-nav-list .parent a:hover, #typecho-nav-list .focus .parent a, #typecho-nav-list .root:hover .parent a{
@@ -94,6 +108,7 @@ function themeConfig($form) {
             border: none;
             border-bottom: 1px solid rgba(0,0,0,.60);
             outline:none;
+            border-radius:0;
         }
         .typecho-option{
             float:left;
@@ -107,6 +122,7 @@ function themeConfig($form) {
             bottom: 32px;
         }
         .typecho-option-submit button{
+            float:right;
             background: #00BCD4;
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             color: #FFF;
@@ -321,9 +337,32 @@ function themeConfig($form) {
             padding: 8px 2%;
             width:44%;
         }
-        @media screen and (max-device-width:480px){
+        @media screen and (max-width:480px){
             .typecho-option{
                 width:94% !important;
+                margin-bottom: 20px !important;
+            }
+            .typecho-option-tabs li{
+                width:33%;
+            }
+            .typecho-option-tabs{
+                padding-left:0;
+            }
+            .typecho-option-tabs a{
+                padding:17px 10px;
+            }
+        }
+        @media screen and (min-width: 480px) and (max-width: 700px){
+            #typecho-option-item-loadingcolor-2, #typecho-option-item-loadingbuffer-3{
+                width:26.5%;
+            }
+            #typecho-option-item-avatarURL-18{
+                margin-bottom:8px;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1042px) {
+            #typecho-option-item-loadingcolor-2, #typecho-option-item-loadingbuffer-3{
+                width:26.5%;
             }
         }
         .typecho-foot{
@@ -362,11 +401,9 @@ function themeConfig($form) {
     $form->addInput($analysis);
 
     $loadingcolor = new Typecho_Widget_Helper_Form_Element_Text('loadingcolor', NULL, NULL, _t('loading 加载进度条颜色'),_t('打开 "功能开关" 中的 loading 加载进度条后, 在这里设置进度条的颜色, 默认为蓝色'));
-    $loadingcolor->input->setAttribute('class','mini');
     $form->addInput($loadingcolor);
 
     $loadingbuffer = new Typecho_Widget_Helper_Form_Element_Text('loadingbuffer', NULL, _t('800'), _t('loading 加载缓冲时间'),_t('loading 加载进度条的缓冲时间, 单位为毫秒 ms, 默认为 800ms'));
-    $loadingbuffer->input->setAttribute('class','mini');
     $form->addInput($loadingbuffer);
 
     $BGtype = new Typecho_Widget_Helper_Form_Element_Radio('BGtype',
@@ -504,8 +541,7 @@ function themeConfig($form) {
 }
 
 //Homepage thumbnail
-function showThumbnail($widget)
-{
+function showThumbnail($widget){
     //If article no include picture, display random default picture
     $rand = rand(1,5); //Random number
 
@@ -534,8 +570,7 @@ function showThumbnail($widget)
 }
 
 //Random thumbnail
-function randomThumbnail($widget)
-{
+function randomThumbnail($widget){
     //If article no include picture, display random default picture
     $rand = rand(1,5); //Random number
 
