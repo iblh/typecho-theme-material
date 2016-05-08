@@ -36,9 +36,11 @@ function themeConfig($form) {
             border:0;
             color:rgba(255,255,255,.6);
         }
-        .typecho-head-nav .operate a:hover{
+        .typecho-head-nav .operate a:hover,
+        .typecho-head-nav .operate a:focus{
             color:rgba(255,255,255,.8);
             background-color:#673AB7;
+            outline:none;
         }
         .body.container{
             min-width: 100% !important;

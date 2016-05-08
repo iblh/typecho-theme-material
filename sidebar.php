@@ -52,12 +52,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?php $this->options->profileUrl(); ?>" tabindex="-1">
+                    <a href="<?php $this->options->adminUrl('options-theme.php'); ?>" tabindex="-1">
                         <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element" >settings</i>
                         <?php if($this->options->langis == '0'): ?>
                             Settings
                         <?php elseif($this->options->langis == '1'): ?>
-                            个人设置
+                            设置外观
                         <?php endif; ?>
                     </a>
                 </li>
