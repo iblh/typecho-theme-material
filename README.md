@@ -12,8 +12,7 @@ A Material Typecho Theme based on Google Material Design
 
 
 ## 使用方法
-- [Github 地址](https://github.com/viosey/typecho-theme-material), 点击"Download ZIP"下载, 解压后更改名字上传到/usr/themes, 并启用主题
-- 如遇到 "Database Query Error" 错误, 试着修改一下主题文件夹的名字, 也许就解决了呢
+- [Github 地址](https://github.com/viosey/typecho-theme-material), 点击"Download ZIP"下载, 解压后将文件夹改名为 "Material"(或其他) 后上传到```/usr/themes```, 并启用主题
 - 在 "设置外观" 中打造一个属于你自己的博客
 - 关于文章缩略图
 	- 文章缩略图为文章内第一张图片

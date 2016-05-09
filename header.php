@@ -156,20 +156,20 @@
                 body{
                     <?php if($this->options->GradientType == '0'): ?>
                         background-image:
-                            -moz-radial-gradient(0% 100%, ellipse cover, #A68584 10%,rgba(255,255,227,0) 40%),
-                            -moz-linear-gradient(-45deg,  #6B8799 0%,#6CA69D 100%)
+                            -moz-radial-gradient(0% 100%, ellipse cover, #96DEDA 10%,rgba(255,255,227,0) 40%),
+                            -moz-linear-gradient(-45deg,  #1fddff 0%,#FFEDBC 100%)
                             ;
                         background-image:
-                            -o-radial-gradient(0% 100%, ellipse cover, #A68584 10%,rgba(255,255,227,0) 40%),
-                            -o-linear-gradient(-45deg,  #6B8799 0%,#6CA69D 100%)
+                            -o-radial-gradient(0% 100%, ellipse cover, #96DEDA 10%,rgba(255,255,227,0) 40%),
+                            -o-linear-gradient(-45deg,  #1fddff 0%,#FFEDBC 100%)
                             ;
                         background-image:
-                            -ms-radial-gradient(0% 100%, ellipse cover, #A68584 10%,rgba(255,255,227,0) 40%),
-                            -ms-linear-gradient(-45deg,  #6B8799 0%,#6CA69D 100%)
+                            -ms-radial-gradient(0% 100%, ellipse cover, #96DEDA 10%,rgba(255,255,227,0) 40%),
+                            -ms-linear-gradient(-45deg,  #1fddff 0%,#FFEDBC 100%)
                             ;
                         background-image:
-    						-webkit-radial-gradient(0% 100%, ellipse cover, #A68584 10%,rgba(255,255,227,0) 40%),
-    						-webkit-linear-gradient(-45deg,  #6B8799 0%,#6CA69D 100%)
+    						-webkit-radial-gradient(0% 100%, ellipse cover, #96DEDA    10%,rgba(255,255,227,0) 40%),
+    						-webkit-linear-gradient(-45deg,  #1fddff 0%,#FFEDBC 100%)
         					;
                     <?php elseif($this->options->GradientType == '1'): ?>
                         background-image:
@@ -259,6 +259,12 @@
                             -webkit-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
                             -webkit-linear-gradient(-45deg, rgba(97,102,158,.8) -10%,rgba(237,187,204,.8) 80% )
                             ;
+                    <?php elseif($this->options->GradientType =='5'): ?>
+                        background-image: #DAD299; /* fallback for old browsers */
+                        background-image: -webkit-linear-gradient(to left, #DAD299 , #B0DAB9); /* Chrome 10-25, Safari 5.1-6 */
+                        background-image: linear-gradient(to left, #DAD299 , #B0DAB9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
                     <?php endif; ?>
                 }
             </style>
