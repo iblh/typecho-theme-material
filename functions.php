@@ -427,11 +427,15 @@ function themeConfig($form) {
     $GradientType = new Typecho_Widget_Helper_Form_Element_Radio('GradientType',
         array(
             '0' => _t('Aerinite &emsp;'),
-            '1' => _t('Ethereal <br />'),
-            '2' => _t('Patrichor &emsp;'),
-            '3' => _t('Komorebi <br />'),
+            '1' => _t('Ethereal &emsp;'),
+            '2' => _t('Patrichor <br />'),
+            '3' => _t('Komorebi &emsp;'),
             '4' => _t('Crepuscular &emsp;'),
             '5' => _t('Autumn <br />'),
+            '6' => _t('Shore &emsp;'),
+            '7' => _t('Horizon &emsp;'),
+            '8' => _t('Green Beach <br />'),
+            '9' => _t('Virgin <br />'),
         ),
 
         '0', _t('渐变样式'), _t("背景设置如果选择渐变背景, 在这里选择想要的渐变样式.")

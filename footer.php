@@ -79,7 +79,7 @@
                         <?php endif;?>
                     </div>
                     <!--copyright-->
-                    <div id="copyright">Copyright &copy; 2016 <?php $this->options->title(); ?></div>
+                    <div id="copyright">Copyright &copy; <?php echo date("Y"); ?> <?php $this->options->title(); ?></div>
 
                     <!--mdl-mini-footer-right-section-->
                     <div class="mdl-mini-footer--right-section">

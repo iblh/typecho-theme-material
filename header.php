@@ -263,8 +263,20 @@
                         background-image: #DAD299; /* fallback for old browsers */
                         background-image: -webkit-linear-gradient(to left, #DAD299 , #B0DAB9); /* Chrome 10-25, Safari 5.1-6 */
                         background-image: linear-gradient(to left, #DAD299 , #B0DAB9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+                    <?php elseif($this->options->GradientType =='6'): ?>
+                        background-image: linear-gradient(-20deg, #d0b782 20%, #a0cecf 80%);
+                    <?php elseif($this->options->GradientType =='7'): ?>
+                        background: #F1F2B5; /* fallback for old browsers */
+                        background: -webkit-linear-gradient(to left, #F1F2B5 , #135058); /* Chrome 10-25, Safari 5.1-6 */
+                        background: linear-gradient(to left, #F1F2B5 , #135058); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *
+                    <?php elseif($this->options->GradientType =='8'): ?>
+                        background: #02AAB0; /* fallback for old browsers */
+                        background: -webkit-linear-gradient(to left, #02AAB0 , #00CDAC); /* Chrome 10-25, Safari 5.1-6 */
+                        background: linear-gradient(to left, #02AAB0 , #00CDAC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    <?php elseif($this->options->GradientType =='9'): ?>
+                        background: #C9FFBF; /* fallback for old browsers */
+                        background: -webkit-linear-gradient(to left, #C9FFBF , #FFAFBD); /* Chrome 10-25, Safari 5.1-6 */
+                        background: linear-gradient(to left, #C9FFBF , #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                     <?php endif; ?>
                 }
             </style>
