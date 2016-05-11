@@ -171,7 +171,8 @@ function themeConfig($form) {
         #typecho-option-item-TwitterURL-26 label,
         #typecho-option-item-FacebookURL-27 label,
         #typecho-option-item-GooglePlusURL-28 label,
-        #typecho-option-item-WeiboURL-29 label{
+        #typecho-option-item-WeiboURL-29 label,
+        #typecho-option-item-RobotoSource-31 label{
             font-size:14px;
             border-bottom:none;
             padding-bottom:0;
@@ -339,6 +340,25 @@ function themeConfig($form) {
             padding: 8px 2%;
             width:44%;
         }
+        #typecho-option-item-GooglePlusURL-28,
+        #typecho-option-item-WeiboURL-29{
+            margin-bottom:40px;
+        }
+        #typecho-option-item-CustomFonts-30{
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+            background-color: #fff;
+            margin: 8px 1%;
+            padding: 8px 2%;
+            width: 94%;
+        }
+        #typecho-option-item-RobotoSource-31{
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+            background-color: #fff;
+            margin: 8px 1%;
+            padding: 8px 2%;
+            width: 94%;
+            margin-bottom: 40px;
+        }
         @media screen and (max-width:480px){
             .typecho-option{
                 width:94% !important;
@@ -362,7 +382,7 @@ function themeConfig($form) {
                 margin-bottom:8px;
             }
         }
-        @media screen and (min-width: 768px) and (max-width: 1042px) {
+        @media screen and (min-width: 768px) and (max-width: 1033px) {
             #typecho-option-item-loadingcolor-2, #typecho-option-item-loadingbuffer-3{
                 width:26.5%;
             }
@@ -399,7 +419,7 @@ function themeConfig($form) {
     );
     $form->addInput($switch->multiMode());
 
-    $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', NULL, NULL, _t('网站统计代码'), _t('填入如 Google Analysis 的第三方统计代码'));
+    $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', NULL, NULL, _t('网站统计代码 + 自定义字体源'), _t('填入如 Google Analysis 的第三方统计代码或字体源'));
     $form->addInput($analysis);
 
     $loadingcolor = new Typecho_Widget_Helper_Form_Element_Text('loadingcolor', NULL, NULL, _t('loading 加载进度条颜色'),_t('打开 "功能开关" 中的 loading 加载进度条后, 在这里设置进度条的颜色, 默认为蓝色'));
@@ -545,6 +565,19 @@ function themeConfig($form) {
 
     $WeiboURL = new Typecho_Widget_Helper_Form_Element_Text('WeiboURL', NULL, NULL, _t('新浪微博地址'), NULL);
     $form->addInput($WeiboURL);
+
+    $CustomFonts = new Typecho_Widget_Helper_Form_Element_Text('CustomFonts', NULL, _t("Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif"), _t('自定义字体'), NULL);
+    $form->addInput($CustomFonts);
+
+    $RobotoSource = new Typecho_Widget_Helper_Form_Element_Radio('RobotoSource',
+    array(
+        '0' => _t('调用 Google fonts (使用 https://lug.ustc.edu.cn 中科大 https 镜像加速)<br />'),
+        '1' => _t('调用主题文件夹自带的 Roboto &emsp;'),
+        '2' => _t('使用自定义字体源')
+    ),
+
+    '1',_t('Roboto 字体使用来源'),NULL);
+    $form->addInput($RobotoSource);
 }
 
 //Homepage thumbnail

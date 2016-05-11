@@ -73,6 +73,26 @@
             <?php endif; ?>
        <![endif]-->
 
+
+       <?php if($this->options->RobotoSource == '0' ): ?>
+           <link href='https://fonts.lug.ustc.edu.cn/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+       <?php elseif($this->options->RobotoSource == '1' ): ?>
+           <style>
+               <?php if(!empty($this->options->CDNURL)): ?>
+                   @font-face {
+                       font-family: Roboto;
+                       src: url('<?php $this->options->CDNURL()?>/MaterialCDN/fonts/Roboto.ttf');
+                   }
+               <?php else: ?>
+                   @font-face {
+                       font-family: Roboto;
+                       src: url('<?php $this->options->themeUrl('fonts/Roboto.ttf'); ?>');
+                   }
+               <?php endif; ?>
+           </style>
+       <?php elseif($this->options->RobotoSource == '2' ): ?>
+       <?php endif; ?>
+
        <!-- 根据function.php设置的样式 -->
         <style>
             #view-source {
@@ -85,10 +105,14 @@
                 z-index: 900;
             }
 
-            a{
+            body,h1,h2,h3,h4,h5,h6 {
+                font-family: <?php $this->options->CustomFonts() ?>;
+            }
+
+            a {
                 color: <?php $this->options->alinkcolor(); ?> ;
             }
-            #ds-thread #ds-reset a{
+            #ds-thread #ds-reset a {
                 color: <?php $this->options->alinkcolor(); ?> !important;
             }
 
