@@ -506,7 +506,7 @@ function themeConfig($form) {
     );
     $form->addInput($langis);
 
-    $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', NULL, NULL,'置顶文章 1 ID', '填写对应主题的 id 即可使文章标题在首页置顶显示');
+    $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', NULL, NULL,'置顶文章 1 ID', NULL);
     $form->addInput($sticky_1->addRule('isInteger', '请填入数字'));
 
     $sticky_2 = new Typecho_Widget_Helper_Form_Element_Text('sticky_2', NULL, NULL,'置顶文章 2 ID', '填写对应主题的 id 即可使文章标题在首页置顶显示');

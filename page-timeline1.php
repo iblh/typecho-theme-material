@@ -24,6 +24,11 @@ $this->need('header.php'); ?>
     margin-top: 2em;
     margin-bottom: 2em;
 }
+@media screen and (max-device-width:480px){
+    #md-timeline {
+        margin-top: 6em;
+    }
+}
 #md-timeline::before {
     content: '';
     position: absolute;

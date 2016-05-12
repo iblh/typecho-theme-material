@@ -844,6 +844,7 @@ blockquote {
 .mdl-badge[data-badge]:after {
     width: 20px;
     height: 20px;
+    font-weight: 400;
 }
 .mdl-button .mdl-badge[data-badge]:after {
     top: -12px;

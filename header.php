@@ -41,13 +41,13 @@
         <!-- Material style -->
         <?php if(!empty($this->options->CDNURL)): ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/material.min.css" />
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/font-awesome.min.css" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/style.css" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/font-awesome.min.css" />
             <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/jquery-2.2.0.min.js"></script>
         <?php else: ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.min.css'); ?>" />
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/font-awesome.min.css'); ?>" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/font-awesome.min.css'); ?>" />
             <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
         <?php endif; ?>
 
@@ -83,10 +83,20 @@
                        font-family: Roboto;
                        src: url('<?php $this->options->CDNURL()?>/MaterialCDN/fonts/Roboto.ttf');
                    }
+                   @font-face {
+                       font-family: Roboto;
+                       font-weight: 700;
+                       src: url('<?php $this->options->CDNURL()?>/MaterialCDN/fonts/Roboto-700.ttf');
+                   }
                <?php else: ?>
                    @font-face {
                        font-family: Roboto;
                        src: url('<?php $this->options->themeUrl('fonts/Roboto.ttf'); ?>');
+                   }
+                   @font-face {
+                       font-family: Roboto;
+                       font-weight: 700;
+                       src: url('<?php $this->options->themeUrl('fonts/Roboto-700.ttf'); ?>');
                    }
                <?php endif; ?>
            </style>
