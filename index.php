@@ -86,11 +86,20 @@ $this->need('header.php');?>
                                 <strong><?php $this->options->title();  ?></strong>
                             </div>
                             <div class="section-spacer"></div>
+                            <!-- Pages button -->
+                            <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <i class="material-icons" role="presentation">view_carousel</i>
+                                <span class="visuallyhidden">Pages</span>
+                            </button>
+                            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
+                                <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+        				      	<?php while($pages->next()): ?>
+        							<a href="<?php $pages->permalink(); ?>" class="md-menu-list-a" title="<?php $pages->title(); ?>"><li class="mdl-menu__item mdl-js-ripple-effect"><?php $pages->title(); ?></li></a>
+        				      	<?php endwhile; ?>
+                            </ul>
                             <!-- Category button -->
                             <button id="show-category-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                                <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">apps</i>
-
                                 <span class="visuallyhidden">Category</span>
                             </button>
                             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-category-button">
@@ -101,7 +110,6 @@ $this->need('header.php');?>
                             </ul>
                             <!--  Menu button-->
                             <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                                <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">more_vert</i>
                                 <span class="visuallyhidden">show menu</span>
                             </button>
