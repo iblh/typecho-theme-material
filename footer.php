@@ -99,40 +99,18 @@
 
     <!-- Material js -->
     <?php if(!empty($this->options->CDNURL)): ?>
-        <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/bootstrap.min.js" async></script>
-        <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/material.min.js" async></script>
-        <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/ripples.min.js" async></script>
+        <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/jquery-2.2.0.min.js"></script>
         <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/js.js" async></script>
     <?php else: ?>
-        <script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>" async></script>
-        <script src="<?php $this->options->themeUrl('js/material.min.js'); ?>" async></script>
-        <script src="<?php $this->options->themeUrl('js/ripples.min.js'); ?>" async></script>
+        <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
         <script src="<?php $this->options->themeUrl('js/js.js'); ?>" async></script>
     <?php endif; ?>
 
 
-    <?php if($this->options->langis == '0'): ?>
-        <script>
-            //Auto fill input placeholder
-            $(".search-input").focus(function() {
-                this.placeholder = "Press enter to search";
-            });
-        </script>
-    <?php elseif($this->options->langis == '1'): ?>
-        <script>
-            //Auto fill input placeholder
-            $(".search-input").focus(function() {
-                this.placeholder = "输入后回车以搜索";
-            });
-        </script>
-    <?php endif; ?>
-
     <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>
         <?php if(!empty($this->options->CDNURL)): ?>
-            <link rel="stylesheet" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/nprogress.css" />
             <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/nprogress.js"></script>
         <?php else: ?>
-            <link rel="stylesheet" href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" />
             <script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
         <?php endif; ?>
 

@@ -92,6 +92,16 @@
     </div>
 
     <style>
+        #comments{
+            background-color: #eee;
+            padding: 2pc;
+        }
+        #comments h4{
+            font-size: 13px;
+            line-height: 18px;
+            color: #8A8A8A;
+            margin: 0;
+        }
         #ds-thread {
             /* clear: both; */
             /* position: relative; */
