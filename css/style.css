@@ -1624,6 +1624,12 @@ blockquote {
 .fab:hover {
     box-shadow: 0 0 6px rgba(0, 0, 0, .24), 0 4px 8px rgba(0, 0, 0, .38);
 }
+#prime{
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12), 0px 8px 8px 0px rgba(0,0,0,0.24);
+}
+#prime:hover{
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.12), 0px 14px 14px 0px rgba(0,0,0,0.24);
+}
 .fab > i {
     font-size: 2em;
     line-height: 55px;
