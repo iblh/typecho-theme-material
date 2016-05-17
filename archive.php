@@ -1,21 +1,22 @@
 <?php $this->need('header.php'); ?>
 
+        <!-- Sidebar hamburger button -->
+        <button class="MD-burger-icon sidebar-toggle">
+          <span class="MD-burger-layer"></span>
+        </button>
+        <!-- Top-left-corner home button -->
+        <div class="demo-back" id="backhome-div">
+            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onClick="javascript :history.back();" title="go back" role="button">
+                <!-- For modern browsers. -->
+                <i class="material-icons" role="presentation">arrow_back</i>
+            </a>
+        </div>
+        <div class="mdl-tooltip" for="backhome-div">Back</div>
+
         <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>fade out<?php endif; ?>">
 
             <main class="mdl-layout__content">
                 <div id="top"></div>
-                <!-- Sidebar hamburger button -->
-                <button class="MD-burger-icon sidebar-toggle">
-                  <span class="MD-burger-layer"></span>
-                </button>
-                <!-- Top-left-corner home button -->
-                <div class="demo-back" id="backhome-div">
-                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onClick="javascript :history.back();" title="go back" role="button">
-                        <!-- For modern browsers. -->
-                        <i class="material-icons" role="presentation">arrow_back</i>
-                    </a>
-                </div>
-                <div class="mdl-tooltip" for="backhome-div">Back</div>
 
                 <div class="demo-blog__posts mdl-grid">
 
@@ -25,17 +26,21 @@
                     <div class="mdl-card mdl-cell mdl-cell--12-col article-module">
 
                         <!-- Article link & title -->
-                        <?php if ( !empty($this->options->appearance) && in_array('ThumbnailOption', $this->options->appearance) ) : ?>
-                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(<?php showThumbnail($this); ?>)">
+                        <?php if( $this->options->ThumbnailOption == '1' ): ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50 " style="background-image:url(<?php showThumbnail($this); ?>)">
                                 <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
                             </div>
-                        <?php else: ?>
-                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-color:<?php $this->options->TitleColor()?>;color:#757575 !important;">
+                        <?php elseif( $this->options->ThumbnailOption == '2'): ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50" style="background-color:<?php $this->options->TitleColor()?> !important;color:#757575 !important;">
                                 <p class="article-headline-p-nopic">
                                     <a href="<?php $this->permalink() ?>" target="_self">
                                         “</br><?php $this->title() ?></br>”
                                     </a>
                                 </p>
+                            </div>
+                        <?php elseif( $this->options->ThumbnailOption == '3'): ?>
+                            <div class="mdl-card__media mdl-color-text--grey-50 " style="background-image:url(<?php randomThumbnail($this); ?>)">
+                                <p class="article-headline-p"><a href="<?php $this->permalink() ?>" target="_self"><?php $this->title() ?></a></p>
                             </div>
                         <?php endif; ?>
 
