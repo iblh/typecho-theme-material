@@ -21,7 +21,7 @@ A Material Typecho Theme based on Google Material Design
 - 首页文章概览默认最大输出80个字符, 可手动添加截断符```<!-- more -->```控制输出
 - 由于 Gravatar 被墙, 解决方案是将 ```var/Typecho/Common.php``` 中的第 939 行中的 ```http://www.gravatar.com``` 中的 ```www.``` 去掉即可, 或者使用主题设置外观中的自定义头像功能.
 - 在侧边栏中使用友情链接, 需安装此友情链接插件  [typecho-links-material](https://github.com/viosey/typecho-links-material)
-- 安装使用 [浏览次数统计插件](https://lets.us.to/usr/uploads/2015/01/874979024.zip) 后, 首页文章信息与文章页分享按钮下拉选项中会显示浏览次数统计
+- 安装使用 [浏览次数统计插件](http://qiniu.viosey.com/typecho/plugins/Stat.zip) 后, 首页文章信息与文章页分享按钮下拉选项中会显示浏览次数统计
 - 点赞功能需使用该 [点赞插件](http://7xqdyf.com1.z0.glb.clouddn.com/zipTeStat.zip)
 
 ## 预览
