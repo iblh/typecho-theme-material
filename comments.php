@@ -116,6 +116,12 @@
             position: relative;
         }
 
+        @media screen and (max-width: 480px) {
+            #ds-thread{
+                padding: 0;
+            }
+        }
+
         #ds-thread #ds-reset .ds-comment-body p {
             padding-bottom: 5px;
         }
