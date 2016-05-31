@@ -100,9 +100,9 @@
     <!-- Material js -->
     <?php if(!empty($this->options->CDNURL)): ?>
         <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/jquery-2.2.0.min.js"></script>
-        <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/js.js" async></script>
+        <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/js.js"></script>
     <?php else: ?>
-        <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
+        <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>" async></script>
         <script src="<?php $this->options->themeUrl('js/js.js'); ?>" async></script>
     <?php endif; ?>
 
@@ -126,9 +126,9 @@
 
     <?php if( !empty($this->options->switch) && in_array('SmoothScroll',$this->options->switch) ): ?>
         <?php if(!empty($this->options->CDNURL)): ?>
-            <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/smoothscroll.js"></script>
+            <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/smoothscroll.js" async></script>
         <?php else: ?>
-            <script src="<?php $this->options->themeUrl('js/smoothscroll.js'); ?>"></script>
+            <script src="<?php $this->options->themeUrl('js/smoothscroll.js'); ?>" async></script>
         <?php endif; ?>
     <?php endif; ?>
 

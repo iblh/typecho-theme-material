@@ -9,6 +9,7 @@ A Material Typecho Theme based on Google Material Design
 - 极其丰富的自定义设置
 - 自带中英文界面语言
 - 自带多种功能与特效
+- Material Design 交流 / bug 反馈群：566308505
 
 
 ## 使用方法
