@@ -102,8 +102,8 @@
         <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/jquery-2.2.0.min.js"></script>
         <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/js.js"></script>
     <?php else: ?>
-        <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>"></script>
-        <script src="<?php $this->options->themeUrl('js/js.js'); ?>"></script>
+        <script src="<?php $this->options->themeUrl('js/jquery-2.2.0.min.js'); ?>" async></script>
+        <script src="<?php $this->options->themeUrl('js/js.js'); ?>" async></script>
     <?php endif; ?>
 
 
