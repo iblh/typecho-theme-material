@@ -1,6 +1,6 @@
 <?php
 /**
- * 时间轴归档 样式1
+ * 时间轴归档 Material
  *
  * @package custom
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * 时间轴归档 样式2
+ * 时间轴归档 VOEZ
  *
  * @package custom
  */
