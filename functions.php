@@ -130,7 +130,7 @@ function themeConfig($form) {
             color: #FFF;
         }
         .typecho-page-main .typecho-option textarea{
-            height:76px;
+            height:101px;
         }
         .typecho-option label.typecho-label{
             font-weight: 400;
@@ -411,11 +411,12 @@ function themeConfig($form) {
             'ShowUpyun' => _t('侧边栏显示 upyun 联盟 logo'),
             'SmoothScroll' => _t('平滑滚动效果'),
             'ShowLoadingLine' => _t('顶部 loading 加载进度条效果'),
+            'PJAX' => _t('使用 pjax'),
             'atargetblank' => _t('链接以新标签页形式打开'),
         ),
 
         //Default choose
-        array('ShowUpyun','SmoothScroll','ShowLoadingLine'), _t('功能开关')
+        array('ShowUpyun','SmoothScroll','ShowLoadingLine','PJAX'), _t('功能开关')
     );
     $form->addInput($switch->multiMode());
 
@@ -642,4 +643,8 @@ function theme_random_posts(){
         $val = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($val);
         echo $val['permalink'];
     }
+}
+
+function is_pjax(){
+    return array_key_exists('HTTP_X_PJAX', $_SERVER) && $_SERVER['HTTP_X_PJAX'];
 }
