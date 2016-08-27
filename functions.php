@@ -574,7 +574,7 @@ function themeConfig($form) {
     array(
         '0' => _t('调用 Google fonts (使用 https://lug.ustc.edu.cn 中科大 https 镜像加速)<br />'),
         '1' => _t('调用主题文件夹自带的 Roboto &emsp;'),
-        '2' => _t('使用自定义字体源')
+        '2' => _t('使用自定义字体源 (在上方"网站统计代码 + 自定义字体源"填入)')
     ),
 
     '1',_t('Roboto 字体使用来源'),NULL);

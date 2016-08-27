@@ -5,10 +5,14 @@
 <aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
 
     <!-- Sidebar header -->
-    <?php if(!empty($this->options->CDNURL)): ?>
-        <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/sidebarheader.jpg); ?>);">
+    <?php if(!empty($this->options->avatarURL)): ?>
+        <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->avatarURL() ?>);">
     <?php else: ?>
-        <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl('img/sidebarheader.jpg'); ?>);">
+        <?php if(!empty($this->options->CDNURL)): ?>
+            <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/sidebarheader.jpg); ?>);">
+        <?php else: ?>
+            <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl('img/sidebarheader.jpg'); ?>);">
+        <?php endif; ?>
     <?php endif; ?>
         <!-- Top bar -->
         <div class="top-bar"></div>

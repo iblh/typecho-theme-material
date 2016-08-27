@@ -9,11 +9,13 @@ A Material Typecho Theme based on Google Material Design
 - 极其丰富的自定义设置
 - 自带中英文界面语言
 - 自带多种功能与特效
+- pjax 无刷新跳转
 - Material Design 交流 / bug 反馈群：566308505
 
 
 ## 使用方法
 - [Github 地址](https://github.com/viosey/typecho-theme-material), 点击"Download ZIP"下载, 解压后将文件夹改名为 "Material"(或其他) 后上传到```/usr/themes```, 并启用主题
+- 下载最新文件 然后覆盖原文件即可更新主题, 部分新增加的功能需要到后台开启才会生效
 - 在 "设置外观" 中打造一个属于你自己的博客
 - 关于文章缩略图
 	- 文章缩略图为文章内第一张图片
