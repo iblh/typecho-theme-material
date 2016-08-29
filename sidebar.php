@@ -5,14 +5,10 @@
 <aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
 
     <!-- Sidebar header -->
-    <?php if(!empty($this->options->avatarURL)): ?>
-        <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->avatarURL() ?>);">
+     <?php if(!empty($this->options->CDNURL)): ?>
+        <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/sidebarheader.jpg); ?>);">
     <?php else: ?>
-        <?php if(!empty($this->options->CDNURL)): ?>
-            <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/sidebarheader.jpg); ?>);">
-        <?php else: ?>
-            <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl('img/sidebarheader.jpg'); ?>);">
-        <?php endif; ?>
+        <div class="sidebar-header header-cover" style="background-image: url(<?php $this->options->themeUrl('img/sidebarheader.jpg'); ?>);">
     <?php endif; ?>
         <!-- Top bar -->
         <div class="top-bar"></div>
@@ -22,13 +18,17 @@
         </button>
         <!-- Sidebar brand image -->
         <div class="sidebar-image">
-            <?php if(!empty($this->options->logo)): ?>
-                <img src="<?php $this->options->logo() ?>">
+            <?php if(!empty($this->options->avatarURL)): ?>
+                <img src="<?php $this->options->avatarURL() ?>">
             <?php else: ?>
-                <?php if(!empty($this->options->CDNURL)): ?>
-                    <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/MaterialLOGO.png">
+                <?php if(!empty($this->options->logo)): ?>
+                    <img src="<?php $this->options->logo() ?>">
                 <?php else: ?>
-                    <img src="<?php $this->options->themeUrl('img/MaterialLOGO.png') ?>">
+                    <?php if(!empty($this->options->CDNURL)): ?>
+                        <img src="<?php $this->options->CDNURL() ?>/MaterialCDN/img/MaterialLOGO.png">
+                    <?php else: ?>
+                        <img src="<?php $this->options->themeUrl('img/MaterialLOGO.png') ?>">
+                    <?php endif; ?>
                 <?php endif; ?>
             <?php endif; ?>
         </div>
