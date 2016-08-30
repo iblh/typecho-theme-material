@@ -153,26 +153,27 @@ function themeConfig($form) {
         #typecho-option-item-bgcolor-5 label,
         #typecho-option-item-GradientType-6 label,
         #typecho-option-item-TitleColor-8 label,
-        #typecho-option-item-DSshortname-10 label,
-        #typecho-option-item-CDNURL-11 label,
-        #typecho-option-item-langis-12 label,
-        #typecho-option-item-sticky_1-13 label,
-        #typecho-option-item-sticky_2-14 label,
-        #typecho-option-item-ThemeColor-15 label,
-        #typecho-option-item-alinkcolor-16 label,
-        #typecho-option-item-ChromeThemeColor-17 label,
-        #typecho-option-item-avatarURL-18 label,
-        #typecho-option-item-favicon-19 label,
-        #typecho-option-item-dailypic-20 label,
-        #typecho-option-item-logo-21 label,
-        #typecho-option-item-dailypicLink-22 label,
-        #typecho-option-item-logoLink-23 label,
-        #typecho-option-item-slogan-24 label,
-        #typecho-option-item-TwitterURL-26 label,
-        #typecho-option-item-FacebookURL-27 label,
-        #typecho-option-item-GooglePlusURL-28 label,
-        #typecho-option-item-WeiboURL-29 label,
-        #typecho-option-item-RobotoSource-31 label{
+        #typecho-option-item-RandomPicAmnt-9 label,
+        #typecho-option-item-DSshortname-11 label,
+        #typecho-option-item-CDNURL-12 label,
+        #typecho-option-item-langis-13 label,
+        #typecho-option-item-sticky_1-14 label,
+        #typecho-option-item-sticky_2-15 label,
+        #typecho-option-item-ThemeColor-16 label,
+        #typecho-option-item-alinkcolor-17 label,
+        #typecho-option-item-ChromeThemeColor-18 label,
+        #typecho-option-item-avatarURL-19 label,
+        #typecho-option-item-favicon-20 label,
+        #typecho-option-item-dailypic-21 label,
+        #typecho-option-item-logo-22 label,
+        #typecho-option-item-dailypicLink-23 label,
+        #typecho-option-item-logoLink-24 label,
+        #typecho-option-item-slogan-25 label,
+        #typecho-option-item-TwitterURL-27 label,
+        #typecho-option-item-FacebookURL-28 label,
+        #typecho-option-item-GooglePlusURL-29 label,
+        #typecho-option-item-WeiboURL-30 label,
+        #typecho-option-item-RobotoSource-32 label{
             font-size:14px;
             border-bottom:none;
             padding-bottom:0;
@@ -226,15 +227,16 @@ function themeConfig($form) {
             width: 59%;
             margin-bottom:40px;
         }
-        #typecho-option-item-TitleColor-8{
+        #typecho-option-item-TitleColor-8,
+        #typecho-option-item-RandomPicAmnt-9{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
             padding: 8px 2%;
-            width: 29%;
+            width: 11.5%;
             margin-bottom:40px;
         }
-        #typecho-option-item-commentis-9{
+        #typecho-option-item-commentis-10{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
@@ -242,7 +244,7 @@ function themeConfig($form) {
             width: 59%;
             margin-bottom:40px;
         }
-        #typecho-option-item-DSshortname-10{
+        #typecho-option-item-DSshortname-11{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
@@ -250,7 +252,7 @@ function themeConfig($form) {
             width: 29%;
             margin-bottom:40px;
         }
-        #typecho-option-item-CDNURL-11{
+        #typecho-option-item-CDNURL-12{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
@@ -258,7 +260,7 @@ function themeConfig($form) {
             width:94%;
             margin-bottom:40px;
         }
-        #typecho-option-item-langis-12{
+        #typecho-option-item-langis-13{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
@@ -266,23 +268,23 @@ function themeConfig($form) {
             width:44%;
             margin-bottom:40px;
         }
-        #typecho-option-item-sticky_1-13,
-        #typecho-option-item-sticky_2-14{
+        #typecho-option-item-sticky_1-14,
+        #typecho-option-item-sticky_2-15{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 0 1%;
             padding: 8px 2%;
             width:44%;
         }
-        #typecho-option-item-sticky_1-13{
+        #typecho-option-item-sticky_1-14{
             margin-top:8px;
         }
-        #typecho-option-item-sticky_2-14{
+        #typecho-option-item-sticky_2-15{
             margin-bottom:40px;
         }
-        #typecho-option-item-ThemeColor-15,
-        #typecho-option-item-alinkcolor-16,
-        #typecho-option-item-ChromeThemeColor-17{
+        #typecho-option-item-ThemeColor-16,
+        #typecho-option-item-alinkcolor-17,
+        #typecho-option-item-ChromeThemeColor-18{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
@@ -290,8 +292,8 @@ function themeConfig($form) {
             width:27.333%;
             margin-bottom:40px;
         }
-        #typecho-option-item-avatarURL-18,
-        #typecho-option-item-favicon-19{
+        #typecho-option-item-avatarURL-19,
+        #typecho-option-item-favicon-20{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
@@ -299,23 +301,23 @@ function themeConfig($form) {
             width:44%;
             margin-bottom:40px;
         }
-        #typecho-option-item-dailypic-20,
-        #typecho-option-item-logo-21{
+        #typecho-option-item-dailypic-21,
+        #typecho-option-item-logo-22{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
             padding: 8px 2%;
             width:44%;
         }
-        #typecho-option-item-dailypicLink-22,
-        #typecho-option-item-logoLink-23{
+        #typecho-option-item-dailypicLink-23,
+        #typecho-option-item-logoLink-24{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
             padding: 8px 2%;
             width:44%;
         }
-        #typecho-option-item-slogan-24{
+        #typecho-option-item-slogan-25{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
@@ -323,35 +325,35 @@ function themeConfig($form) {
             width:94%;
             margin-bottom:40px;
         }
-        #typecho-option-item-footersns-25{
+        #typecho-option-item-footersns-26{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
             padding: 8px 2%;
             width:94%;
         }
-        #typecho-option-item-TwitterURL-26,
-        #typecho-option-item-FacebookURL-27,
-        #typecho-option-item-GooglePlusURL-28,
-        #typecho-option-item-WeiboURL-29{
+        #typecho-option-item-TwitterURL-27,
+        #typecho-option-item-FacebookURL-28,
+        #typecho-option-item-GooglePlusURL-29,
+        #typecho-option-item-WeiboURL-30{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
             padding: 8px 2%;
             width:44%;
         }
-        #typecho-option-item-GooglePlusURL-28,
-        #typecho-option-item-WeiboURL-29{
+        #typecho-option-item-GooglePlusURL-29,
+        #typecho-option-item-WeiboURL-30{
             margin-bottom:40px;
         }
-        #typecho-option-item-CustomFonts-30{
+        #typecho-option-item-CustomFonts-31{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
             padding: 8px 2%;
             width: 94%;
         }
-        #typecho-option-item-RobotoSource-31{
+        #typecho-option-item-RobotoSource-32{
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
             background-color: #fff;
             margin: 8px 1%;
@@ -378,7 +380,7 @@ function themeConfig($form) {
             #typecho-option-item-loadingcolor-2, #typecho-option-item-loadingbuffer-3{
                 width:26.5%;
             }
-            #typecho-option-item-avatarURL-18{
+            #typecho-option-item-avatarURL-19{
                 margin-bottom:8px;
             }
         }
@@ -475,8 +477,11 @@ function themeConfig($form) {
     );
     $form->addInput($ThumbnailOption);
 
-    $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#FFF'), _t('缩略图显示纯色时的颜色'), _t('填入颜色代码'));
+    $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#FFF'), _t('缩略图为纯色时的颜色'), _t('填入颜色代码'));
     $form->addInput($TitleColor);
+
+    $RandomPicAmnt = new Typecho_Widget_Helper_Form_Element_Text('RandomPicAmnt', NULL, _t('5'), _t('随机缩略图数量'), _t('img/random 图片的数量'));
+    $form->addInput($RandomPicAmnt);
 
     $commentis = new Typecho_Widget_Helper_Form_Element_Radio('commentis',
         array(
@@ -584,7 +589,7 @@ function themeConfig($form) {
 //Homepage thumbnail
 function showThumbnail($widget){
     //If article no include picture, display random default picture
-    $rand = rand(1,5); //Random number
+    $rand = rand(1,$widget->widget('Widget_Options')->RandomPicAmnt); //Random number
 
     if(!empty($widget->widget('Widget_Options')->CDNURL)){
 		$random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/' . $rand . '.jpg';
@@ -613,7 +618,7 @@ function showThumbnail($widget){
 //Random thumbnail
 function randomThumbnail($widget){
     //If article no include picture, display random default picture
-    $rand = rand(1,5); //Random number
+    $rand = rand(1,$widget->widget('Widget_Options')->RandomPicAmnt); //Random number
 
     if(!empty($widget->widget('Widget_Options')->CDNURL)){
 		$random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/' . $rand . '.jpg';
