@@ -133,7 +133,7 @@ function themeConfig($form) {
             height:101px;
         }
         .typecho-option label.typecho-label{
-            font-weight: 400;
+            font-weight: 500;
             margin-bottom: 20px;
             margin-top: 10px;
             font-size: 16px;
@@ -500,7 +500,7 @@ function themeConfig($form) {
         array(
             '0' => _t('English <br />'),
             '1' => _t('简体中文 <br />'),
-            '2' => _t('繁体中文 (未完工, 勿選) <br />')
+            '2' => _t('繁体中文 <br />')
         ),
 
         '0', _t('界面语言设置'), _t("默认使用英文, 中文总感觉有些违和 _(:3」∠)_")
