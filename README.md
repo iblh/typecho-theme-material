@@ -1,19 +1,24 @@
 ## Material
+
+[关于 Material](https://blog.viosey.com/index.php/Material.html)
+
 一款基于Google Material Design的Material Typecho主题
 A Material Typecho Theme based on Google Material Design
 >Refer to Google  Material-Design-Lite
 
 ## 基本特性
+
 - [主题 Demo](https://blog.viosey.com)
 - 侧边栏含有有关博客的详细信息以及相关操作
 - 极其丰富的自定义设置
 - 自带中英文界面语言
 - 自带多种功能与特效
 - pjax 无刷新跳转
-- Material Design 交流 / bug 反馈群：566308505
+- Material Design 交流 / Bug 反馈群：566308505
 
 
-## 使用方法
+## 食用方法
+
 - [Github 地址](https://github.com/viosey/typecho-theme-material), 点击"Download ZIP"下载, 解压后将文件夹改名为 "Material"(或其他) 后上传到```/usr/themes```, 并启用主题
 - 下载最新文件 然后覆盖原文件即可更新主题, 部分新增加的功能需要到后台开启才会生效 (建议更新后先切换为其他主题, 再切换回该主题). 否则有可能会导致莫名其妙的 bug...
 - 在 "设置外观" 中打造一个属于你自己的博客
@@ -28,9 +33,22 @@ A Material Typecho Theme based on Google Material Design
 - 点赞功能需使用该 [点赞插件](http://7xqdyf.com1.z0.glb.clouddn.com/zipTeStat.zip)
 
 ## 预览
+
+正常效果: 
+
 ![](https://viosey.com/img/screenshot.jpg)
 
 ![](https://viosey.com/img/verticalpageview.jpg)
+
+---
+
+满屏雷姆:
+
+![](https://qiniu.viosey.com/img/TM-2.0-Rem-1.png)
+
+![](https://qiniu.viosey.com/img/TM-2.0-Rem-2.png)
+
+![](https://qiniu.viosey.com/img/TM-2.0-Rem-3.png)
 
 ## License
 Open sourced under the GPL v3.0 license.
