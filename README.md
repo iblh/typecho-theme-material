@@ -48,7 +48,7 @@ A Material Typecho Theme based on Google Material Design
 
 ![](https://qiniu.viosey.com/img/TM-2.0-Rem-2.png)
 
-![](https://qiniu.viosey.com/img/TM-2.0-Rem-3.png)
+![](https://qiniu.viosey.com/img/TM-2.0-Rem-4.png)
 
 ## License
 Open sourced under the GPL v3.0 license.
