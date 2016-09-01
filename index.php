@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 2.1.0
+ * @version 2.1.*
  * @link https://viosey.com
  */
 
@@ -234,7 +234,7 @@ $this->need('header.php');?>
                                 </div>
 
                                 <!-- Article info-->
-                                <div>
+                                <div id="article-info">
                                     <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
                                         <!-- Author avatar -->
                                         <div id="author-avatar">
