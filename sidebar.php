@@ -45,6 +45,7 @@
             <!-- User dropdown  -->
             <li class="dropdown">
                 <ul id="settings-dropdown" class="dropdown-menu">
+                    <?php if($this->user->hasLogin()): ?>
                     <li>
                         <a href="<?php $this->options->adminUrl(); ?>" tabindex="-1">
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">account_circle</i>
@@ -63,7 +64,6 @@
                             <?php endif; ?>
                         </a>
                     </li>
-                    <?php if($this->user->hasLogin()): ?>
                     <li>
                         <a href="<?php $this->options->logoutUrl(); ?>" class="md-menu-list-a" tabindex="-1">
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">exit_to_app</i>

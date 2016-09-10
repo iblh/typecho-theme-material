@@ -49,9 +49,9 @@
 
         <?php if ( !empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns) ) : ?>
         <?php if(!empty($this->options->CDNURL)): ?>
-        <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer-ico-facebook.png);">
+        <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer-ico-facebook.png);">
                             <?php else: ?>
-                               <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer-ico-facebook.png'); ?>);">
+                               <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer-ico-facebook.png'); ?>);">
                             <?php endif; ?>
                                 <span class="visuallyhidden">Facebook</span>
                             </button></a>
@@ -59,9 +59,9 @@
 
         <?php if ( !empty($this->options->footersns) && in_array('ShowGooglePlus', $this->options->footersns) ) : ?>
         <?php if(!empty($this->options->CDNURL)): ?>
-        <a href="<?php $this->options->GooglePlusURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer-ico-gplus.png);">
+        <a href="<?php $this->options->GooglePlusURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer-ico-gplus.png);">
                             <?php else: ?>
-                               <a href="<?php $this->options->GooglePlusURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer-ico-gplus.png'); ?>);">
+                               <a href="<?php $this->options->GooglePlusURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer-ico-gplus.png'); ?>);">
                             <?php endif; ?>
                                 <span class="visuallyhidden">Google Plus</span>
                             </button></a>
@@ -69,9 +69,9 @@
 
         <?php if ( !empty($this->options->footersns) && in_array('ShowWeibo', $this->options->footersns) ) : ?>
         <?php if(!empty($this->options->CDNURL)): ?>
-        <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer-ico-weibo.png);">
+        <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer-ico-weibo.png);">
                             <?php else: ?>
-                               <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer-ico-weibo.png'); ?>);">
+                               <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer-ico-weibo.png'); ?>);">
                             <?php endif; ?>
                                 <span class="visuallyhidden">Sina Weibo</span>
                             </button></a>
