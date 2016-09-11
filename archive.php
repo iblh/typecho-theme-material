@@ -1,22 +1,21 @@
 <?php $this->need('header.php'); ?>
 
-<!-- Sidebar hamburger button -->
-<button class="MD-burger-icon sidebar-toggle">
-          <span class="MD-burger-layer"></span>
-        </button>
-<!-- Top-left-corner home button -->
-<div class="demo-back" id="backhome-div">
-    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onClick="window.history.back();return false;" title="go back" role="button">
-        <!-- For modern browsers. -->
-        <i class="material-icons" role="presentation">arrow_back</i>
-    </a>
-</div>
-<div class="mdl-tooltip" for="backhome-div">Back</div>
-
 <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>fade out<?php endif; ?>">
 
     <main class="mdl-layout__content">
         <div id="top"></div>
+        <!-- Sidebar hamburger button -->
+        <button class="MD-burger-icon sidebar-toggle">
+                <span class="MD-burger-layer"></span>
+                </button>
+        <!-- Top-left-corner home button -->
+        <div class="demo-back" id="backhome-div">
+            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onClick="window.history.back();return false;" title="go back" role="button">
+                <!-- For modern browsers. -->
+                <i class="material-icons" role="presentation">arrow_back</i>
+            </a>
+        </div>
+        <div class="mdl-tooltip" for="backhome-div">Back</div>
 
         <div class="demo-blog__posts mdl-grid">
 
