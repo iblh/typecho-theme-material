@@ -152,67 +152,66 @@
                 <ul class="dropdown-menu">
                     <!-- 使用多说评论 -->
                     <?php if($this->options->commentis == '1'): ?>
-                    <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="15"></ul>
+                        <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="15"></ul>
 
-                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-                    <script type="text/javascript">
-                        var duoshuoQuery = {
-                            short_name: "<?php $this->options->DSshortname() ?>"
-                        }; //每个用户的独有标签
-                        (function() {
-                            var ds = document.createElement('script');
-                            ds.type = 'text/javascript';
-                            ds.async = true;
-                            // ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                            <?php if(!empty($this->options->CDNURL)): ?>
-                            ds.src = '<?php $this->options->CDNURL() ?>/MaterialCDN/js/dsembed.js';
-                            <?php else: ?>
-                            ds.src = '<?php $this->options->themeUrl('
-                            js / dsembed.js ') ?>';
-                            <?php endif; ?>
-                            ds.charset = 'UTF-8';
-                            (document.getElementsByTagName('head')[0] ||
-                                document.getElementsByTagName('body')[0]).appendChild(ds);
-                        })();
-                    </script>
-                    <!-- 多说公共JS代码 end -->
+                        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                        <script type="text/javascript">
+                            var duoshuoQuery = {
+                                short_name: "<?php $this->options->DSshortname() ?>"
+                            }; //每个用户的独有标签
+                            (function() {
+                                var ds = document.createElement('script');
+                                ds.type = 'text/javascript';
+                                ds.async = true;
+                                // ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                                <?php if(!empty($this->options->CDNURL)): ?>
+                                ds.src = '<?php $this->options->CDNURL() ?>/MaterialCDN/js/dsembed.js';
+                                <?php else: ?>
+                                ds.src = '<?php $this->options->themeUrl('js/dsembed.js') ?>';
+                                <?php endif; ?>
+                                ds.charset = 'UTF-8';
+                                (document.getElementsByTagName('head')[0] ||
+                                    document.getElementsByTagName('body')[0]).appendChild(ds);
+                            })();
+                        </script>
+                        <!-- 多说公共JS代码 end -->
 
-                    <style>
-                        .ds-recent-comments {
-                            padding: 0;
-                        }
-                        
-                        .ds-recent-comments .ds-meta {
-                            display: none;
-                        }
-                        
-                        #ds-recent-comments li.ds-comment {
-                            padding: 0 !important;
-                            height: 48px;
-                            line-height: 48px;
-                        }
-                        
-                        #ds-recent-comments li.ds-comment a {
-                            padding-top: 16px;
-                            padding-bottom: 16px;
-                            padding-right: 70px;
-                            background: rgba(0, 0, 0, 0);
-                        }
-                        
-                        #ds-recent-comments li.ds-comment:hover {
-                            background-color: #cecece;
-                        }
-                    </style>
+                        <style>
+                            .ds-recent-comments {
+                                padding: 0;
+                            }
+
+                            .ds-recent-comments .ds-meta {
+                                display: none;
+                            }
+
+                            #ds-recent-comments li.ds-comment {
+                                padding: 0 !important;
+                                height: 48px;
+                                line-height: 48px;
+                            }
+
+                            #ds-recent-comments li.ds-comment a {
+                                padding-top: 16px;
+                                padding-bottom: 16px;
+                                padding-right: 70px;
+                                background: rgba(0, 0, 0, 0);
+                            }
+
+                            #ds-recent-comments li.ds-comment:hover {
+                                background-color: #cecece;
+                            }
+                        </style>
                     <!-- 使用原生评论 -->
                     <?php else: ?>
-                    <?php $this->widget('Widget_Comments_Recent','pageSize=5')
-                    ->parse('
-                    <li>
-                        <a href="{permalink}" tabindex="-1">
-                            {text}
-                        </a>
-                    </li>
-                    '); ?>
+                        <?php $this->widget('Widget_Comments_Recent','pageSize=5')
+                        ->parse('
+                        <li>
+                            <a href="{permalink}" tabindex="-1">
+                                {text}
+                            </a>
+                        </li>
+                        '); ?>
                     <?php endif; ?>
                 </ul>
             </li>
