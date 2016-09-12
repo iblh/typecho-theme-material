@@ -61,7 +61,7 @@
                 </div>
 
                 <!-- Articli info-->
-                <div>
+                <div id="article-info">
                     <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 " id="article-author-date">
                         <!-- Author avatar -->
                         <div id="author-avatar">
@@ -86,6 +86,12 @@
                     </div>
                     <div id="article-category-comment">
                         <?php $this->category(','); ?> | <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a>
+                            <?php $this->sticky(); ?>
+                            <?php if($this->options->langis == '0'): ?>Views
+                            <?php elseif($this->options->langis == '1'): ?>浏览
+                            <?php elseif($this->options->langis == '2'): ?>流覽
+                            <?php endif; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
 
