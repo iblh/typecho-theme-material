@@ -41,10 +41,10 @@
         <!-- Material style -->
         <?php if(!empty($this->options->CDNURL)): ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/material.min.css" />
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/style.css" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/style.min.css" />
         <?php else: ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/material.min.css'); ?>" />
-            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.css'); ?>" />
+            <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/style.min.css'); ?>" />
         <?php endif; ?>
 
         <!--[if lte IE 9]>
