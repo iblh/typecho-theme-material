@@ -102,11 +102,11 @@
 <!-- Material js -->
 <?php if(!empty($this->options->CDNURL)): ?>
 <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/jquery.min.js"></script>
-<script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/js.js"></script>
+<script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/js.min.js"></script>
 <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/jquery.pjax.js"></script>
 <?php else: ?>
 <script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('js/js.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/js.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
 <?php endif; ?>
 

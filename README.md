@@ -37,9 +37,9 @@ A Material Typecho Theme based on Google Material Design
 
 正常效果: 
 
-![](https://viosey.com/img/screenshot.jpg)
+![](https://qiniu.viosey.com/img/typecho-theme-material-screenshot.jpg)
 
-![](https://viosey.com/img/verticalpageview.jpg)
+![](https://qiniu.viosey.com/img/typecho-theme-material-vertical.jpg)
 
 ---
 
