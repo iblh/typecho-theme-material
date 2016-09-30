@@ -146,7 +146,7 @@ blockquote {
     background-color: #F6F6F6;
     z-index: 0;
     font-size: 2.8em;
-    line-height: 45px;
+    line-height: 1em;
     border-left: 7px solid #009688;
 }
 
@@ -154,36 +154,62 @@ blockquote {
     background-color: #F6F6F6;
     z-index: 0;
     font-size: 2.5em;
-    line-height: 40px;
+    line-height: 1em;
     border-left: 6px solid #00BCD4;
 }
 
 #article-content-div h3 {
     background-color: #F6F6F6;
     font-size: 2.2em;
-    line-height: 35px;
+    line-height: 1em;
     border-left: 5px solid #8BC34A;
 }
 
 #article-content-div h4 {
     background-color: #F6F6F6;
     font-size: 1.9em;
-    line-height: 30px;
+    line-height: 1em;
     border-left: 4px solid #E91E63;
 }
 
 #article-content-div h5 {
     background-color: #F6F6F6;
     font-size: 1.6em;
-    line-height: 25px;
+    line-height: 1em;
     border-left: 3px solid #9C27B0;
 }
 
 #article-content-div h6 {
     background-color: #F6F6F6;
     font-size: 1.3em;
-    line-height: 20px;
+    line-height: 1em;
     border-left: 2px solid #CDDC39;
+}
+
+@media screen and (max-width: 480px){
+    #article-content-div h1 {
+        font-size: 2.0em;
+    }
+    
+    #article-content-div h2 {
+        font-size: 1.85em;
+    }
+    
+    #article-content-div h3 {
+        font-size: 1.70em;
+    }
+    
+    #article-content-div h4 {
+        font-size: 1.55em;
+    }
+    
+    #article-content-div h5 {
+        font-size: 1.40em;
+    }
+    
+    #article-content-div h6 {
+        font-size: 1.25em;
+    }
 }
 
 .mdl-button {
@@ -336,11 +362,13 @@ blockquote {
     min-height: 4pc;
 }
 
+/*
 @media screen and (max-width: 480px) {
     .demo-blog .mdl-card__media~.mdl-card__supporting-text {
         display: none;
     }
 }
+*/
 
 .demo-blog .mdl-card__supporting-text:not(:last-child) {
     box-sizing: border-box;
