@@ -265,8 +265,8 @@ $this->need('header.php');?>
                                             <?php $this->commentsNum('%d 评论'); ?>
                                             <?php endif; ?>
                                         </a>
-                                        <?php if (class_exists("Stat_Plugin")): ?> |&nbsp;
-                                        <?php $this->views(); ?>
+                                        <<?php if (class_exists("TeStat_Plugin")): ?> |&nbsp;
+                                        <?php $this->viewsNum(); ?>
                                         <?php $this->sticky(); ?>
                                         <?php if($this->options->langis == '0'): ?>Views
                                         <?php elseif($this->options->langis == '1'): ?>浏览
