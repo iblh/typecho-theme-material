@@ -74,10 +74,10 @@
                                 <span class="visuallyhidden">share</span>
                             </button>
                     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-                        <?php if (class_exists("Stat_Plugin")): ?>
+                        <?php if (class_exists("TeStat_Plugin")): ?>
                         <a class="md-menu-list-a" href="#">
                             <li class="mdl-menu__item">
-                                <?php $this->views(); ?> 浏览</li>
+                                <?php $this->viewsNum(); ?> 浏览</li>
                         </a>
                         <?php endif; ?>
                         <a class="md-menu-list-a" target="_blank" href="<?php $this->permalink(); ?>">
