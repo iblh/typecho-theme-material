@@ -17,8 +17,8 @@
         </div>
         <div class="mdl-tooltip" for="backhome-div">Back</div>
 
-        <!-- Article content module -->
-        <div class="page-content_module demo-blog__posts mdl-grid">
+        <!-- Page module -->
+        <div class="page-module demo-blog__posts mdl-grid">
             <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
                 <!-- Article title -->

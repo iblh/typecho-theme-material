@@ -17,8 +17,8 @@
         </div>
         <div class="mdl-tooltip" for="backhome-div">Back</div>
 
-        <!-- Article content module -->
-        <div class="post-content_module demo-blog__posts mdl-grid">
+        <!-- Post module -->
+        <div class="post-module demo-blog__posts mdl-grid">
             <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
                 <!-- Article title -->
@@ -69,7 +69,6 @@
                     </ul>
                     <!-- share -->
                     <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                                <!-- For modern browsers. -->
                                 <i class="material-icons" role="presentation">share</i>
                                 <span class="visuallyhidden">share</span>
                             </button>
