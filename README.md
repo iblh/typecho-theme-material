@@ -1,9 +1,9 @@
-## Material 原质
+# Material 原质
 
 >原之质，物之渊
 
-
 ![](https://qiniu.viosey.com/img/Material-Phone-Render.png)
+
 
 ## Contents 目录
 
@@ -18,9 +18,9 @@
 
 ## General 概括
 
-- Author 作者: Viosey
-- Version 版本: 2.3.7
-- Compatibility 兼容:  PHP 5.0+, MySQL, Typecho 1.0
+- Author 作者：Viosey
+- Version 版本：2.3.8
+- Compatibility 兼容：PHP 5.0+, MySQL, Typecho 1.0
 - Material QQ 群：566308505
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
@@ -37,9 +37,9 @@
 
 Experience the Material theme in live: [typecho-theme-material Demo](https://blog.viosey.com)
 
-体验 Material 主题: [typecho-theme-material 演示](https://blog.viosey.com)
-
 >Attention: This Demo is based on Hexo, and use [hexo-theme-material](https://github.com/viosey/hexo-theme-material) theme, there maybe something different with [typecho-theme-material](https://github.com/viosey/typecho-theme-material).
+
+体验 Material 主题: [typecho-theme-material 演示](https://blog.viosey.com)
 
 >注意：此演示基于 Hexo，并使用了 [hexo-theme-material](https://github.com/viosey/hexo-theme-material) 主题，与 [typecho-theme-material](https://github.com/viosey/typecho-theme-material) 有一些差异。
 
@@ -59,21 +59,12 @@ Experience the Material theme in live: [typecho-theme-material Demo](https://blo
 
 ## Preview 预览
 
-正常效果: 
 
 ![](https://qiniu.viosey.com/img/typecho-theme-material-screenshot.jpg)
 
 ![](https://qiniu.viosey.com/img/typecho-theme-material-vertical.jpg)
 
----
-
-满屏雷姆:
-
 ![](https://qiniu.viosey.com/img/TM-2.0-Rem-1.png)
-
-![](https://qiniu.viosey.com/img/TM-2.0-Rem-2.png)
-
-![](https://qiniu.viosey.com/img/TM-2.0-Rem-4.png)
 
 
 ## Contributing 贡献
