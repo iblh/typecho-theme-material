@@ -170,7 +170,7 @@
         //绑定链接
         $.pjax({
             selector: "a[href^='<?php $this->options->siteUrl(); ?>'][href$='.html']",
-            container: '.mdl-layout__content', //内容替换的容器
+            container: '.demo-blog__posts', //内容替换的容器
             show: 'slide', //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
             cache: true, //是否使用缓存
             storage: true, //是否使用本地存储
@@ -181,18 +181,18 @@
             }
         });
         //绑定跳转开始事件
-        $(".mdl-layout__content").bind("pjax.start",
+        $(".demo-blog__posts").bind("pjax.start",
             function() {
-                $(".mdl-layout__content").css("opacity", "0.6");
+                $(".demo-blog__posts").css("opacity", "0.6");
                 // $(".spinner").css("opacity","1");
                 // $(".spinner").show();
 
             });
         //绑定跳转结束事件
-        $(".mdl-layout__content").bind("pjax.end",
+        $(".demo-blog__posts").bind("pjax.end",
             function() {
                 // $(".spinner").hide();
-                $(".mdl-layout__content").css("opacity", "1");
+                $(".demo-blog__posts").css("opacity", "1");
                 // Main
                 initHeader();
                 addListeners();

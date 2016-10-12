@@ -19,7 +19,7 @@
 ## General 概括
 
 - Author 作者：Viosey
-- Version 版本：2.3.8
+- Version 版本：2.3.9
 - Compatibility 兼容：PHP 5.0+, MySQL, Typecho 1.0
 - Material QQ 群：566308505
 - [![Gitter](https://img.shields.io/gitter/room/material-theme/typecho.svg?style=flat-square)](https://gitter.im/material-theme/typecho?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
