@@ -208,6 +208,8 @@
 
     });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.0.0/pangu.min.js"></script>
+<script> pangu.spacingPage(); </script>
 <?php endif; ?>
 
 <?php $this->footer(); ?>
