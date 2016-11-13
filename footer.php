@@ -82,6 +82,9 @@
                 <?php echo date("Y"); ?>
                 <?php $this->options->title(); ?>
             </div>
+            <div id="copyright">
+                <?php Uptime_Plugin::show(); ?>
+            </div>
 
             <!--mdl-mini-footer-right-section-->
             <div class="mdl-mini-footer--right-section">
