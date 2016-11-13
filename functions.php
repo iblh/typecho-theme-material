@@ -130,7 +130,7 @@ function themeConfig($form) {
             color: #FFF;
         }
         .typecho-page-main .typecho-option textarea{
-            height:101px;
+            height:150px;
         }
         .typecho-option label.typecho-label{
             font-weight: 500;
@@ -419,7 +419,7 @@ function themeConfig($form) {
         ),
 
         //Default choose
-        array('ShowUpyun','SmoothScroll','ShowLoadingLine','PJAX'), _t('功能开关')
+        array('SmoothScroll','ShowLoadingLine','PJAX','Pangu'), _t('功能开关')
     );
     $form->addInput($switch->multiMode());
 
