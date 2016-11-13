@@ -208,8 +208,10 @@
 
     });
 </script>
+<?php if ( !empty($this->options->switch) && in_array('Pangu', $this->options->switch) ) : ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.0.0/pangu.min.js"></script>
 <script> pangu.spacingPage(); </script>
+<?php endif; ?>
 <?php endif; ?>
 
 <?php $this->footer(); ?>
