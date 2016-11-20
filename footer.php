@@ -82,9 +82,6 @@
                 <?php echo date("Y"); ?>
                 <?php $this->options->title(); ?>
             </div>
-            <div id="copyright">
-                <?php Uptime_Plugin::show(); ?>
-            </div>
 
             <!--mdl-mini-footer-right-section-->
             <div class="mdl-mini-footer--right-section">
@@ -211,10 +208,6 @@
 
     });
 </script>
-<?php if ( !empty($this->options->switch) && in_array('Pangu', $this->options->switch) ) : ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.0.0/pangu.min.js"></script>
-<script> pangu.spacingPage(); </script>
-<?php endif; ?>
 <?php endif; ?>
 
 <?php $this->footer(); ?>

@@ -130,7 +130,7 @@ function themeConfig($form) {
             color: #FFF;
         }
         .typecho-page-main .typecho-option textarea{
-            height:150px;
+            height:101px;
         }
         .typecho-option label.typecho-label{
             font-weight: 500;
@@ -415,11 +415,10 @@ function themeConfig($form) {
             'ShowLoadingLine' => _t('顶部 loading 加载进度条效果'),
             'PJAX' => _t('使用 pjax'),
             'atargetblank' => _t('链接以新标签页形式打开'),
-	    'Pangu' => _t('引用 Pangu.js 实现中英文间自动添加空格'),
         ),
 
         //Default choose
-        array('SmoothScroll','ShowLoadingLine','PJAX','Pangu'), _t('功能开关')
+        array('ShowUpyun','SmoothScroll','ShowLoadingLine','PJAX'), _t('功能开关')
     );
     $form->addInput($switch->multiMode());
 
