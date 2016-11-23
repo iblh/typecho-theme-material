@@ -79,6 +79,11 @@
                                 <?php $this->viewsNum(); ?> 浏览</li>
                         </a>
                         <?php endif; ?>
+                        <?php if($this->user->hasLogin()):?>
+                        <a class="md-menu-list-a" target="_blank" href="<?php $this->options->adminUrl(); ?>write-post.php?cid=<?php echo $this->cid;?>" target="_blank">
+                                <li class="mdl-menu__item">编辑</li>
+                        </a>
+                        <?php endif;?>
                         <a class="md-menu-list-a" target="_blank" href="<?php $this->permalink(); ?>">
                             <li class="mdl-menu__item">
                                 <?php if($this->options->langis == '0'): ?> Open in New Tab
