@@ -630,27 +630,6 @@ function randomThumbnail($widget){
     echo $random;
 }
 
-//Random article
-function theme_random_posts(){
-    $defaults = array(
-        'number' => 1,
-    );
-    $db = Typecho_Db::get();
-
-    $sql = $db->select()->from('table.contents')
-        ->where('status = ?','publish')
-        ->where('type = ?', 'post')
-        ->where('created <= unix_timestamp(now())', 'post') //avoid display the article which don't reach the publish time
-        ->limit($defaults['number'])
-        ->order('RAND()');
-
-    $result = $db->fetchAll($sql);
-    foreach($result as $val){
-        $val = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($val);
-        echo $val['permalink'];
-    }
-}
-
 function is_pjax(){
     return array_key_exists('HTTP_X_PJAX', $_SERVER) && $_SERVER['HTTP_X_PJAX'];
 }
