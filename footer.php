@@ -210,6 +210,16 @@
 </script>
 <?php endif; ?>
 
+<!-- Pangu js -->
+<?php if( !empty($this->options->switch) && in_array('Pangu',$this->options->switch) ): ?>
+  <?php if(!empty($this->options->CDNURL)): ?>
+    <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/pangu.min.js" async></script>
+  <?php else: ?>
+    <script src="<?php $this->options->themeUrl('js/pangu.min.js'); ?>" async></script>
+  <?php endif; ?>
+  <script> pangu.spacingPage(); </script>
+<?php endif; ?>
+
 <?php $this->footer(); ?>
 
 </html>
