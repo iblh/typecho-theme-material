@@ -39,9 +39,9 @@
             <div class="mdl-mini-footer--left-section">
                 <?php if ( !empty($this->options->footersns) && in_array('ShowTwitter', $this->options->footersns) ) : ?>
                 <?php if(!empty($this->options->CDNURL)): ?>
-                <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer-ico-twitter.png);">
+                <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-twitter.png);">
                                     <?php else: ?>
-                                       <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer-ico-twitter.png'); ?>);">
+                                       <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-twitter.png'); ?>);">
                                     <?php endif; ?>
                                         <span class="visuallyhidden">Twitter</span>
                                     </button></a>
@@ -49,9 +49,9 @@
 
                 <?php if ( !empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns) ) : ?>
                 <?php if(!empty($this->options->CDNURL)): ?>
-                <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer-ico-facebook.png);">
+                <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-facebook.png);">
                                     <?php else: ?>
-                                       <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer-ico-facebook.png'); ?>);">
+                                       <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-facebook.png'); ?>);">
                                     <?php endif; ?>
                                         <span class="visuallyhidden">Facebook</span>
                                     </button></a>
@@ -59,9 +59,9 @@
 
                 <?php if ( !empty($this->options->footersns) && in_array('ShowGooglePlus', $this->options->footersns) ) : ?>
                 <?php if(!empty($this->options->CDNURL)): ?>
-                <a href="<?php $this->options->GooglePlusURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer-ico-gplus.png);">
+                <a href="<?php $this->options->GooglePlusURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-gplus.png);">
                                     <?php else: ?>
-                                       <a href="<?php $this->options->GooglePlusURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer-ico-gplus.png'); ?>);">
+                                       <a href="<?php $this->options->GooglePlusURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-gplus.png'); ?>);">
                                     <?php endif; ?>
                                         <span class="visuallyhidden">Google Plus</span>
                                     </button></a>
@@ -69,11 +69,36 @@
 
                 <?php if ( !empty($this->options->footersns) && in_array('ShowWeibo', $this->options->footersns) ) : ?>
                 <?php if(!empty($this->options->CDNURL)): ?>
-                <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer-ico-weibo.png);">
+                <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-weibo.png);">
                                     <?php else: ?>
-                                       <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer-ico-weibo.png'); ?>);">
+                                       <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-weibo.png'); ?>);">
                                     <?php endif; ?>
                                         <span class="visuallyhidden">Sina Weibo</span>
+                                        
+                                                        <?php if ( !empty($this->options->footersns) && in_array('ShowInstagram', $this->options->footersns) ) : ?>
+                <?php if(!empty($this->options->CDNURL)): ?>
+                <a href="<?php $this->options->InstagramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-instagram.png);">
+                                    <?php else: ?>
+                                       <a href="<?php $this->options->InstagramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-instagram.png'); ?>);">
+                                    <?php endif; ?>
+                                        <span class="visuallyhidden">Instagram</span>
+                                        
+                                                        <?php if ( !empty($this->options->footersns) && in_array('ShowGithub', $this->options->footersns) ) : ?>
+                <?php if(!empty($this->options->CDNURL)): ?>
+                <a href="<?php $this->options->GithubURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-github.png);">
+                                    <?php else: ?>
+                                       <a href="<?php $this->options->GithubURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-github.png'); ?>);">
+                                    <?php endif; ?>
+                                        <span class="visuallyhidden">Github</span>
+                                        
+                                                        <?php if ( !empty($this->options->footersns) && in_array('ShowTumblr', $this->options->footersns) ) : ?>
+                <?php if(!empty($this->options->CDNURL)): ?>
+                <a href="<?php $this->options->TumblrURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-tumblr.png);">
+                                    <?php else: ?>
+                                       <a href="<?php $this->options->TumblrURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-tumblr.png'); ?>);">
+                                    <?php endif; ?>
+                                        <span class="visuallyhidden">Tumblr</span>
+                                        
                                     </button></a>
                 <?php endif;?>
             </div>
