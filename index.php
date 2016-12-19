@@ -262,7 +262,12 @@ $this->need('header.php');?>
                                             <?php if($this->options->commentis == '1'): ?><span class="ds-thread-count" data-thread-key="<?php echo $this->cid;?>" data-count-type="comments"></span>
                                             <!-- 使用原生评论 -->
                                             <?php else: ?>
-                                            <?php $this->commentsNum('%d 评论'); ?>
+                                            <!-- 评论数目 -->
+                                            <?php $this->commentsNum('%d'); ?>									
+							                <?php if($this->options->langis == '0'): ?>Comments
+							                <?php elseif($this->options->langis == '1'): ?>评论
+							                <?php elseif($this->options->langis == '2'): ?>評論
+							                <?php endif; ?>
                                             <?php endif; ?>
                                         </a>
                                         <?php if (class_exists("TeStat_Plugin")): ?> |&nbsp;

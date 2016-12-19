@@ -76,7 +76,12 @@
                         <?php if (class_exists("TeStat_Plugin")): ?>
                         <a class="md-menu-list-a" href="#">
                             <li class="mdl-menu__item">
-                                <?php $this->viewsNum(); ?> 浏览</li>
+                                <?php $this->viewsNum(); ?> 
+								<?php if($this->options->langis == '0'): ?> Views
+                                <?php elseif($this->options->langis == '1'): ?> 浏览
+                                <?php elseif($this->options->langis == '2'): ?> 瀏覽
+                                <?php endif; ?>
+                            </li>
                         </a>
                         <?php endif; ?>
                         <?php if($this->user->hasLogin()):?>
