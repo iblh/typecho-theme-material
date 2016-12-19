@@ -32,6 +32,7 @@
 - 自带中英文界面语言
 - 自带多种功能与特效
 - pjax 无刷新跳转
+- PanGu.js 中英文之间自动添加空格（可选）
 
 ## Demo 演示
 
@@ -55,6 +56,8 @@ Experience the Material theme in live: [typecho-theme-material Demo](https://blo
 - 首页文章概览默认最大输出80个字符, 可手动添加截断符 `<!-- more -->` 控制输出。
 - 在侧边栏中使用友情链接, 需安装此友情链接插件  [typecho-links-material](https://github.com/viosey/typecho-links-material)。
 - [浏览次数 & 点赞插件](http://qiniu.viosey.com/zipTeStat.zip) 安装该插件可实现文章内点赞, 首页文章信息与文章页分享按钮下拉选项中会显示浏览次数统计 (使用 cookie 策略)。
+
+- [Typecho-Plugin-Uptime](https://github.com/rainfroid/Typecho-Plugin-Uptime) 安装该插件可实现页脚显示“本站已运行 xx 时 xx 分 xx 秒”（起始时间需在插件后台设置）。
 
 
 ## Preview 预览
