@@ -74,7 +74,8 @@
                                        <a href="<?php $this->options->WeiboURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-weibo.png'); ?>);">
                                     <?php endif; ?>
                                         <span class="visuallyhidden">Sina Weibo</span>
-                                        
+                                    </button></a>
+                <?php endif;?>
                                                         <?php if ( !empty($this->options->footersns) && in_array('ShowInstagram', $this->options->footersns) ) : ?>
                 <?php if(!empty($this->options->CDNURL)): ?>
                 <a href="<?php $this->options->InstagramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-instagram.png);">
@@ -82,7 +83,8 @@
                                        <a href="<?php $this->options->InstagramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-instagram.png'); ?>);">
                                     <?php endif; ?>
                                         <span class="visuallyhidden">Instagram</span>
-                                        
+                                    </button></a>
+                <?php endif;?>
                                                         <?php if ( !empty($this->options->footersns) && in_array('ShowGithub', $this->options->footersns) ) : ?>
                 <?php if(!empty($this->options->CDNURL)): ?>
                 <a href="<?php $this->options->GithubURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-github.png);">
@@ -90,7 +92,8 @@
                                        <a href="<?php $this->options->GithubURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-github.png'); ?>);">
                                     <?php endif; ?>
                                         <span class="visuallyhidden">Github</span>
-                                        
+                                    </button></a>
+                <?php endif;?>
                                                         <?php if ( !empty($this->options->footersns) && in_array('ShowTumblr', $this->options->footersns) ) : ?>
                 <?php if(!empty($this->options->CDNURL)): ?>
                 <a href="<?php $this->options->TumblrURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-tumblr.png);">
@@ -98,7 +101,6 @@
                                        <a href="<?php $this->options->TumblrURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-tumblr.png'); ?>);">
                                     <?php endif; ?>
                                         <span class="visuallyhidden">Tumblr</span>
-                                        
                                     </button></a>
                 <?php endif;?>
             </div>
@@ -108,8 +110,8 @@
                 <?php $this->options->title(); ?>
             </div>
             <!--uptime-->
-			<div id="copyright">
-                <?php Uptime_Plugin::show(); ?>
+            <div id="copyright">
+              <?php Uptime_Plugin::show(); ?>
             </div>
             <!--mdl-mini-footer-right-section-->
             <div class="mdl-mini-footer--right-section">
@@ -241,9 +243,9 @@
 <!-- Pangu js -->
 <?php if( !empty($this->options->switch) && in_array('Pangu',$this->options->switch) ): ?>
   <?php if(!empty($this->options->CDNURL)): ?>
-    <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/pangu.min.js" async></script>
+    <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/pangu.min.js"></script>
   <?php else: ?>
-    <script src="<?php $this->options->themeUrl('js/pangu.min.js'); ?>" async></script>
+    <script src="<?php $this->options->themeUrl('js/pangu.min.js'); ?>"></script>
   <?php endif; ?>
   <script> pangu.spacingPage(); </script>
 <?php endif; ?>
