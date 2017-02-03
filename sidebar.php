@@ -180,6 +180,28 @@
                 '); ?>
                 </ul>
             </li>
+            
+            <!-- categories -->
+            <li class="dropdown">
+                <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                    <i class="material-icons sidebar-material-icons">apps</i>
+                    <?php if($this->options->langis == '0'): ?> Categories
+                    <?php elseif($this->options->langis == '1'): ?> 分类
+                    <?php endif; ?>
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" for="show-category-button">
+                    <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
+                    <?php while($category->next()): ?>
+                    <li>
+                        <a href="<?php $category->permalink(); ?>" title="<?php $category->name(); ?>">
+                            <?php $category->name(); ?>
+                        </a>
+                    </li>
+                    <?php endwhile; ?>
+                </ul>
+            </li>
+            
             <!-- divider -->
             <li class="divider"></li>
             <!-- Pages  -->
@@ -206,8 +228,8 @@
                     <span class="sidebar-badge"><?php echo $stat->publishedPostsNum;?></span>
                 </a>
             </li>
-        </ul>
-
+        </ul>        
+        
         <!-- Sidebar divider -->
         <div class="sidebar-divider"></div>
 

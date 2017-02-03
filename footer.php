@@ -240,9 +240,9 @@
 <!-- Pangu js -->
 <?php if( !empty($this->options->switch) && in_array('Pangu',$this->options->switch) ): ?>
   <?php if(!empty($this->options->CDNURL)): ?>
-    <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/pangu.min.js"></script>
+      <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/pangu.min.js"></script>
   <?php else: ?>
-    <script src="<?php $this->options->themeUrl('js/pangu.min.js'); ?>"></script>
+      <script src="<?php $this->options->themeUrl('js/pangu.min.js'); ?>"></script>
   <?php endif; ?>
   <script> pangu.spacingPage(); </script>
 <?php endif; ?>

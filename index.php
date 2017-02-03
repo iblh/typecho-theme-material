@@ -101,21 +101,7 @@ $this->need('header.php');?>
                                     </a>
                                     <?php endwhile; ?>
                                 </ul>
-                                <!-- Category button -->
-                                <button id="show-category-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                                <i class="material-icons" role="presentation">apps</i>
-                                <span class="visuallyhidden">Category</span>
-                            </button>
-                                <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-category-button">
-                                    <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
-                                    <?php while($category->next()): ?>
-                                    <a href="<?php $category->permalink(); ?>" class="md-menu-list-a" title="<?php $category->name(); ?>">
-                                        <li class="mdl-menu__item mdl-js-ripple-effect">
-                                            <?php $category->name(); ?>
-                                        </li>
-                                    </a>
-                                    <?php endwhile; ?>
-                                </ul>
+                                                                
                                 <!--  Menu button-->
                                 <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <i class="material-icons" role="presentation">more_vert</i>
