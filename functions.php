@@ -86,7 +86,7 @@ function themeConfig($form) {
     $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#FFF'), _t('缩略图为纯色时的颜色'), _t('填入颜色代码'));
     $form->addInput($TitleColor);
 
-    $RandomPicAmnt = new Typecho_Widget_Helper_Form_Element_Text('RandomPicAmnt', NULL, _t('5'), _t('随机缩略图数量'), _t('img/random 图片的数量'));
+    $RandomPicAmnt = new Typecho_Widget_Helper_Form_Element_Text('RandomPicAmnt', NULL, _t('19'), _t('随机缩略图数量'), _t('img/random 图片的数量'));
     $form->addInput($RandomPicAmnt);
 
     $commentis = new Typecho_Widget_Helper_Form_Element_Radio('commentis',
@@ -114,7 +114,7 @@ function themeConfig($form) {
             '2' => _t('繁体中文 <br />')
         ),
 
-        '0', _t('界面语言设置'), _t("默认使用英文, 中文总感觉有些违和 _(:3」∠)_")
+        '0', _t('界面语言设置'), _t("默认使用英文")
     );
     $form->addInput($langis);
 
@@ -210,9 +210,9 @@ function showThumbnail($widget){
     $rand = rand(1,$widget->widget('Widget_Options')->RandomPicAmnt); //Random number
 
     if(!empty($widget->widget('Widget_Options')->CDNURL)){
-		$random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/' . $rand . '.jpg';
+		$random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/material-' . $rand . '.png';
 	}else{
-        $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg';
+        $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/material-' . $rand . '.png';
 	}//Random picture path
 
 
@@ -239,9 +239,9 @@ function randomThumbnail($widget){
     $rand = rand(1,$widget->widget('Widget_Options')->RandomPicAmnt); //Random number
 
     if(!empty($widget->widget('Widget_Options')->CDNURL)){
-		$random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/' . $rand . '.jpg';
+		$random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/material-' . $rand . '.png';
 	}else{
-        $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/' . $rand . '.jpg';
+        $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/material-' . $rand . '.png';
 	}//Random picture path
 
     echo $random;
