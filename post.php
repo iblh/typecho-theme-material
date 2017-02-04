@@ -76,7 +76,7 @@
                         <?php if (class_exists("TeStat_Plugin")): ?>
                         <a class="md-menu-list-a" href="#">
                             <li class="mdl-menu__item">
-                                <?php $this->viewsNum(); ?> 浏览</li>
+                                <?php ($q=$this->viewsNum);if(($q%2)!=0){echo ($q-1)/2;}else{echo $q/2;} ?> 浏览</li>
                         </a>
                         <?php endif; ?>
                         <?php if($this->user->hasLogin()):?>

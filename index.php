@@ -255,7 +255,7 @@ $this->need('header.php');?>
                                             <?php endif; ?>
                                         </a>
                                         <?php if (class_exists("TeStat_Plugin")): ?> |&nbsp;
-                                        <?php $this->viewsNum(); ?>
+                                        <?php ($q=$this->viewsNum);if(($q%2)!=0){echo ($q-1)/2;}else{echo $q/2;} ?>
                                         <?php $this->sticky(); ?>
                                         <?php if($this->options->langis == '0'): ?>Views
                                         <?php elseif($this->options->langis == '1'): ?>浏览
