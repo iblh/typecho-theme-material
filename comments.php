@@ -1,5 +1,6 @@
 <?php $this->comments()->to($comments); ?>
-<?php function threadedComments($comments, $options) {
+<?php function threadedComments($comments, $options)
+{
     $commentClass = '';
     $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';  //评论层数大于0为子级，否则是父级
 ?>
@@ -11,8 +12,7 @@
         echo ' comment-parent';
     }
     $comments->alt(' comment-odd', ' comment-even');
-    echo $commentClass;
-    ?>">
+    echo $commentClass; ?>">
 
     <!-- Comment info -->
     <header class="comment header">
@@ -73,25 +73,28 @@
 
     <!-- Comment answers -->
     <div class="comment__answers">
-        <?php if ($comments->children) { ?>
+        <?php if ($comments->children) {
+        ?>
         <!--是否嵌套评论判断开始-->
         <div class="comment-children">
             <?php $comments->threadedComments($options); ?>
             <!--嵌套评论所有内容-->
         </div>
-        <?php } ?>
+        <?php 
+    } ?>
         <!--是否嵌套评论判断结束-->
     </div>
 
 </div>
 
-<?php } ?>
+<?php 
+} ?>
 
 <!-- 使用多说评论 -->
-<?php if($this->options->commentis == '1'): ?>
+<?php if ($this->options->commentis == '1'): ?>
 
 <div id="comments">
-    <?php if($this->allow('comment')): ?>
+    <?php if ($this->allow('comment')): ?>
     <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="<?php echo $this->cid;?>" data-title="<?php echo $this->title;?>" data-author-key="<?php echo $this->authorId;?>" data-url=""></div>
     <!-- 多说评论框 end -->
@@ -110,7 +113,7 @@
 
 <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
 
-    <?php if($this->allow('comment')): ?>
+    <?php if ($this->allow('comment')): ?>
 
     <div id="<?php $this->respondId(); ?>" class="respond">
 
@@ -118,7 +121,7 @@
         <form method="post" action="<?php $this->commentUrl() ?>">
 
             <!-- If user has login -->
-            <?php if($this->user->hasLogin()): ?>
+            <?php if ($this->user->hasLogin()): ?>
 
             <!-- Display user name & logout -->
             <p style="color:#8A8A8A;" class="visitor-name-span">Logged in as
@@ -134,9 +137,9 @@
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input type="text" name="author" class="mdl-textfield__input login-input-info" />
                     <label for="author" class="mdl-textfield__label">
-                                    <?php if($this->options->langis == '0'): ?>
+                                    <?php if ($this->options->langis == '0'): ?>
                                         Name*
-                                    <?php elseif($this->options->langis == '1'): ?>
+                                    <?php elseif ($this->options->langis == '1'): ?>
                                         昵称*
                                     <?php endif; ?>
                                 </label>
@@ -148,9 +151,9 @@
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input type="email" name="mail" class="mdl-textfield__input login-input-info" />
                     <label for="mail" class="mdl-textfield__label">
-                                    <?php if($this->options->langis == '0'): ?>
+                                    <?php if ($this->options->langis == '0'): ?>
                                         Email*
-                                    <?php elseif($this->options->langis == '1'): ?>
+                                    <?php elseif ($this->options->langis == '1'): ?>
                                         邮箱*
                                     <?php endif; ?>
                                 </label>
@@ -163,9 +166,9 @@
                     <input type="url" name="url" id="visitor-url" class="mdl-textfield__input login-input-info" />
                     <!--  placeholder="http://"-->
                     <label for="url" class="mdl-textfield__label">
-                                    <?php if($this->options->langis == '0'): ?>
+                                    <?php if ($this->options->langis == '0'): ?>
                                         Website
-                                    <?php elseif($this->options->langis == '1'): ?>
+                                    <?php elseif ($this->options->langis == '1'): ?>
                                         网站
                                     <?php endif; ?>
                                 </label>
@@ -177,9 +180,9 @@
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="comment-input-div">
                 <textarea name="text" rows="1" id="comment" class="mdl-textfield__input"></textarea>
                 <label for="comment" class="mdl-textfield__label">
-                            <?php if($this->options->langis == '0'): ?>
+                            <?php if ($this->options->langis == '0'): ?>
                                 Join the discussion
-                            <?php elseif($this->options->langis == '1'): ?>
+                            <?php elseif ($this->options->langis == '1'): ?>
                                 加入讨论吧...
                             <?php endif; ?>
                         </label>

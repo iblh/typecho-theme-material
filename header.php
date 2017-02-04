@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="<?php $this->options->ChromeThemeColor() ?>" />
         <title>
-            <?php $this->archiveTitle('','',' - '); ?>
+            <?php $this->archiveTitle('', '', ' - '); ?>
             <?php $this->options->title(); ?>
         </title>
         <link rel="icon" type="image/ico" href="<?php $this->options->favicon() ?>">
@@ -39,7 +39,7 @@
         <?php $this->header(); ?>
 
         <!-- Material style -->
-        <?php if(!empty($this->options->CDNURL)): ?>
+        <?php if (!empty($this->options->CDNURL)): ?>
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/material.min.css" />
             <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/style.min.css" />
         <?php else: ?>
@@ -48,20 +48,20 @@
         <?php endif; ?>
 
         <!--[if lte IE 9]>
-            <?php if(!empty($this->options->CDNURL)): ?>
+            <?php if (!empty($this->options->CDNURL)): ?>
                 <link rel="stylesheet" href="<?php $this->options->CDNURL() ?>/MaterialCDN/css/ie-blocker.css">
             <?php else: ?>
                 <link rel="stylesheet" href="<?php $this->options->themeUrl('css/ie-blocker.css'); ?>">
             <?php endif; ?>
 
-            <?php if($this->options->langis == '0'): ?>
-                <?php if(!empty($this->options->CDNURL)): ?>
+            <?php if ($this->options->langis == '0'): ?>
+                <?php if (!empty($this->options->CDNURL)): ?>
                    <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/ie-blocker.en.js" img-path="../img/ie-blocker/"></script>
                 <?php else: ?>
                    <script src="<?php $this->options->themeUrl('js/ie-blocker.en.js'); ?>" img-path="../img/ie-blocker/"></script>
                 <?php endif; ?>
-            <?php elseif($this->options->langis == '1'): ?>
-                <?php if(!empty($this->options->CDNURL)): ?>
+            <?php elseif ($this->options->langis == '1'): ?>
+                <?php if (!empty($this->options->CDNURL)): ?>
                     <script src="<?php $this->options->CDNURL() ?>/MaterialCDN/js/ie-blocker.zhCN.js" img-path="../img/ie-blocker/"></script>
                 <?php else: ?>
                     <script src="<?php $this->options->themeUrl('js/ie-blocker.zhCN.js'); ?>" img-path="../img/ie-blocker/"></script>
@@ -70,11 +70,11 @@
        <![endif]-->
 
 
-       <?php if($this->options->RobotoSource == '0' ): ?>
+       <?php if ($this->options->RobotoSource == '0'): ?>
            <link href='https://fonts.lug.ustc.edu.cn/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-       <?php elseif($this->options->RobotoSource == '1' ): ?>
+       <?php elseif ($this->options->RobotoSource == '1'): ?>
            <style>
-               <?php if(!empty($this->options->CDNURL)): ?>
+               <?php if (!empty($this->options->CDNURL)): ?>
                    @font-face {
                        font-family: Roboto;
                        src: url('<?php $this->options->CDNURL()?>/MaterialCDN/fonts/Roboto.ttf');
@@ -96,7 +96,7 @@
                    }
                <?php endif; ?>
            </style>
-       <?php elseif($this->options->RobotoSource == '2' ): ?>
+       <?php elseif ($this->options->RobotoSource == '2'): ?>
        <?php endif; ?>
 
        <!-- 根据function.php设置的样式 -->
@@ -142,7 +142,7 @@
             }
         </style>
 
-        <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>
+        <?php if (!empty($this->options->switch) && in_array('ShowLoadingLine', $this->options->switch)): ?>
             <style>
                 .fade {
                   transition: all <?php $this->options->loadingbuffer(); ?>ms linear;
@@ -160,7 +160,7 @@
             </style>
         <?php endif; ?>
 
-        <?php if ( $this->options->BGtype =='0' ) : ?>
+        <?php if ($this->options->BGtype =='0') : ?>
             <style>
                 body{
                     <?php if (!empty($this->options->bgcolor)): ?>
@@ -181,10 +181,10 @@
                     color: #666;
                 }
             </style>
-        <?php elseif ( $this->options->BGtype == '2'): ?>
+        <?php elseif ($this->options->BGtype == '2'): ?>
             <style>
             body{
-                <?php if($this->options->GradientType == '0'): ?>
+                <?php if ($this->options->GradientType == '0'): ?>
                     background-image:
                         -moz-radial-gradient(0% 100%, ellipse cover, #96DEDA 10%,rgba(255,255,227,0) 40%),
                         -moz-linear-gradient(-45deg,  #1fddff 0%,#FFEDBC 100%)
@@ -201,7 +201,7 @@
                         -webkit-radial-gradient(0% 100%, ellipse cover, #96DEDA    10%,rgba(255,255,227,0) 40%),
                         -webkit-linear-gradient(-45deg,  #1fddff 0%,#FFEDBC 100%)
                         ;
-                <?php elseif($this->options->GradientType == '1'): ?>
+                <?php elseif ($this->options->GradientType == '1'): ?>
                     background-image:
                         -moz-radial-gradient(-20% 140%, ellipse ,  rgba(255,144,187,.6) 30%,rgba(255,255,227,0) 50%),
                         -moz-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%),
@@ -226,7 +226,7 @@
                         -webkit-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
                         -webkit-linear-gradient(-45deg,  rgba(18,101,101,.8) -10%,#d9e3e5 80% )
                         ;
-                <?php elseif($this->options->GradientType == '2'): ?>
+                <?php elseif ($this->options->GradientType == '2'): ?>
                     background-image:
                         -moz-radial-gradient(-20% 140%, ellipse ,  rgba(235,167,171,.6) 30%,rgba(255,255,227,0) 50%),
                         -moz-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
@@ -247,7 +247,7 @@
                         -webkit-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
                         -webkit-linear-gradient(-45deg,  rgba(62,70,92,.8) -10%,rgba(220,230,200,.8) 80% )
                         ;
-                <?php elseif($this->options->GradientType =='3'): ?>
+                <?php elseif ($this->options->GradientType =='3'): ?>
                     background-image:
                         -moz-radial-gradient(-20% 140%, ellipse ,  rgba(143,192,193,.6) 30%,rgba(255,255,227,0) 50%),
                         -moz-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
@@ -268,7 +268,7 @@
                         -webkit-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
                         -webkit-linear-gradient(-45deg,  rgba(143,181,158,.8) -10%,rgba(213,232,211,.8) 80% )
                         ;
-                <?php elseif($this->options->GradientType =='4'): ?>
+                <?php elseif ($this->options->GradientType =='4'): ?>
                     background-image:
                         -moz-radial-gradient(-20% 140%, ellipse ,  rgba(214,195,224,.6) 30%,rgba(255,255,227,0) 50%),
                         -moz-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
@@ -289,34 +289,34 @@
                         -webkit-radial-gradient(60% 40%,ellipse,   #d9e3e5 10%,rgba(44,70,76,.0) 60%),
                         -webkit-linear-gradient(-45deg, rgba(97,102,158,.8) -10%,rgba(237,187,204,.8) 80% )
                         ;
-                <?php elseif($this->options->GradientType =='5'): ?>
+                <?php elseif ($this->options->GradientType =='5'): ?>
                     background-image: #DAD299; /* fallback for old browsers */
                     background-image: -webkit-linear-gradient(to left, #DAD299 , #B0DAB9); /* Chrome 10-25, Safari 5.1-6 */
                     background-image: linear-gradient(to left, #DAD299 , #B0DAB9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-                <?php elseif($this->options->GradientType =='6'): ?>
+                <?php elseif ($this->options->GradientType =='6'): ?>
                     background-image: linear-gradient(-20deg, #d0b782 20%, #a0cecf 80%);
-                <?php elseif($this->options->GradientType =='7'): ?>
+                <?php elseif ($this->options->GradientType =='7'): ?>
                     background: #F1F2B5; /* fallback for old browsers */
                     background: -webkit-linear-gradient(to left, #F1F2B5 , #135058); /* Chrome 10-25, Safari 5.1-6 */
                     background: linear-gradient(to left, #F1F2B5 , #135058); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *
-                <?php elseif($this->options->GradientType =='8'): ?>
+                <?php elseif ($this->options->GradientType =='8'): ?>
                     background: #02AAB0; /* fallback for old browsers */
                     background: -webkit-linear-gradient(to left, #02AAB0 , #00CDAC); /* Chrome 10-25, Safari 5.1-6 */
                     background: linear-gradient(to left, #02AAB0 , #00CDAC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-                <?php elseif($this->options->GradientType =='9'): ?>
+                <?php elseif ($this->options->GradientType =='9'): ?>
                     background: #C9FFBF; /* fallback for old browsers */
                     background: -webkit-linear-gradient(to left, #C9FFBF , #FFAFBD); /* Chrome 10-25, Safari 5.1-6 */
                     background: linear-gradient(to left, #C9FFBF , #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 <?php endif; ?>
             }
             </style>
-        <?php elseif ( $this->options->BGtype == '1'): ?>
+        <?php elseif ($this->options->BGtype == '1'): ?>
             <style>
                 body{
                     <?php if (!empty($this->options->bgcolor)): ?>
                         background-image: url(<?php $this->options->bgcolor() ?>);
                     <?php else: ?>
-                        <?php if(!empty($this->options->CDNURL)): ?>
+                        <?php if (!empty($this->options->CDNURL)): ?>
                             background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/bg.jpg);
                         <?php else: ?>
                             background-image: url(<?php $this->options->themeUrl('img/bg.jpg'); ?>);

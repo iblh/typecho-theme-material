@@ -1,8 +1,8 @@
 <?php
 
 //Appearance setup
-function themeConfig($form) {
-
+function themeConfig($form)
+{
     echo '<p style="font-size:14px;" id="use-intro">
     <span style="display: block;
     margin-bottom: 10px;
@@ -28,13 +28,13 @@ function themeConfig($form) {
     );
     $form->addInput($switch->multiMode());
 
-    $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', NULL, NULL, _t('网站统计代码 + 自定义字体源'), _t('填入如 Google Analysis 的第三方统计代码或字体源'));
+    $analysis = new Typecho_Widget_Helper_Form_Element_Textarea('analysis', null, null, _t('网站统计代码 + 自定义字体源'), _t('填入如 Google Analysis 的第三方统计代码或字体源'));
     $form->addInput($analysis);
 
-    $loadingcolor = new Typecho_Widget_Helper_Form_Element_Text('loadingcolor', NULL, NULL, _t('loading 加载进度条颜色'),_t('打开 "功能开关" 中的 loading 加载进度条后, 在这里设置进度条的颜色, 默认为蓝色'));
+    $loadingcolor = new Typecho_Widget_Helper_Form_Element_Text('loadingcolor', null, null, _t('loading 加载进度条颜色'), _t('打开 "功能开关" 中的 loading 加载进度条后, 在这里设置进度条的颜色, 默认为蓝色'));
     $form->addInput($loadingcolor);
 
-    $loadingbuffer = new Typecho_Widget_Helper_Form_Element_Text('loadingbuffer', NULL, _t('800'), _t('loading 加载缓冲时间'),_t('loading 加载进度条的缓冲时间, 单位为毫秒 ms, 默认为 800ms'));
+    $loadingbuffer = new Typecho_Widget_Helper_Form_Element_Text('loadingbuffer', null, _t('800'), _t('loading 加载缓冲时间'), _t('loading 加载进度条的缓冲时间, 单位为毫秒 ms, 默认为 800ms'));
     $form->addInput($loadingbuffer);
 
     $BGtype = new Typecho_Widget_Helper_Form_Element_Radio('BGtype',
@@ -45,11 +45,11 @@ function themeConfig($form) {
         ),
 
         //Default choose
-        '1',_t('背景设置'),_t("选择背景方案, 对应填写下方的 '<b>背景颜色 / 图片</b>' 或选择 '<b>渐变样式</b>', 这里默认使用图片背景.")
+        '1', _t('背景设置'), _t("选择背景方案, 对应填写下方的 '<b>背景颜色 / 图片</b>' 或选择 '<b>渐变样式</b>', 这里默认使用图片背景.")
     );
     $form->addInput($BGtype);
 
-    $bgcolor = new Typecho_Widget_Helper_Form_Element_Text('bgcolor', NULL, NULL, _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br />背景设置如果选择图片背景, 这里就填写图片地址;<br />
+    $bgcolor = new Typecho_Widget_Helper_Form_Element_Text('bgcolor', null, null, _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br />背景设置如果选择图片背景, 这里就填写图片地址;<br />
     不填写则默认显示 #F5F5F5 或主题文件夹下的 /img/bg.jpg'));
     $form->addInput($bgcolor);
 
@@ -83,10 +83,10 @@ function themeConfig($form) {
     );
     $form->addInput($ThumbnailOption);
 
-    $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', NULL, _t('#FFF'), _t('缩略图为纯色时的颜色'), _t('填入颜色代码'));
+    $TitleColor = new Typecho_Widget_Helper_Form_Element_Text('TitleColor', null, _t('#FFF'), _t('缩略图为纯色时的颜色'), _t('填入颜色代码'));
     $form->addInput($TitleColor);
 
-    $RandomPicAmnt = new Typecho_Widget_Helper_Form_Element_Text('RandomPicAmnt', NULL, _t('19'), _t('随机缩略图数量'), _t('img/random 图片的数量'));
+    $RandomPicAmnt = new Typecho_Widget_Helper_Form_Element_Text('RandomPicAmnt', null, _t('19'), _t('随机缩略图数量'), _t('img/random 图片的数量'));
     $form->addInput($RandomPicAmnt);
 
     $commentis = new Typecho_Widget_Helper_Form_Element_Radio('commentis',
@@ -99,10 +99,10 @@ function themeConfig($form) {
     );
     $form->addInput($commentis);
 
-    $DSshortname = new Typecho_Widget_Helper_Form_Element_Text('DSshortname', NULL, NULL, '多说二级域名 (short_name)', '要使用多说评论, 在这里填入多说的 short_name, 即二级域名.');
+    $DSshortname = new Typecho_Widget_Helper_Form_Element_Text('DSshortname', null, null, '多说二级域名 (short_name)', '要使用多说评论, 在这里填入多说的 short_name, 即二级域名.');
     $form->addInput($DSshortname);
 
-    $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', NULL, NULL, _t('CDN 地址'), _t("
+    $CDNURL = new Typecho_Widget_Helper_Form_Element_Text('CDNURL', null, null, _t('CDN 地址'), _t("
     新建一个'MaterialCDN' 文件夹, 把'css, fonts, img, js' 文件夹放进去, 然后把'MaterialCDN' 上传到到你的 CDN 储存空间根目录下<br />
     填入你的 CDN 地址, 如 <b>http://bucket.b0.upaiyun.com</b>"));
     $form->addInput($CDNURL);
@@ -118,40 +118,40 @@ function themeConfig($form) {
     );
     $form->addInput($langis);
 
-    $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', NULL, NULL,'置顶文章 1 ID', NULL);
+    $sticky_1 = new Typecho_Widget_Helper_Form_Element_Text('sticky_1', null, null, '置顶文章 1 ID', null);
     $form->addInput($sticky_1->addRule('isInteger', '请填入数字'));
 
-    $sticky_2 = new Typecho_Widget_Helper_Form_Element_Text('sticky_2', NULL, NULL,'置顶文章 2 ID', '填写对应主题的 id 即可使文章标题在首页置顶显示');
+    $sticky_2 = new Typecho_Widget_Helper_Form_Element_Text('sticky_2', null, null, '置顶文章 2 ID', '填写对应主题的 id 即可使文章标题在首页置顶显示');
     $form->addInput($sticky_2->addRule('isInteger', '请填入数字'));
 
-    $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', NULL, _t('#039BE5'), _t('主题颜色'), NULL);
+    $ThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ThemeColor', null, _t('#039BE5'), _t('主题颜色'), null);
     $form->addInput($ThemeColor);
 
-    $alinkcolor = new Typecho_Widget_Helper_Form_Element_Text('alinkcolor', NULL, _t('#039BE5'), _t('超链接颜色'), NULL);
+    $alinkcolor = new Typecho_Widget_Helper_Form_Element_Text('alinkcolor', null, _t('#039BE5'), _t('超链接颜色'), null);
     $form->addInput($alinkcolor);
 
-    $ChromeThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ChromeThemeColor', NULL, _t('#039BE5'), _t('Android Chrome 地址栏颜色'), NULL);
+    $ChromeThemeColor = new Typecho_Widget_Helper_Form_Element_Text('ChromeThemeColor', null, _t('#039BE5'), _t('Android Chrome 地址栏颜色'), null);
     $form->addInput($ChromeThemeColor);
 
-    $avatarURL = new Typecho_Widget_Helper_Form_Element_Text('avatarURL', NULL, NULL, '个人头像地址', '填入头像的地址, 如不填写则使用默认头像');
+    $avatarURL = new Typecho_Widget_Helper_Form_Element_Text('avatarURL', null, null, '个人头像地址', '填入头像的地址, 如不填写则使用默认头像');
     $form->addInput($avatarURL);
 
-    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon 地址'), _t('填入博客 favicon 的地址, 默认则不显示'));
+    $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', null, null, _t('favicon 地址'), _t('填入博客 favicon 的地址, 默认则不显示'));
     $form->addInput($favicon);
 
-    $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', NULL, NULL, _t('首页顶部左边的图片地址'), _t('填入图片地址, 图片显示在首页顶部左边位置'));
+    $dailypic = new Typecho_Widget_Helper_Form_Element_Text('dailypic', null, null, _t('首页顶部左边的图片地址'), _t('填入图片地址, 图片显示在首页顶部左边位置'));
     $form->addInput($dailypic);
 
-    $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL, NULL, _t('首页顶部右边 LOGO 图片地址'), _t('填入 LOGO 地址, 图片将显示于首页右上角板块'));
+    $logo = new Typecho_Widget_Helper_Form_Element_Text('logo', null, null, _t('首页顶部右边 LOGO 图片地址'), _t('填入 LOGO 地址, 图片将显示于首页右上角板块'));
     $form->addInput($logo);
 
-    $dailypicLink = new Typecho_Widget_Helper_Form_Element_Text('dailypicLink', NULL, _t('#'), _t('首页顶部左边图片的点击跳转地址'), _t('点击图片后, 想要跳转网页的地址'));
+    $dailypicLink = new Typecho_Widget_Helper_Form_Element_Text('dailypicLink', null, _t('#'), _t('首页顶部左边图片的点击跳转地址'), _t('点击图片后, 想要跳转网页的地址'));
     $form->addInput($dailypicLink);
 
-    $logoLink = new Typecho_Widget_Helper_Form_Element_Text('logoLink', NULL, NULL, _t('首页顶部右边 LOGO 的点击跳转地址'), _t('点击 LOGO 后, 想要跳转网页的地址'));
+    $logoLink = new Typecho_Widget_Helper_Form_Element_Text('logoLink', null, null, _t('首页顶部右边 LOGO 的点击跳转地址'), _t('点击 LOGO 后, 想要跳转网页的地址'));
     $form->addInput($logoLink);
 
-    $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', NULL, _t('Nice to meet you'), _t('首页顶部左边的标语'), _t('填入自定义文字, 显示于首页顶部左边的图片上'));
+    $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', null, _t('Nice to meet you'), _t('首页顶部左边的标语'), _t('填入自定义文字, 显示于首页顶部左边的图片上'));
     $form->addInput($slogan);
 
     $footersns = new Typecho_Widget_Helper_Form_Element_Checkbox('footersns',
@@ -169,44 +169,44 @@ function themeConfig($form) {
             'ShowLinkedin' => _t('显示 Linkedin 图标 &emsp;'),
         ),
 
-        array('ShowTwitter','ShowFacebook','ShowGooglePlus'), _t('页脚 SNS 图标按钮显示设置'),_t('开启后, 按钮显示于博客页脚位置')
+        array('ShowTwitter','ShowFacebook','ShowGooglePlus'), _t('页脚 SNS 图标按钮显示设置'), _t('开启后, 按钮显示于博客页脚位置')
     );
     $form->addInput($footersns);
 
-    $TwitterURL = new Typecho_Widget_Helper_Form_Element_Text('TwitterURL', NULL, _t('NULL'), _t('Twitter 地址'), NULL);
+    $TwitterURL = new Typecho_Widget_Helper_Form_Element_Text('TwitterURL', null, _t('NULL'), _t('Twitter 地址'), null);
     $form->addInput($TwitterURL);
 
-    $FacebookURL = new Typecho_Widget_Helper_Form_Element_Text('FacebookURL', NULL, _t('NULL'), _t('Facebook 地址'), NULL);
+    $FacebookURL = new Typecho_Widget_Helper_Form_Element_Text('FacebookURL', null, _t('NULL'), _t('Facebook 地址'), null);
     $form->addInput($FacebookURL);
 
-    $GooglePlusURL = new Typecho_Widget_Helper_Form_Element_Text('GooglePlusURL', NULL, _t('NULL'), _t('Google+ 地址'), NULL);
+    $GooglePlusURL = new Typecho_Widget_Helper_Form_Element_Text('GooglePlusURL', null, _t('NULL'), _t('Google+ 地址'), null);
     $form->addInput($GooglePlusURL);
 
-    $WeiboURL = new Typecho_Widget_Helper_Form_Element_Text('WeiboURL', NULL, NULL, _t('新浪微博地址'), NULL);
+    $WeiboURL = new Typecho_Widget_Helper_Form_Element_Text('WeiboURL', null, null, _t('新浪微博地址'), null);
     $form->addInput($WeiboURL);
     
-    $InstagramURL = new Typecho_Widget_Helper_Form_Element_Text('InstagramURL', NULL, NULL, _t('Instagram 地址'), NULL);
+    $InstagramURL = new Typecho_Widget_Helper_Form_Element_Text('InstagramURL', null, null, _t('Instagram 地址'), null);
     $form->addInput($InstagramURL);
     
-    $GithubURL = new Typecho_Widget_Helper_Form_Element_Text('GithubURL', NULL, NULL, _t('Github 地址'), NULL);
+    $GithubURL = new Typecho_Widget_Helper_Form_Element_Text('GithubURL', null, null, _t('Github 地址'), null);
     $form->addInput($GithubURL);
     
-    $TumblrURL = new Typecho_Widget_Helper_Form_Element_Text('TumblrURL', NULL, NULL, _t('Tumblr 地址'), NULL);
+    $TumblrURL = new Typecho_Widget_Helper_Form_Element_Text('TumblrURL', null, null, _t('Tumblr 地址'), null);
     $form->addInput($TumblrURL);
     
-    $BilibiliURL = new Typecho_Widget_Helper_Form_Element_Text('BilibiliURL', NULL, NULL, _t('Bilibili 地址'), NULL);
+    $BilibiliURL = new Typecho_Widget_Helper_Form_Element_Text('BilibiliURL', null, null, _t('Bilibili 地址'), null);
     $form->addInput($BilibiliURL);
     
-    $TelegramURL = new Typecho_Widget_Helper_Form_Element_Text('TelegramURL', NULL, NULL, _t('Telegram 地址'), NULL);
+    $TelegramURL = new Typecho_Widget_Helper_Form_Element_Text('TelegramURL', null, null, _t('Telegram 地址'), null);
     $form->addInput($TelegramURL);
     
-    $ZhihuURL = new Typecho_Widget_Helper_Form_Element_Text('ZhihuURL', NULL, NULL, _t('Zhihu 地址'), NULL);
+    $ZhihuURL = new Typecho_Widget_Helper_Form_Element_Text('ZhihuURL', null, null, _t('Zhihu 地址'), null);
     $form->addInput($ZhihuURL);
     
-    $LinkedinURL = new Typecho_Widget_Helper_Form_Element_Text('LinkedinURL', NULL, NULL, _t('Linkedin 地址'), NULL);
+    $LinkedinURL = new Typecho_Widget_Helper_Form_Element_Text('LinkedinURL', null, null, _t('Linkedin 地址'), null);
     $form->addInput($LinkedinURL);
 
-    $CustomFonts = new Typecho_Widget_Helper_Form_Element_Text('CustomFonts', NULL, _t("Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif"), _t('自定义字体'), NULL);
+    $CustomFonts = new Typecho_Widget_Helper_Form_Element_Text('CustomFonts', null, _t("Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif"), _t('自定义字体'), null);
     $form->addInput($CustomFonts);
 
     $RobotoSource = new Typecho_Widget_Helper_Form_Element_Radio('RobotoSource',
@@ -216,20 +216,21 @@ function themeConfig($form) {
         '2' => _t('使用自定义字体源 (在上方"网站统计代码 + 自定义字体源"填入)')
     ),
 
-    '1',_t('Roboto 字体使用来源'),NULL);
+    '1', _t('Roboto 字体使用来源'), null);
     $form->addInput($RobotoSource);
 }
 
 //Homepage thumbnail
-function showThumbnail($widget){
+function showThumbnail($widget)
+{
     //If article no include picture, display random default picture
-    $rand = rand(1,$widget->widget('Widget_Options')->RandomPicAmnt); //Random number
+    $rand = rand(1, $widget->widget('Widget_Options')->RandomPicAmnt); //Random number
 
-    if(!empty($widget->widget('Widget_Options')->CDNURL)){
-		$random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/material-' . $rand . '.png';
-	}else{
+    if (!empty($widget->widget('Widget_Options')->CDNURL)) {
+        $random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/material-' . $rand . '.png';
+    } else {
         $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/material-' . $rand . '.png';
-	}//Random picture path
+    }//Random picture path
 
 
     // If only one random default picture, delete the following "//"
@@ -239,30 +240,30 @@ function showThumbnail($widget){
     $pattern = '/\<img.*?src\=\"(.*?)\"[^>]*>/i';
 
     if (preg_match_all($pattern, $widget->content, $thumbUrl)) {
-             echo $thumbUrl[1][0];
-    }
-    else if ($attach->isImage) {
+        echo $thumbUrl[1][0];
+    } elseif ($attach->isImage) {
         echo $attach->url;
-    }
-    else {
+    } else {
         echo $random;
     }
 }
 
 //Random thumbnail
-function randomThumbnail($widget){
+function randomThumbnail($widget)
+{
     //If article no include picture, display random default picture
-    $rand = rand(1,$widget->widget('Widget_Options')->RandomPicAmnt); //Random number
+    $rand = rand(1, $widget->widget('Widget_Options')->RandomPicAmnt); //Random number
 
-    if(!empty($widget->widget('Widget_Options')->CDNURL)){
-		$random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/material-' . $rand . '.png';
-	}else{
+    if (!empty($widget->widget('Widget_Options')->CDNURL)) {
+        $random = $widget->widget('Widget_Options')->CDNURL. '/MaterialCDN/img/random/material-' . $rand . '.png';
+    } else {
         $random = $widget->widget('Widget_Options')->themeUrl . '/img/random/material-' . $rand . '.png';
-	}//Random picture path
+    }//Random picture path
 
     echo $random;
 }
 
-function is_pjax(){
+function is_pjax()
+{
     return array_key_exists('HTTP_X_PJAX', $_SERVER) && $_SERVER['HTTP_X_PJAX'];
 }
