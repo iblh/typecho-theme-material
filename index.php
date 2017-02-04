@@ -117,7 +117,20 @@ $this->need('header.php');?>
                                         </li>
                                     </a>
                                     <!-- 文章的RSS地址连接 -->
-
+                                    <a class="md-menu-list-a" href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->options->siteUrl(); ?>">                                        
+                                        <li class="mdl-menu__item">
+                                            <?php if($this->options->langis == '0'): ?> Share to Facebook
+                                            <?php else: ?> 分享到 Facebook
+                                            <?php endif; ?>
+                                        </li>
+                                    </a>
+                                    <a class="md-menu-list-a" href="https://telegram.me/share/url?url=<?php $this->options->siteUrl(); ?>&text=<?php $this->options->title(); ?>" >
+                                        <li class="mdl-menu__item">
+                                            <?php if($this->options->langis == '0'): ?> Share to Telegram
+                                            <?php else: ?> 分享到 Telegram
+                                            <?php endif; ?>
+                                        </li>
+                                    </a>
                                     <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->options->title(); ?>&url=<?php $this->options->siteUrl(); ?>&via=<?php $this->author->screenName(); ?>">
                                         <li class="mdl-menu__item">
                                             <?php if($this->options->langis == '0'): ?> Share to Twitter
@@ -132,15 +145,13 @@ $this->need('header.php');?>
                                             <?php endif; ?>
                                         </li>
                                     </a>
-                                    <a href="<?php $this->options->siteUrl(); ?>" target="_blank" class="md-menu-list-a">
-                                        <li class="mdl-menu__item mdl-js-ripple-effect">
-                                            <?php if($this->options->langis == '0'): ?> Open in New Tab
-                                            <?php elseif($this->options->langis == '1'): ?> 新标签页打开
-                                            <?php elseif($this->options->langis == '2'): ?> 新標籤頁打開
+                                    <a class="md-menu-list-a" href="http://service.weibo.com/share/share.php?appkey=&title=<?php $this->options->title(); ?>&url=<?php $this->options->siteUrl(); ?>&pic=&searchPic=false&style=simple ">
+                                        <li class="mdl-menu__item">
+                                            <?php if($this->options->langis == '0'): ?> Share to Weibo
+                                            <?php else: ?> 分享到新浪微博
                                             <?php endif; ?>
                                         </li>
                                     </a>
-
                                 </ul>
                             </div>
                         </div>

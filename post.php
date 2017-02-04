@@ -60,7 +60,7 @@
                     <!-- view tags -->
                     <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
-                                <i class="material-icons">view_carousel</i>
+                                <i class="material-icons">bookmarks</i>
                                 <span class="visuallyhidden">tags</span>
                             </button>
                     <ul id="article-functions-viewtags-ul" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
@@ -84,11 +84,17 @@
                                 <li class="mdl-menu__item">编辑</li>
                         </a>
                         <?php endif;?>
-                        <a class="md-menu-list-a" target="_blank" href="<?php $this->permalink(); ?>">
+                        <a class="md-menu-list-a" href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->options->permalink(); ?>">                                        
                             <li class="mdl-menu__item">
-                                <?php if($this->options->langis == '0'): ?> Open in New Tab
-                                <?php elseif($this->options->langis == '1'): ?> 新标签页打开
-                                <?php elseif($this->options->langis == '2'): ?> 新標籤頁打開
+                                <?php if($this->options->langis == '0'): ?> Share to Facebook
+                                <?php else: ?> 分享到 Facebook
+                                <?php endif; ?>
+                            </li>
+                        </a>
+                        <a class="md-menu-list-a" href="https://telegram.me/share/url?url=<?php $this->options->permalink(); ?>&text=<?php $this->options->title(); ?>" >
+                            <li class="mdl-menu__item">
+                                <?php if($this->options->langis == '0'): ?> Share to Telegram
+                                <?php else: ?> 分享到 Telegram
                                 <?php endif; ?>
                             </li>
                         </a>
@@ -103,6 +109,13 @@
                             <li class="mdl-menu__item">
                                 <?php if($this->options->langis == '0'): ?> Share to Google+
                                 <?php else: ?> 分享到 Google+
+                                <?php endif; ?>
+                            </li>
+                        </a>
+                        <a class="md-menu-list-a" href="http://service.weibo.com/share/share.php?appkey=&title=<?php $this->options->title(); ?>&url=<?php $this->options->permalink(); ?>&pic=&searchPic=false&style=simple ">
+                            <li class="mdl-menu__item">
+                                <?php if($this->options->langis == '0'): ?> Share to Weibo
+                                <?php else: ?> 分享到新浪微博
                                 <?php endif; ?>
                             </li>
                         </a>
