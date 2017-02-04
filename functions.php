@@ -163,6 +163,10 @@ function themeConfig($form) {
             'ShowInstagram' => _t('显示 Instagram 图标 &emsp;'),
             'ShowGithub' => _t('显示 Github 图标 &emsp;'),
             'ShowTumblr' => _t('显示 Tumblr 图标 &emsp;'),
+            'ShowBilibili' => _t('显示 Bilibili 图标 &emsp;'),
+            'ShowTelegram' => _t('显示 Telegram 图标 &emsp;'),
+            'ShowZhihu' => _t('显示 Zhihu 图标 &emsp;'),
+            'ShowLinkedin' => _t('显示 Linkedin 图标 &emsp;'),
         ),
 
         array('ShowTwitter','ShowFacebook','ShowGooglePlus'), _t('页脚 SNS 图标按钮显示设置'),_t('开启后, 按钮显示于博客页脚位置')
@@ -189,6 +193,18 @@ function themeConfig($form) {
     
     $TumblrURL = new Typecho_Widget_Helper_Form_Element_Text('TumblrURL', NULL, NULL, _t('Tumblr 地址'), NULL);
     $form->addInput($TumblrURL);
+    
+    $BilibiliURL = new Typecho_Widget_Helper_Form_Element_Text('BilibiliURL', NULL, NULL, _t('Bilibili 地址'), NULL);
+    $form->addInput($BilibiliURL);
+    
+    $TelegramURL = new Typecho_Widget_Helper_Form_Element_Text('TelegramURL', NULL, NULL, _t('Telegram 地址'), NULL);
+    $form->addInput($TelegramURL);
+    
+    $ZhihuURL = new Typecho_Widget_Helper_Form_Element_Text('ZhihuURL', NULL, NULL, _t('Zhihu 地址'), NULL);
+    $form->addInput($ZhihuURL);
+    
+    $LinkedinURL = new Typecho_Widget_Helper_Form_Element_Text('LinkedinURL', NULL, NULL, _t('Linkedin 地址'), NULL);
+    $form->addInput($LinkedinURL);
 
     $CustomFonts = new Typecho_Widget_Helper_Form_Element_Text('CustomFonts', NULL, _t("Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif"), _t('自定义字体'), NULL);
     $form->addInput($CustomFonts);

@@ -40,14 +40,13 @@
                 <?php if ( !empty($this->options->footersns) && in_array('ShowTwitter', $this->options->footersns) ) : ?>
                 <?php if(!empty($this->options->CDNURL)): ?>
                 <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-twitter.png);">
-                                    <?php else: ?>
-                                       <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-twitter.png'); ?>);">
-                                    <?php endif; ?>
-                                        <span class="visuallyhidden">Twitter</span>
-                                    </button></a>
-                <?php endif;?>
-
-                <?php if ( !empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns) ) : ?>
+                    <?php else: ?>
+                        <a href="<?php $this->options->TwitterURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-twitter.png'); ?>);">                                            
+                            <?php endif; ?>
+                            <span class="visuallyhidden">Twitter</span>
+                        </button></a>
+                    <?php endif;?>
+                    <?php if ( !empty($this->options->footersns) && in_array('ShowFacebook', $this->options->footersns) ) : ?>
                 <?php if(!empty($this->options->CDNURL)): ?>
                 <a href="<?php $this->options->FacebookURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-facebook.png);">
                                     <?php else: ?>
@@ -103,7 +102,49 @@
                                         <span class="visuallyhidden">Tumblr</span>
                                     </button></a>
                 <?php endif;?>
+                
+                <?php if ( !empty($this->options->footersns) && in_array('ShowBilibili', $this->options->footersns) ) : ?>
+                    <?php if(!empty($this->options->CDNURL)): ?>
+                        <a href="<?php $this->options->BilibiliURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-bilibili.png);">
+                    <?php else: ?>
+                            <a href="<?php $this->options->BilibiliURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-bilibili.png'); ?>);">
+                    <?php endif; ?>
+                <span class="visuallyhidden">Bilibili</span>
+                            </button></a>
+                <?php endif;?>
+                
+                <?php if ( !empty($this->options->footersns) && in_array('ShowTelegram', $this->options->footersns) ) : ?>
+                    <?php if(!empty($this->options->CDNURL)): ?>
+                        <a href="<?php $this->options->TelegramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-telegram.png);">
+                    <?php else: ?>
+                            <a href="<?php $this->options->TelegramURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-telegram.png'); ?>);">
+                    <?php endif; ?>
+                <span class="visuallyhidden">Telegram</span>
+                            </button></a>
+                <?php endif;?>
+                
+                <?php if ( !empty($this->options->footersns) && in_array('ShowZhihu', $this->options->footersns) ) : ?>
+                    <?php if(!empty($this->options->CDNURL)): ?>
+                        <a href="<?php $this->options->ZhihuURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-zhihu.png);">
+                    <?php else: ?>
+                            <a href="<?php $this->options->ZhihuURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-zhihu.png'); ?>);">
+                    <?php endif; ?>
+                <span class="visuallyhidden">Zhihu</span>
+                            </button></a>
+                <?php endif;?>
+                
+                <?php if ( !empty($this->options->footersns) && in_array('ShowLinkedin', $this->options->footersns) ) : ?>
+                    <?php if(!empty($this->options->CDNURL)): ?>
+                        <a href="<?php $this->options->LinkedinURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->CDNURL() ?>/MaterialCDN/img/footer/footer_ico-linkedin.png);">
+                    <?php else: ?>
+                            <a href="<?php $this->options->LinkedinURL() ?>" target="view_window"><button class="mdl-mini-footer--social-btn social-btn social-btn__weibo" style="background-image: url(<?php $this->options->themeUrl('img/footer/footer_ico-linkedin.png'); ?>);">
+                    <?php endif; ?>
+                <span class="visuallyhidden">Linkedin</span>
+                            </button></a>
+                <?php endif;?>
+                
             </div>
+            
             <!--copyright-->
             <div id="copyright">Copyright &copy;
                 <?php echo date("Y"); ?>

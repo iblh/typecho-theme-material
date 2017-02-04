@@ -4,7 +4,7 @@
  *
  * @package Theme.Material
  * @author viosey
- * @version 2.3.0
+ * @version 2.4.0
  * @link https://viosey.com
  */
 
@@ -16,8 +16,8 @@ $this->need('header.php');?>
             <div id="top"></div>
             <!-- Sidebar hamburger button -->
             <button class="MD-burger-icon sidebar-toggle">
-                  <span class="MD-burger-layer"></span>
-                </button>
+              <span class="MD-burger-layer"></span>
+            </button>
 
             <div class="demo-blog__posts mdl-grid">
 
@@ -56,9 +56,9 @@ $this->need('header.php');?>
                             <!-- Search -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
                                 <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
-                                <!-- For modern browsers. -->
-                                <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-                            </label>
+                                    <!-- For modern browsers. -->
+                                    <i class="material-icons mdl-color-text--white" role="presentation">search</i>
+                                </label>
                                 <form id="search-form" method="post" action="" class="mdl-textfield__expandable-holder">
                                     <input class="mdl-textfield__input search-input" type="text" name="s" id="search">
                                     <label id="search-form-label" class="mdl-textfield__label" for="search">Enter your query...</label>
@@ -104,9 +104,9 @@ $this->need('header.php');?>
                                                                 
                                 <!--  Menu button-->
                                 <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                                <i class="material-icons" role="presentation">more_vert</i>
-                                <span class="visuallyhidden">show menu</span>
-                            </button>
+                                    <i class="material-icons" role="presentation">more_vert</i>
+                                    <span class="visuallyhidden">show menu</span>
+                                </button>
                                 <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
 
                                     <a href="<?php $this->options->feedUrl(); ?>" class="md-menu-list-a">
@@ -117,15 +117,7 @@ $this->need('header.php');?>
                                         </li>
                                     </a>
                                     <!-- 文章的RSS地址连接 -->
-                                    <a href="<?php $this->options->commentsFeedUrl(); ?>" class="md-menu-list-a">
-                                        <li class="mdl-menu__item mdl-js-ripple-effect">
-                                            <?php if($this->options->langis == '0'): ?> Comment RSS
-                                            <?php elseif($this->options->langis == '1'): ?> 评论 RSS
-                                            <?php elseif($this->options->langis == '2'): ?> 評論 RSS
-                                            <?php endif; ?>
-                                        </li>
-                                    </a>
-                                    <!-- 评论的RSS地址连接 -->
+
                                     <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->options->title(); ?>&url=<?php $this->options->siteUrl(); ?>&via=<?php $this->author->screenName(); ?>">
                                         <li class="mdl-menu__item">
                                             <?php if($this->options->langis == '0'): ?> Share to Twitter
