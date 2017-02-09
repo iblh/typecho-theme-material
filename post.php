@@ -32,7 +32,7 @@
                 <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
                     <!-- Author avatar -->
                     <div id="author-avatar">
-                        <?php if(!empty($this->options->avatarURL)): ?>
+                        <?php if (!empty($this->options->avatarURL)): ?>
                         <img src="<?php $this->options->avatarURL() ?>" width="44px" height="44px" />
                         <?php else: ?>
                         <?php $this->author->gravatar(44); ?>
@@ -44,7 +44,7 @@
                         <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
                         <!-- Articel date -->
                         <span>
-                                    <?php if($this->options->langis == '0'): ?>
+                                    <?php if ($this->options->langis == '0'): ?>
                                         <?php $this->date('F j, Y'); ?>
                                     <?php else: ?>
                                         <?php $this->dateWord(); ?>
@@ -60,7 +60,7 @@
                     <!-- view tags -->
                     <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                                 <!-- For modern browsers. -->
-                                <i class="material-icons">view_carousel</i>
+                                <i class="material-icons">bookmarks</i>
                                 <span class="visuallyhidden">tags</span>
                             </button>
                     <ul id="article-functions-viewtags-ul" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
@@ -76,33 +76,50 @@
                         <?php if (class_exists("TeStat_Plugin")): ?>
                         <a class="md-menu-list-a" href="#">
                             <li class="mdl-menu__item">
-                                <?php $this->viewsNum(); ?> 浏览</li>
+                                <?php ($q=$this->viewsNum); if (($q%2)!=0) {
+    echo($q-1)/2;
+} else {
+    echo $q/2;
+} ?> 浏览</li>
                         </a>
                         <?php endif; ?>
-                        <?php if($this->user->hasLogin()):?>
+                        <?php if ($this->user->hasLogin()):?>
                         <a class="md-menu-list-a" target="_blank" href="<?php $this->options->adminUrl(); ?>write-post.php?cid=<?php echo $this->cid;?>" target="_blank">
                                 <li class="mdl-menu__item">编辑</li>
                         </a>
                         <?php endif;?>
-                        <a class="md-menu-list-a" target="_blank" href="<?php $this->permalink(); ?>">
+                        <a class="md-menu-list-a" href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->options->permalink(); ?>">                                        
                             <li class="mdl-menu__item">
-                                <?php if($this->options->langis == '0'): ?> Open in New Tab
-                                <?php elseif($this->options->langis == '1'): ?> 新标签页打开
-                                <?php elseif($this->options->langis == '2'): ?> 新標籤頁打開
+                                <?php if ($this->options->langis == '0'): ?> Share to Facebook
+                                <?php else: ?> 分享到 Facebook
+                                <?php endif; ?>
+                            </li>
+                        </a>
+                        <a class="md-menu-list-a" href="https://telegram.me/share/url?url=<?php $this->options->permalink(); ?>&text=<?php $this->options->title(); ?>" >
+                            <li class="mdl-menu__item">
+                                <?php if ($this->options->langis == '0'): ?> Share to Telegram
+                                <?php else: ?> 分享到 Telegram
                                 <?php endif; ?>
                             </li>
                         </a>
                         <a class="md-menu-list-a" href="https://twitter.com/intent/tweet?text=<?php $this->title(); ?>&url=<?php $this->permalink() ?>&via=<?php $this->user->screenName(); ?>">
                             <li class="mdl-menu__item">
-                                <?php if($this->options->langis == '0'): ?> Share to Twitter
+                                <?php if ($this->options->langis == '0'): ?> Share to Twitter
                                 <?php else: ?> 分享到 Twitter
                                 <?php endif; ?>
                             </li>
                         </a>
                         <a class="md-menu-list-a" href="https://plus.google.com/share?url=<?php $this->permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
                             <li class="mdl-menu__item">
-                                <?php if($this->options->langis == '0'): ?> Share to Google+
+                                <?php if ($this->options->langis == '0'): ?> Share to Google+
                                 <?php else: ?> 分享到 Google+
+                                <?php endif; ?>
+                            </li>
+                        </a>
+                        <a class="md-menu-list-a" href="http://service.weibo.com/share/share.php?appkey=&title=<?php $this->options->title(); ?>&url=<?php $this->options->permalink(); ?>&pic=&searchPic=false&style=simple ">
+                            <li class="mdl-menu__item">
+                                <?php if ($this->options->langis == '0'): ?> Share to Weibo
+                                <?php else: ?> 分享到新浪微博
                                 <?php endif; ?>
                             </li>
                         </a>
@@ -110,7 +127,7 @@
                 </div>
 
                 <!-- Articel content -->
-                <div id="article-content-div" class="mdl-color-text--grey-700 mdl-card__supporting-text post-article-content <?php if( !empty($this->options->switch) && in_array('ShowLoadingLine',$this->options->switch) ): ?>fade out<?php endif; ?>">
+                <div id="article-content-div" class="mdl-color-text--grey-700 mdl-card__supporting-text post-article-content <?php if (!empty($this->options->switch) && in_array('ShowLoadingLine', $this->options->switch)): ?>fade out<?php endif; ?>">
                     <?php $this->content(); ?>
                 </div>
 
@@ -120,12 +137,12 @@
 
             <!-- theNext thePrev button -->
             <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-                <?php $this->theNext('%s', NULL, array('title' => '
+                <?php $this->theNext('%s', null, array('title' => '
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                             <i class="material-icons">arrow_back</i>
                         </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Newer', 'tagClass' => 'prev-content')); ?>
                 <div class="section-spacer"></div>
-                <?php $this->thePrev('%s', NULL, array('title' => 'Older&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <?php $this->thePrev('%s', null, array('title' => 'Older&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                             <i class="material-icons">arrow_forward</i>
                         </button>', 'tagClass' => 'prev-content')); ?>
             </nav>
