@@ -46,7 +46,6 @@ $this->need('header.php');?>
                                 </div>
                                 <div>
                                     <span class="author-name-span"><a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a></span>
-                                    <span class="index-top-block-date"></span>
                                 </div>
                             </div>
                         </div>
