@@ -286,7 +286,7 @@
   <?php endif; ?>
   <script> pangu.spacingPage(); </script>
 <?php endif; ?>
-
+<?php $html_source = ob_get_contents(); ob_clean(); print compressHtml($html_source); ob_end_flush(); ?>
 <?php $this->footer(); ?>
 
 </html>
